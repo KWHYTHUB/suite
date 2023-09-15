@@ -247,44 +247,44 @@ public:
 class UILayer : public cocos2d::CCLayerColor {
 public:
 
-    GEODE_CODEGEN_DLL static UILayer* create();
+    SAPPHIRE_CODEGEN_DLL static UILayer* create();
 
-    GEODE_CODEGEN_DLL void disableMenu();
+    SAPPHIRE_CODEGEN_DLL void disableMenu();
 
-    GEODE_CODEGEN_DLL void enableMenu();
+    SAPPHIRE_CODEGEN_DLL void enableMenu();
 
-    GEODE_CODEGEN_DLL void pCommand(cocos2d::CCNode* p0);
+    SAPPHIRE_CODEGEN_DLL void pCommand(cocos2d::CCNode* p0);
 
-    GEODE_CODEGEN_DLL void toggleCheckpointsMenu(bool p0);
+    SAPPHIRE_CODEGEN_DLL void toggleCheckpointsMenu(bool p0);
 
-    GEODE_CODEGEN_DLL void onCheck(cocos2d::CCObject* pSender);
+    SAPPHIRE_CODEGEN_DLL void onCheck(cocos2d::CCObject* pSender);
 
-    GEODE_CODEGEN_DLL void onDeleteCheck(cocos2d::CCObject* pSender);
+    SAPPHIRE_CODEGEN_DLL void onDeleteCheck(cocos2d::CCObject* pSender);
 
-    GEODE_CODEGEN_DLL void onPause(cocos2d::CCObject* pSender);
+    SAPPHIRE_CODEGEN_DLL void onPause(cocos2d::CCObject* pSender);
 
-    GEODE_CODEGEN_DLL virtual void keyDown(cocos2d::enumKeyCodes key);
+    SAPPHIRE_CODEGEN_DLL virtual void keyDown(cocos2d::enumKeyCodes key);
 
-    GEODE_CODEGEN_DLL virtual void keyUp(cocos2d::enumKeyCodes key);
+    SAPPHIRE_CODEGEN_DLL virtual void keyUp(cocos2d::enumKeyCodes key);
 
-        GEODE_PAD(0x16);
+        SAPPHIRE_PAD(0x16);
         cocos2d::CCMenu* m_checkPointMenu;
 };
 
 class TextInputDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void textChanged(CCTextInputNode* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void textChanged(CCTextInputNode* p0);
 
-    GEODE_CODEGEN_DLL virtual void textInputOpened(CCTextInputNode* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void textInputOpened(CCTextInputNode* p0);
 
-    GEODE_CODEGEN_DLL virtual void textInputClosed(CCTextInputNode* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void textInputClosed(CCTextInputNode* p0);
 
-    GEODE_CODEGEN_DLL virtual void textInputShouldOffset(CCTextInputNode* p0, float p1);
+    SAPPHIRE_CODEGEN_DLL virtual void textInputShouldOffset(CCTextInputNode* p0, float p1);
 
-    GEODE_CODEGEN_DLL virtual void textInputReturn(CCTextInputNode* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void textInputReturn(CCTextInputNode* p0);
 
-    GEODE_CODEGEN_DLL virtual bool allowTextInput(CCTextInputNode* p0);
+    SAPPHIRE_CODEGEN_DLL virtual bool allowTextInput(CCTextInputNode* p0);
 
 };
 
@@ -293,21 +293,21 @@ public:
 	 TextArea(TextArea const&) : m_fontFile() {}
 	 ~TextArea() {}
 
-        GEODE_CODEGEN_DLL TextArea();
-    GEODE_CODEGEN_DLL virtual void draw();
+        SAPPHIRE_CODEGEN_DLL TextArea();
+    SAPPHIRE_CODEGEN_DLL virtual void draw();
 
-    GEODE_CODEGEN_DLL virtual void setOpacity(unsigned char p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setOpacity(unsigned char p0);
 
-    GEODE_CODEGEN_DLL bool init(gd::string str, char const* font, float width, float height, cocos2d::CCPoint anchor, float scale, bool disableColor);
+    SAPPHIRE_CODEGEN_DLL bool init(gd::string str, char const* font, float width, float height, cocos2d::CCPoint anchor, float scale, bool disableColor);
 
-    GEODE_CODEGEN_DLL static TextArea* create(gd::string const& str, char const* font, float width, float height, cocos2d::CCPoint const& anchor, float scale, bool disableColor);
+    SAPPHIRE_CODEGEN_DLL static TextArea* create(gd::string const& str, char const* font, float width, float height, cocos2d::CCPoint const& anchor, float scale, bool disableColor);
 
     template <bool T=false>
     void colorAllCharactersTo(cocos2d::ccColor3B color){
         static_assert(T, "Implement TextArea::colorAllCharactersTo");
     }
 
-    GEODE_CODEGEN_DLL void setString(gd::string str);
+    SAPPHIRE_CODEGEN_DLL void setString(gd::string str);
 
         bool m_disableColor;
         MultilineBitmapFont* m_label;
@@ -330,32 +330,32 @@ public:
 class TableViewDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void willTweenToIndexPath(CCIndexPath& p0, TableViewCell* p1, TableView* p2);
+    SAPPHIRE_CODEGEN_DLL virtual void willTweenToIndexPath(CCIndexPath& p0, TableViewCell* p1, TableView* p2);
 
-    GEODE_CODEGEN_DLL virtual void didEndTweenToIndexPath(CCIndexPath& p0, TableView* p1);
+    SAPPHIRE_CODEGEN_DLL virtual void didEndTweenToIndexPath(CCIndexPath& p0, TableView* p1);
 
-    GEODE_CODEGEN_DLL virtual void TableViewWillDisplayCellForRowAtIndexPath(CCIndexPath& p0, TableViewCell* p1, TableView* p2);
+    SAPPHIRE_CODEGEN_DLL virtual void TableViewWillDisplayCellForRowAtIndexPath(CCIndexPath& p0, TableViewCell* p1, TableView* p2);
 
-    GEODE_CODEGEN_DLL virtual void TableViewDidDisplayCellForRowAtIndexPath(CCIndexPath& p0, TableViewCell* p1, TableView* p2);
+    SAPPHIRE_CODEGEN_DLL virtual void TableViewDidDisplayCellForRowAtIndexPath(CCIndexPath& p0, TableViewCell* p1, TableView* p2);
 
-    GEODE_CODEGEN_DLL virtual void TableViewWillReloadCellForRowAtIndexPath(CCIndexPath& p0, TableViewCell* p1, TableView* p2);
+    SAPPHIRE_CODEGEN_DLL virtual void TableViewWillReloadCellForRowAtIndexPath(CCIndexPath& p0, TableViewCell* p1, TableView* p2);
 
-    GEODE_CODEGEN_DLL virtual float cellHeightForRowAtIndexPath(CCIndexPath& p0, TableView* p1);
+    SAPPHIRE_CODEGEN_DLL virtual float cellHeightForRowAtIndexPath(CCIndexPath& p0, TableView* p1);
 
-    GEODE_CODEGEN_DLL virtual void didSelectRowAtIndexPath(CCIndexPath& p0, TableView* p1);
+    SAPPHIRE_CODEGEN_DLL virtual void didSelectRowAtIndexPath(CCIndexPath& p0, TableView* p1);
 
 };
 
 class TableViewDataSource {
 public:
 
-    GEODE_CODEGEN_DLL virtual int numberOfRowsInSection(unsigned int p0, TableView* p1);
+    SAPPHIRE_CODEGEN_DLL virtual int numberOfRowsInSection(unsigned int p0, TableView* p1);
 
-    GEODE_CODEGEN_DLL virtual unsigned int numberOfSectionsInTableView(TableView* p0);
+    SAPPHIRE_CODEGEN_DLL virtual unsigned int numberOfSectionsInTableView(TableView* p0);
 
-    GEODE_CODEGEN_DLL virtual void TableViewCommitCellEditingStyleForRowAtIndexPath(TableView* p0, TableViewCellEditingStyle p1, CCIndexPath& p2);
+    SAPPHIRE_CODEGEN_DLL virtual void TableViewCommitCellEditingStyleForRowAtIndexPath(TableView* p0, TableViewCellEditingStyle p1, CCIndexPath& p2);
 
-    GEODE_CODEGEN_DLL virtual TableViewCell* cellForRowAtIndexPath(CCIndexPath& p0, TableView* p1);
+    SAPPHIRE_CODEGEN_DLL virtual TableViewCell* cellForRowAtIndexPath(CCIndexPath& p0, TableView* p1);
 
 };
 
@@ -367,7 +367,7 @@ public:
         static_assert(T, "Implement StatsCell::updateBGColor");
     }
 
-    GEODE_CODEGEN_DLL void draw();
+    SAPPHIRE_CODEGEN_DLL void draw();
 
 };
 
@@ -426,23 +426,23 @@ public:
 class SliderTouchLogic : public cocos2d::CCMenu {
 public:
 
-    GEODE_CODEGEN_DLL SliderThumb* getThumb() const;
+    SAPPHIRE_CODEGEN_DLL SliderThumb* getThumb() const;
 
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         float m_length;
         SliderThumb* m_thumb;
         Slider* m_slider;
         bool m_unknown;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         bool m_vertical;
 };
 
 class SliderThumb : public cocos2d::CCMenuItemImage {
 public:
 
-    GEODE_CODEGEN_DLL void setValue(float val);
+    SAPPHIRE_CODEGEN_DLL void setValue(float val);
 
-    GEODE_CODEGEN_DLL float getValue();
+    SAPPHIRE_CODEGEN_DLL float getValue();
 
         float m_length;
         bool m_vertical;
@@ -451,26 +451,26 @@ public:
 class SimplePlayer : public cocos2d::CCSprite {
 public:
 
-    GEODE_CODEGEN_DLL void setSecondColor(const cocos2d::ccColor3B& color);
+    SAPPHIRE_CODEGEN_DLL void setSecondColor(const cocos2d::ccColor3B& color);
 
-    GEODE_CODEGEN_DLL bool hasGlowOutline();
+    SAPPHIRE_CODEGEN_DLL bool hasGlowOutline();
 
-    GEODE_CODEGEN_DLL void setGlowOutline(bool value);
+    SAPPHIRE_CODEGEN_DLL void setGlowOutline(bool value);
 
-    GEODE_CODEGEN_DLL bool init(int iconID);
+    SAPPHIRE_CODEGEN_DLL bool init(int iconID);
 
-    GEODE_CODEGEN_DLL static SimplePlayer* create(int iconID);
+    SAPPHIRE_CODEGEN_DLL static SimplePlayer* create(int iconID);
 
-    GEODE_CODEGEN_DLL void updatePlayerFrame(int iconID, IconType iconType);
+    SAPPHIRE_CODEGEN_DLL void updatePlayerFrame(int iconID, IconType iconType);
 
-    GEODE_CODEGEN_DLL void updateColors();
+    SAPPHIRE_CODEGEN_DLL void updateColors();
 
     template <bool T=false>
     void setFrames(const char* firstLayer, const char* secondLayer, const char* birdDome, const char* outlineSprite, const char* detailSprite){
         static_assert(T, "Implement SimplePlayer::setFrames");
     }
 
-    GEODE_CODEGEN_DLL void setColor(const cocos2d::ccColor3B& color);
+    SAPPHIRE_CODEGEN_DLL void setColor(const cocos2d::ccColor3B& color);
 
     template <bool T=false>
     void setOpacity(unsigned char opacity){
@@ -484,14 +484,14 @@ public:
         cocos2d::CCSprite* m_detailSprite;
         GJRobotSprite* m_robotSprite;
         GJSpiderSprite* m_spiderSprite;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         bool m_hasGlowOutline;
 };
 
 class SpawnTriggerAction : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL static SpawnTriggerAction* createFromString(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL static SpawnTriggerAction* createFromString(gd::string p0);
 
         bool m_timerEnded;
         float m_delay;
@@ -521,37 +521,37 @@ public:
 		m_containsBorder = 0;
     }
 
-    GEODE_CODEGEN_DLL static FLAlertLayer* create(char const* title, const gd::string& desc, char const* btn);
+    SAPPHIRE_CODEGEN_DLL static FLAlertLayer* create(char const* title, const gd::string& desc, char const* btn);
 
-    GEODE_CODEGEN_DLL virtual void onEnter();
+    SAPPHIRE_CODEGEN_DLL virtual void onEnter();
 
-    GEODE_CODEGEN_DLL virtual bool ccTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    SAPPHIRE_CODEGEN_DLL virtual bool ccTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
 
-    GEODE_CODEGEN_DLL virtual void ccTouchMoved(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    SAPPHIRE_CODEGEN_DLL virtual void ccTouchMoved(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
 
-    GEODE_CODEGEN_DLL virtual void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    SAPPHIRE_CODEGEN_DLL virtual void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
 
-    GEODE_CODEGEN_DLL virtual void ccTouchCancelled(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    SAPPHIRE_CODEGEN_DLL virtual void ccTouchCancelled(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
 
-    GEODE_CODEGEN_DLL virtual void registerWithTouchDispatcher();
+    SAPPHIRE_CODEGEN_DLL virtual void registerWithTouchDispatcher();
 
-    GEODE_CODEGEN_DLL virtual void keyBackClicked();
+    SAPPHIRE_CODEGEN_DLL virtual void keyBackClicked();
 
-    GEODE_CODEGEN_DLL virtual void keyDown(cocos2d::enumKeyCodes p0);
+    SAPPHIRE_CODEGEN_DLL virtual void keyDown(cocos2d::enumKeyCodes p0);
 
-    GEODE_CODEGEN_DLL virtual void show();
+    SAPPHIRE_CODEGEN_DLL virtual void show();
 
-    GEODE_CODEGEN_DLL bool init(FLAlertLayerProtocol* p0, char const* p1, gd::string p2, char const* p3, char const* p4, float p5, bool p6, float p7);
+    SAPPHIRE_CODEGEN_DLL bool init(FLAlertLayerProtocol* p0, char const* p1, gd::string p2, char const* p3, char const* p4, float p5, bool p6, float p7);
 
-    GEODE_CODEGEN_DLL static FLAlertLayer* create(FLAlertLayerProtocol* p0, char const* p1, gd::string p2, char const* p3, char const* p4);
+    SAPPHIRE_CODEGEN_DLL static FLAlertLayer* create(FLAlertLayerProtocol* p0, char const* p1, gd::string p2, char const* p3, char const* p4);
 
-    GEODE_CODEGEN_DLL static FLAlertLayer* create(FLAlertLayerProtocol* p0, char const* p1, gd::string p2, char const* p3, char const* p4, float p5);
+    SAPPHIRE_CODEGEN_DLL static FLAlertLayer* create(FLAlertLayerProtocol* p0, char const* p1, gd::string p2, char const* p3, char const* p4, float p5);
 
-    GEODE_CODEGEN_DLL static FLAlertLayer* create(FLAlertLayerProtocol* p0, char const* p1, gd::string p2, char const* p3, char const* p4, float p5, bool p6, float p7);
+    SAPPHIRE_CODEGEN_DLL static FLAlertLayer* create(FLAlertLayerProtocol* p0, char const* p1, gd::string p2, char const* p3, char const* p4, float p5, bool p6, float p7);
 
-    GEODE_CODEGEN_DLL void onBtn1(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onBtn1(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL void onBtn2(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onBtn2(cocos2d::CCObject* p0);
 
         cocos2d::CCMenu* m_buttonMenu;
         int m_controlConnected;
@@ -574,15 +574,15 @@ public:
 class SetupSpawnPopup : public FLAlertLayer {
 public:
 
-    GEODE_CODEGEN_DLL static SetupSpawnPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    SAPPHIRE_CODEGEN_DLL static SetupSpawnPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
 
-    GEODE_CODEGEN_DLL void createToggleButton(gd::string p0, cocos2d::SEL_MenuHandler p1, bool p2, cocos2d::CCMenu* p3, cocos2d::CCPoint p4, cocos2d::CCArray* p5);
+    SAPPHIRE_CODEGEN_DLL void createToggleButton(gd::string p0, cocos2d::SEL_MenuHandler p1, bool p2, cocos2d::CCMenu* p3, cocos2d::CCPoint p4, cocos2d::CCArray* p5);
 
-    GEODE_CODEGEN_DLL void onTargetIDArrow(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onTargetIDArrow(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL void textChanged(CCTextInputNode* p0);
+    SAPPHIRE_CODEGEN_DLL void textChanged(CCTextInputNode* p0);
 
-    GEODE_CODEGEN_DLL void updateTargetID();
+    SAPPHIRE_CODEGEN_DLL void updateTargetID();
 
         EffectGameObject* m_selectedObject;
         cocos2d::CCArray* m_selectedArray;
@@ -604,14 +604,14 @@ public:
 class SetupShakePopup : public FLAlertLayer {
 public:
 
-    GEODE_CODEGEN_DLL static SetupShakePopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    SAPPHIRE_CODEGEN_DLL static SetupShakePopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
 
 };
 
 class GJSpecialColorSelectDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void colorSelectClosed(GJSpecialColorSelect* p0, int p1);
+    SAPPHIRE_CODEGEN_DLL virtual void colorSelectClosed(GJSpecialColorSelect* p0, int p1);
 
 };
 
@@ -644,64 +644,64 @@ public:
     }
 
         cocos2d::extension::CCControlColourPicker* m_colorPicker;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         cocos2d::CCSprite* m_currentColorSpr;
         cocos2d::CCSprite* m_prevColorSpr;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         int m_pulseMode;
 };
 
 class SetupObjectTogglePopup : public FLAlertLayer {
 public:
 
-    GEODE_CODEGEN_DLL static SetupObjectTogglePopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    SAPPHIRE_CODEGEN_DLL static SetupObjectTogglePopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
 
-    GEODE_CODEGEN_DLL bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
+    SAPPHIRE_CODEGEN_DLL bool init(EffectGameObject* p0, cocos2d::CCArray* p1);
 
-    GEODE_CODEGEN_DLL void onTargetIDArrow(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onTargetIDArrow(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL void textChanged(CCTextInputNode* p0);
+    SAPPHIRE_CODEGEN_DLL void textChanged(CCTextInputNode* p0);
 
-    GEODE_CODEGEN_DLL void updateTargetID();
+    SAPPHIRE_CODEGEN_DLL void updateTargetID();
 
 };
 
 class SetupCountTriggerPopup : public FLAlertLayer {
 public:
 
-    GEODE_CODEGEN_DLL static SetupCountTriggerPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    SAPPHIRE_CODEGEN_DLL static SetupCountTriggerPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
 
-    GEODE_CODEGEN_DLL void onTargetIDArrow(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onTargetIDArrow(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL void textChanged(CCTextInputNode* p0);
+    SAPPHIRE_CODEGEN_DLL void textChanged(CCTextInputNode* p0);
 
-    GEODE_CODEGEN_DLL void updateTargetID();
+    SAPPHIRE_CODEGEN_DLL void updateTargetID();
 
 };
 
 class SetupAnimationPopup : public FLAlertLayer {
 public:
 
-    GEODE_CODEGEN_DLL static SetupAnimationPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    SAPPHIRE_CODEGEN_DLL static SetupAnimationPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
 
-    GEODE_CODEGEN_DLL void onTargetIDArrow(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onTargetIDArrow(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL void textChanged(CCTextInputNode* p0);
+    SAPPHIRE_CODEGEN_DLL void textChanged(CCTextInputNode* p0);
 
-    GEODE_CODEGEN_DLL void updateTargetID();
+    SAPPHIRE_CODEGEN_DLL void updateTargetID();
 
 };
 
 class SetTargetIDLayer {
 public:
 
-    GEODE_CODEGEN_DLL static SetTargetIDLayer* create(EffectGameObject* p0, cocos2d::CCArray* p1, gd::string p2);
+    SAPPHIRE_CODEGEN_DLL static SetTargetIDLayer* create(EffectGameObject* p0, cocos2d::CCArray* p1, gd::string p2);
 
-    GEODE_CODEGEN_DLL void onTargetIDArrow(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onTargetIDArrow(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL void textChanged(CCTextInputNode* p0);
+    SAPPHIRE_CODEGEN_DLL void textChanged(CCTextInputNode* p0);
 
-    GEODE_CODEGEN_DLL void updateTargetID();
+    SAPPHIRE_CODEGEN_DLL void updateTargetID();
 
 };
 
@@ -723,31 +723,31 @@ public:
 class ScrollingLayer : public cocos2d::CCLayerColor {
 public:
 
-    GEODE_CODEGEN_DLL static ScrollingLayer* create(cocos2d::CCSize p0, cocos2d::CCPoint p1, float p2);
+    SAPPHIRE_CODEGEN_DLL static ScrollingLayer* create(cocos2d::CCSize p0, cocos2d::CCPoint p1, float p2);
 
 };
 
 class RetryLevelLayer {
 public:
 
-    GEODE_CODEGEN_DLL static RetryLevelLayer* create();
+    SAPPHIRE_CODEGEN_DLL static RetryLevelLayer* create();
 
 };
 
 class SetupPickupTriggerPopup : public FLAlertLayer {
 public:
 
-    GEODE_CODEGEN_DLL static SetupPickupTriggerPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    SAPPHIRE_CODEGEN_DLL static SetupPickupTriggerPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
 
-    GEODE_CODEGEN_DLL void onItemIDArrow(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onItemIDArrow(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL void onNextItemID(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onNextItemID(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL void textChanged(CCTextInputNode* p0);
+    SAPPHIRE_CODEGEN_DLL void textChanged(CCTextInputNode* p0);
 
-    GEODE_CODEGEN_DLL void updateItemID();
+    SAPPHIRE_CODEGEN_DLL void updateItemID();
 
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         CCTextInputNode* m_countInput;
 };
 
@@ -765,7 +765,7 @@ public:
 class CCSpritePlus : public cocos2d::CCSprite {
 public:
 
-    GEODE_CODEGEN_DLL bool initWithSpriteFrameName(const char* p0);
+    SAPPHIRE_CODEGEN_DLL bool initWithSpriteFrameName(const char* p0);
 
     template <bool T=false>
     void setScaleX(float scale){
@@ -823,248 +823,248 @@ class GameObject : public CCSpritePlus {
 public:
 	 using GroupArrayType = short*; 
 
-    GEODE_CODEGEN_DLL cocos2d::CCPoint getStartPosition();
+    SAPPHIRE_CODEGEN_DLL cocos2d::CCPoint getStartPosition();
 
-    GEODE_CODEGEN_DLL void setStartPosition(cocos2d::CCPoint const& p);
+    SAPPHIRE_CODEGEN_DLL void setStartPosition(cocos2d::CCPoint const& p);
 
-    GEODE_CODEGEN_DLL unsigned int getUniqueID();
+    SAPPHIRE_CODEGEN_DLL unsigned int getUniqueID();
 
-    GEODE_CODEGEN_DLL short getGroupID(int ix);
+    SAPPHIRE_CODEGEN_DLL short getGroupID(int ix);
 
-    GEODE_CODEGEN_DLL short getGroupIDCount();
+    SAPPHIRE_CODEGEN_DLL short getGroupIDCount();
 
-    GEODE_CODEGEN_DLL gd::vector<short> getGroupIDs();
+    SAPPHIRE_CODEGEN_DLL gd::vector<short> getGroupIDs();
 
-    GEODE_CODEGEN_DLL int getGameZOrder();
+    SAPPHIRE_CODEGEN_DLL int getGameZOrder();
 
-    GEODE_CODEGEN_DLL void setGameZOrder(int z);
+    SAPPHIRE_CODEGEN_DLL void setGameZOrder(int z);
 
-    GEODE_CODEGEN_DLL void setGameObjType(GameObjectType t);
+    SAPPHIRE_CODEGEN_DLL void setGameObjType(GameObjectType t);
 
-    GEODE_CODEGEN_DLL GJSpriteColor* getBaseColor();
+    SAPPHIRE_CODEGEN_DLL GJSpriteColor* getBaseColor();
 
-    GEODE_CODEGEN_DLL GJSpriteColor* getDetailColor();
+    SAPPHIRE_CODEGEN_DLL GJSpriteColor* getDetailColor();
 
-        GEODE_CODEGEN_DLL ~GameObject();
-    GEODE_CODEGEN_DLL virtual void update(float p0);
+        SAPPHIRE_CODEGEN_DLL ~GameObject();
+    SAPPHIRE_CODEGEN_DLL virtual void update(float p0);
 
-    GEODE_CODEGEN_DLL virtual void setScaleX(float p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setScaleX(float p0);
 
-    GEODE_CODEGEN_DLL virtual void setScaleY(float p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setScaleY(float p0);
 
-    GEODE_CODEGEN_DLL virtual void setScale(float p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setScale(float p0);
 
-    GEODE_CODEGEN_DLL virtual void setPosition(const cocos2d::CCPoint& p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setPosition(const cocos2d::CCPoint& p0);
 
-    GEODE_CODEGEN_DLL virtual void setVisible(bool p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setVisible(bool p0);
 
-    GEODE_CODEGEN_DLL virtual void setRotation(float p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setRotation(float p0);
 
-    GEODE_CODEGEN_DLL virtual void setOpacity(GLubyte p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setOpacity(GLubyte p0);
 
-    GEODE_CODEGEN_DLL virtual bool initWithTexture(cocos2d::CCTexture2D* p0);
+    SAPPHIRE_CODEGEN_DLL virtual bool initWithTexture(cocos2d::CCTexture2D* p0);
 
-    GEODE_CODEGEN_DLL virtual void setChildColor(const cocos2d::ccColor3B& p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setChildColor(const cocos2d::ccColor3B& p0);
 
-    GEODE_CODEGEN_DLL virtual void setFlipX(bool p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setFlipX(bool p0);
 
-    GEODE_CODEGEN_DLL virtual void setFlipY(bool p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setFlipY(bool p0);
 
-    GEODE_CODEGEN_DLL virtual void customSetup();
+    SAPPHIRE_CODEGEN_DLL virtual void customSetup();
 
-    GEODE_CODEGEN_DLL virtual void setupCustomSprites();
+    SAPPHIRE_CODEGEN_DLL virtual void setupCustomSprites();
 
-    GEODE_CODEGEN_DLL virtual void addMainSpriteToParent(bool p0);
+    SAPPHIRE_CODEGEN_DLL virtual void addMainSpriteToParent(bool p0);
 
-    GEODE_CODEGEN_DLL virtual void resetObject();
+    SAPPHIRE_CODEGEN_DLL virtual void resetObject();
 
-    GEODE_CODEGEN_DLL virtual void triggerObject(GJBaseGameLayer* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void triggerObject(GJBaseGameLayer* p0);
 
-    GEODE_CODEGEN_DLL virtual void activateObject();
+    SAPPHIRE_CODEGEN_DLL virtual void activateObject();
 
-    GEODE_CODEGEN_DLL virtual void deactivateObject(bool p0);
+    SAPPHIRE_CODEGEN_DLL virtual void deactivateObject(bool p0);
 
-    GEODE_CODEGEN_DLL virtual cocos2d::CCRect* getObjectRect();
+    SAPPHIRE_CODEGEN_DLL virtual cocos2d::CCRect* getObjectRect();
 
-    GEODE_CODEGEN_DLL virtual cocos2d::CCRect* getObjectRect(float p0, float p1);
+    SAPPHIRE_CODEGEN_DLL virtual cocos2d::CCRect* getObjectRect(float p0, float p1);
 
-    GEODE_CODEGEN_DLL virtual cocos2d::CCRect* getObjectRect2(float p0, float p1);
+    SAPPHIRE_CODEGEN_DLL virtual cocos2d::CCRect* getObjectRect2(float p0, float p1);
 
-    GEODE_CODEGEN_DLL virtual cocos2d::CCRect* getObjectTextureRect();
+    SAPPHIRE_CODEGEN_DLL virtual cocos2d::CCRect* getObjectTextureRect();
 
-    GEODE_CODEGEN_DLL virtual void getRealPosition();
+    SAPPHIRE_CODEGEN_DLL virtual void getRealPosition();
 
-    GEODE_CODEGEN_DLL virtual void setStartPos(cocos2d::CCPoint p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setStartPos(cocos2d::CCPoint p0);
 
-    GEODE_CODEGEN_DLL virtual void updateStartValues();
+    SAPPHIRE_CODEGEN_DLL virtual void updateStartValues();
 
-    GEODE_CODEGEN_DLL virtual void customObjectSetup();
+    SAPPHIRE_CODEGEN_DLL virtual void customObjectSetup();
 
-    GEODE_CODEGEN_DLL virtual gd::string getSaveString();
+    SAPPHIRE_CODEGEN_DLL virtual gd::string getSaveString();
 
-    GEODE_CODEGEN_DLL virtual bool isFlipX();
+    SAPPHIRE_CODEGEN_DLL virtual bool isFlipX();
 
-    GEODE_CODEGEN_DLL virtual bool isFlipY();
+    SAPPHIRE_CODEGEN_DLL virtual bool isFlipY();
 
-    GEODE_CODEGEN_DLL virtual void setRScaleX(float p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setRScaleX(float p0);
 
-    GEODE_CODEGEN_DLL virtual void setRScaleY(float p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setRScaleY(float p0);
 
-    GEODE_CODEGEN_DLL virtual void setRScale(float p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setRScale(float p0);
 
-    GEODE_CODEGEN_DLL virtual void getRScaleX();
+    SAPPHIRE_CODEGEN_DLL virtual void getRScaleX();
 
-    GEODE_CODEGEN_DLL virtual void getRScaleY();
+    SAPPHIRE_CODEGEN_DLL virtual void getRScaleY();
 
-    GEODE_CODEGEN_DLL virtual void calculateSpawnXPos();
+    SAPPHIRE_CODEGEN_DLL virtual void calculateSpawnXPos();
 
-    GEODE_CODEGEN_DLL virtual void triggerActivated(float p0);
+    SAPPHIRE_CODEGEN_DLL virtual void triggerActivated(float p0);
 
-    GEODE_CODEGEN_DLL virtual void powerOnObject();
+    SAPPHIRE_CODEGEN_DLL virtual void powerOnObject();
 
-    GEODE_CODEGEN_DLL virtual void powerOffObject();
+    SAPPHIRE_CODEGEN_DLL virtual void powerOffObject();
 
-    GEODE_CODEGEN_DLL virtual void setObjectColor(const cocos2d::ccColor3B& p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setObjectColor(const cocos2d::ccColor3B& p0);
 
-    GEODE_CODEGEN_DLL virtual void setGlowColor(cocos2d::_ccColor3B const& p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setGlowColor(cocos2d::_ccColor3B const& p0);
 
-    GEODE_CODEGEN_DLL virtual void getOrientedBox();
+    SAPPHIRE_CODEGEN_DLL virtual void getOrientedBox();
 
-    GEODE_CODEGEN_DLL virtual void addToGroup(int p0);
+    SAPPHIRE_CODEGEN_DLL virtual void addToGroup(int p0);
 
-    GEODE_CODEGEN_DLL virtual void removeFromGroup(int p0);
+    SAPPHIRE_CODEGEN_DLL virtual void removeFromGroup(int p0);
 
-    GEODE_CODEGEN_DLL virtual void spawnXPosition();
+    SAPPHIRE_CODEGEN_DLL virtual void spawnXPosition();
 
-    GEODE_CODEGEN_DLL virtual void getObjectRectDirty() const;
+    SAPPHIRE_CODEGEN_DLL virtual void getObjectRectDirty() const;
 
-    GEODE_CODEGEN_DLL virtual void setObjectRectDirty(bool p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setObjectRectDirty(bool p0);
 
-    GEODE_CODEGEN_DLL virtual void getOrientedRectDirty() const;
+    SAPPHIRE_CODEGEN_DLL virtual void getOrientedRectDirty() const;
 
-    GEODE_CODEGEN_DLL virtual void setOrientedRectDirty(bool p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setOrientedRectDirty(bool p0);
 
-    GEODE_CODEGEN_DLL virtual GameObjectType getType() const;
+    SAPPHIRE_CODEGEN_DLL virtual GameObjectType getType() const;
 
-    GEODE_CODEGEN_DLL virtual void setType(GameObjectType p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setType(GameObjectType p0);
 
-    GEODE_CODEGEN_DLL virtual void getStartPos() const;
+    SAPPHIRE_CODEGEN_DLL virtual void getStartPos() const;
 
-    GEODE_CODEGEN_DLL void activatedByPlayer(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void activatedByPlayer(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void addColorSprite();
+    SAPPHIRE_CODEGEN_DLL void addColorSprite();
 
-    GEODE_CODEGEN_DLL void addColorSpriteToParent(bool p0);
+    SAPPHIRE_CODEGEN_DLL void addColorSpriteToParent(bool p0);
 
-    GEODE_CODEGEN_DLL void addToTempOffset(float p0, float p1);
+    SAPPHIRE_CODEGEN_DLL void addToTempOffset(float p0, float p1);
 
-    GEODE_CODEGEN_DLL void calculateOrientedBox();
+    SAPPHIRE_CODEGEN_DLL void calculateOrientedBox();
 
-    GEODE_CODEGEN_DLL void canChangeCustomColor();
+    SAPPHIRE_CODEGEN_DLL void canChangeCustomColor();
 
-    GEODE_CODEGEN_DLL void colorForMode(int p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void colorForMode(int p0, bool p1);
 
-    GEODE_CODEGEN_DLL void commonSetup();
+    SAPPHIRE_CODEGEN_DLL void commonSetup();
 
-    GEODE_CODEGEN_DLL void copyGroups(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void copyGroups(GameObject* p0);
 
-    GEODE_CODEGEN_DLL static GameObject* createWithFrame(const char* p0);
+    SAPPHIRE_CODEGEN_DLL static GameObject* createWithFrame(const char* p0);
 
-    GEODE_CODEGEN_DLL static GameObject* createWithKey(int p0);
+    SAPPHIRE_CODEGEN_DLL static GameObject* createWithKey(int p0);
 
-    GEODE_CODEGEN_DLL void destroyObject();
+    SAPPHIRE_CODEGEN_DLL void destroyObject();
 
-    GEODE_CODEGEN_DLL void determineSlopeDirection();
+    SAPPHIRE_CODEGEN_DLL void determineSlopeDirection();
 
-    GEODE_CODEGEN_DLL void getActiveColorForMode(int p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void getActiveColorForMode(int p0, bool p1);
 
-    GEODE_CODEGEN_DLL void getBallFrame(int p0);
+    SAPPHIRE_CODEGEN_DLL void getBallFrame(int p0);
 
-    GEODE_CODEGEN_DLL cocos2d::CCPoint getBoxOffset();
+    SAPPHIRE_CODEGEN_DLL cocos2d::CCPoint getBoxOffset();
 
-    GEODE_CODEGEN_DLL const cocos2d::_ccColor3B& getColorIndex();
+    SAPPHIRE_CODEGEN_DLL const cocos2d::_ccColor3B& getColorIndex();
 
-    GEODE_CODEGEN_DLL void getDidUpdateLastPosition();
+    SAPPHIRE_CODEGEN_DLL void getDidUpdateLastPosition();
 
-    GEODE_CODEGEN_DLL void getLastPosition();
+    SAPPHIRE_CODEGEN_DLL void getLastPosition();
 
-    GEODE_CODEGEN_DLL void getMainColorMode();
+    SAPPHIRE_CODEGEN_DLL void getMainColorMode();
 
-    GEODE_CODEGEN_DLL void getObjectZOrder();
+    SAPPHIRE_CODEGEN_DLL void getObjectZOrder();
 
-    GEODE_CODEGEN_DLL float getObjectRadius();
+    SAPPHIRE_CODEGEN_DLL float getObjectRadius();
 
-    GEODE_CODEGEN_DLL void getSecondaryColorMode();
+    SAPPHIRE_CODEGEN_DLL void getSecondaryColorMode();
 
-    GEODE_CODEGEN_DLL void getSectionIdx();
+    SAPPHIRE_CODEGEN_DLL void getSectionIdx();
 
-    GEODE_CODEGEN_DLL void groupWasDisabled();
+    SAPPHIRE_CODEGEN_DLL void groupWasDisabled();
 
-    GEODE_CODEGEN_DLL void groupWasEnabled();
+    SAPPHIRE_CODEGEN_DLL void groupWasEnabled();
 
-    GEODE_CODEGEN_DLL void hasBeenActivated();
+    SAPPHIRE_CODEGEN_DLL void hasBeenActivated();
 
-    GEODE_CODEGEN_DLL void hasBeenActivatedByPlayer(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void hasBeenActivatedByPlayer(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void hasSecondaryColor();
+    SAPPHIRE_CODEGEN_DLL void hasSecondaryColor();
 
-    GEODE_CODEGEN_DLL void ignoreEnter();
+    SAPPHIRE_CODEGEN_DLL void ignoreEnter();
 
-    GEODE_CODEGEN_DLL void ignoreFade();
+    SAPPHIRE_CODEGEN_DLL void ignoreFade();
 
-    GEODE_CODEGEN_DLL void isBasicTrigger();
+    SAPPHIRE_CODEGEN_DLL void isBasicTrigger();
 
-    GEODE_CODEGEN_DLL void isColorTrigger();
+    SAPPHIRE_CODEGEN_DLL void isColorTrigger();
 
-    GEODE_CODEGEN_DLL void isSpawnableTrigger();
+    SAPPHIRE_CODEGEN_DLL void isSpawnableTrigger();
 
-    GEODE_CODEGEN_DLL void isSpecialObject();
+    SAPPHIRE_CODEGEN_DLL void isSpecialObject();
 
-    GEODE_CODEGEN_DLL static GameObject* objectFromString(gd::string p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL static GameObject* objectFromString(gd::string p0, bool p1);
 
-    GEODE_CODEGEN_DLL void playShineEffect();
+    SAPPHIRE_CODEGEN_DLL void playShineEffect();
 
-    GEODE_CODEGEN_DLL void quickUpdatePosition();
+    SAPPHIRE_CODEGEN_DLL void quickUpdatePosition();
 
-    GEODE_CODEGEN_DLL void removeGlow();
+    SAPPHIRE_CODEGEN_DLL void removeGlow();
 
-    GEODE_CODEGEN_DLL void resetGroupDisabled();
+    SAPPHIRE_CODEGEN_DLL void resetGroupDisabled();
 
-    GEODE_CODEGEN_DLL void saveActiveColors();
+    SAPPHIRE_CODEGEN_DLL void saveActiveColors();
 
-    GEODE_CODEGEN_DLL void selectObject(const cocos2d::ccColor3B& p0);
+    SAPPHIRE_CODEGEN_DLL void selectObject(const cocos2d::ccColor3B& p0);
 
-    GEODE_CODEGEN_DLL void setDefaultMainColorMode(int p0);
+    SAPPHIRE_CODEGEN_DLL void setDefaultMainColorMode(int p0);
 
-    GEODE_CODEGEN_DLL void setDidUpdateLastPosition(bool const& p0);
+    SAPPHIRE_CODEGEN_DLL void setDidUpdateLastPosition(bool const& p0);
 
-    GEODE_CODEGEN_DLL void setGlowOpacity(unsigned char p0);
+    SAPPHIRE_CODEGEN_DLL void setGlowOpacity(unsigned char p0);
 
-    GEODE_CODEGEN_DLL void setLastPosition(cocos2d::CCPoint const& p0);
+    SAPPHIRE_CODEGEN_DLL void setLastPosition(cocos2d::CCPoint const& p0);
 
-    GEODE_CODEGEN_DLL void setMainColorMode(int p0);
+    SAPPHIRE_CODEGEN_DLL void setMainColorMode(int p0);
 
-    GEODE_CODEGEN_DLL void setSectionIdx(int const& p0);
+    SAPPHIRE_CODEGEN_DLL void setSectionIdx(int const& p0);
 
-    GEODE_CODEGEN_DLL void setupCoinArt();
+    SAPPHIRE_CODEGEN_DLL void setupCoinArt();
 
-    GEODE_CODEGEN_DLL void slopeFloorTop();
+    SAPPHIRE_CODEGEN_DLL void slopeFloorTop();
 
-    GEODE_CODEGEN_DLL void slopeWallLeft();
+    SAPPHIRE_CODEGEN_DLL void slopeWallLeft();
 
-    GEODE_CODEGEN_DLL void updateCustomScale(float p0);
+    SAPPHIRE_CODEGEN_DLL void updateCustomScale(float p0);
 
-    GEODE_CODEGEN_DLL void updateMainColor();
+    SAPPHIRE_CODEGEN_DLL void updateMainColor();
 
-    GEODE_CODEGEN_DLL void updateOrientedBox();
+    SAPPHIRE_CODEGEN_DLL void updateOrientedBox();
 
-    GEODE_CODEGEN_DLL void updateSecondaryColor();
+    SAPPHIRE_CODEGEN_DLL void updateSecondaryColor();
 
-    GEODE_CODEGEN_DLL void updateStartPos();
+    SAPPHIRE_CODEGEN_DLL void updateStartPos();
 
-    GEODE_CODEGEN_DLL void updateState();
+    SAPPHIRE_CODEGEN_DLL void updateState();
 
-    GEODE_CODEGEN_DLL void updateSyncedAnimation(float p0);
+    SAPPHIRE_CODEGEN_DLL void updateSyncedAnimation(float p0);
 
     template <bool T=false>
     void deselectObject(){
@@ -1144,9 +1144,9 @@ public:
         bool m_isSaw;
         int m_customRotateSpeed;
         bool m_sawIsDisabled;
-        GEODE_PAD(0x4);
+        SAPPHIRE_PAD(0x4);
         cocos2d::CCSprite* m_detailSprite;
-        GEODE_PAD(0x8);
+        SAPPHIRE_PAD(0x8);
         bool m_isRotatedSide;
         float m_unk2F4;
         float m_unk2F8;
@@ -1173,7 +1173,7 @@ public:
         int m_targetColorID;
         float m_scale;
         int m_objectID;
-        GEODE_PAD(0x4);
+        SAPPHIRE_PAD(0x4);
         bool m_unk368;
         bool m_unk369;
         bool m_unk36A;
@@ -1211,7 +1211,7 @@ public:
         bool m_unk3D9;
         bool m_isSelected;
         int m_globalClickCounter;
-        GEODE_PAD(0x8);
+        SAPPHIRE_PAD(0x8);
         bool m_unknownLayerRelated;
         float m_multiScaleMultiplier;
         bool m_isGroupParent;
@@ -1224,14 +1224,14 @@ public:
         int m_editorLayer;
         int m_editorLayer2;
         int m_unk414;
-        GEODE_PAD(0xc);
+        SAPPHIRE_PAD(0xc);
         cocos2d::CCPoint m_firstPosition;
-        GEODE_PAD(0x1c);
+        SAPPHIRE_PAD(0x1c);
         bool m_highDetail;
         ColorActionSprite* m_colorActionSpriteBase;
         ColorActionSprite* m_colorActionSpriteDetail;
         GJEffectManager* m_effectManager;
-        GEODE_PAD(0x10);
+        SAPPHIRE_PAD(0x10);
 };
 
 class AnimatedSpriteDelegate {
@@ -1242,302 +1242,302 @@ public:
 class PlayerObject : public GameObject, public AnimatedSpriteDelegate {
 public:
 
-        GEODE_CODEGEN_DLL ~PlayerObject();
-    GEODE_CODEGEN_DLL virtual void update(float p0);
+        SAPPHIRE_CODEGEN_DLL ~PlayerObject();
+    SAPPHIRE_CODEGEN_DLL virtual void update(float p0);
 
-    GEODE_CODEGEN_DLL virtual void setScaleX(float p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setScaleX(float p0);
 
-    GEODE_CODEGEN_DLL virtual void setScaleY(float p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setScaleY(float p0);
 
-    GEODE_CODEGEN_DLL virtual void setScale(float p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setScale(float p0);
 
-    GEODE_CODEGEN_DLL virtual void setPosition(cocos2d::CCPoint const& p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setPosition(cocos2d::CCPoint const& p0);
 
-    GEODE_CODEGEN_DLL virtual void setVisible(bool p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setVisible(bool p0);
 
-    GEODE_CODEGEN_DLL virtual void setRotation(float p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setRotation(float p0);
 
-    GEODE_CODEGEN_DLL virtual void setOpacity(unsigned char p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setOpacity(unsigned char p0);
 
-    GEODE_CODEGEN_DLL virtual void setColor(cocos2d::_ccColor3B const& p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setColor(cocos2d::_ccColor3B const& p0);
 
-    GEODE_CODEGEN_DLL virtual void setFlipX(bool p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setFlipX(bool p0);
 
-    GEODE_CODEGEN_DLL virtual void setFlipY(bool p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setFlipY(bool p0);
 
-    GEODE_CODEGEN_DLL virtual void resetObject();
+    SAPPHIRE_CODEGEN_DLL virtual void resetObject();
 
-    GEODE_CODEGEN_DLL virtual void getRealPosition();
+    SAPPHIRE_CODEGEN_DLL virtual void getRealPosition();
 
-    GEODE_CODEGEN_DLL virtual void getOrientedBox();
+    SAPPHIRE_CODEGEN_DLL virtual void getOrientedBox();
 
-    GEODE_CODEGEN_DLL virtual void animationFinished(char const* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void animationFinished(char const* p0);
 
-    GEODE_CODEGEN_DLL void activateStreak();
+    SAPPHIRE_CODEGEN_DLL void activateStreak();
 
-    GEODE_CODEGEN_DLL void addAllParticles();
+    SAPPHIRE_CODEGEN_DLL void addAllParticles();
 
-    GEODE_CODEGEN_DLL void addToTouchedRings(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void addToTouchedRings(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void boostPlayer(float p0);
+    SAPPHIRE_CODEGEN_DLL void boostPlayer(float p0);
 
-    GEODE_CODEGEN_DLL void bumpPlayer(float p0, int p1);
+    SAPPHIRE_CODEGEN_DLL void bumpPlayer(float p0, int p1);
 
-    GEODE_CODEGEN_DLL void buttonDown(PlayerButton p0);
+    SAPPHIRE_CODEGEN_DLL void buttonDown(PlayerButton p0);
 
-    GEODE_CODEGEN_DLL void checkSnapJumpToObject(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void checkSnapJumpToObject(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void collidedWithObject(float p0, GameObject* p1);
+    SAPPHIRE_CODEGEN_DLL void collidedWithObject(float p0, GameObject* p1);
 
-    GEODE_CODEGEN_DLL void collidedWithObject(float p0, GameObject* p1, cocos2d::CCRect p2);
+    SAPPHIRE_CODEGEN_DLL void collidedWithObject(float p0, GameObject* p1, cocos2d::CCRect p2);
 
-    GEODE_CODEGEN_DLL void collidedWithSlope(float p0, GameObject* p1, bool p2);
+    SAPPHIRE_CODEGEN_DLL void collidedWithSlope(float p0, GameObject* p1, bool p2);
 
-    GEODE_CODEGEN_DLL void convertToClosestRotation(float p0);
+    SAPPHIRE_CODEGEN_DLL void convertToClosestRotation(float p0);
 
-    GEODE_CODEGEN_DLL void copyAttributes(PlayerObject* p0);
+    SAPPHIRE_CODEGEN_DLL void copyAttributes(PlayerObject* p0);
 
-    GEODE_CODEGEN_DLL static PlayerObject* create(int p0, int p1, cocos2d::CCLayer* p2);
+    SAPPHIRE_CODEGEN_DLL static PlayerObject* create(int p0, int p1, cocos2d::CCLayer* p2);
 
-    GEODE_CODEGEN_DLL void deactivateParticle();
+    SAPPHIRE_CODEGEN_DLL void deactivateParticle();
 
-    GEODE_CODEGEN_DLL void deactivateStreak(bool p0);
+    SAPPHIRE_CODEGEN_DLL void deactivateStreak(bool p0);
 
-    GEODE_CODEGEN_DLL void fadeOutStreak2(float p0);
+    SAPPHIRE_CODEGEN_DLL void fadeOutStreak2(float p0);
 
-    GEODE_CODEGEN_DLL void flashPlayer(float p0, float p1, cocos2d::_ccColor3B p2, cocos2d::_ccColor3B p3);
+    SAPPHIRE_CODEGEN_DLL void flashPlayer(float p0, float p1, cocos2d::_ccColor3B p2, cocos2d::_ccColor3B p3);
 
-    GEODE_CODEGEN_DLL void flipGravity(bool p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void flipGravity(bool p0, bool p1);
 
-    GEODE_CODEGEN_DLL void flipMod();
+    SAPPHIRE_CODEGEN_DLL void flipMod();
 
-    GEODE_CODEGEN_DLL void getActiveMode();
+    SAPPHIRE_CODEGEN_DLL void getActiveMode();
 
-    GEODE_CODEGEN_DLL void getModifiedSlopeYVel();
+    SAPPHIRE_CODEGEN_DLL void getModifiedSlopeYVel();
 
-    GEODE_CODEGEN_DLL void getOldPosition(float p0);
+    SAPPHIRE_CODEGEN_DLL void getOldPosition(float p0);
 
-    GEODE_CODEGEN_DLL void getSecondColor();
+    SAPPHIRE_CODEGEN_DLL void getSecondColor();
 
-    GEODE_CODEGEN_DLL void gravityDown();
+    SAPPHIRE_CODEGEN_DLL void gravityDown();
 
-    GEODE_CODEGEN_DLL void gravityUp();
+    SAPPHIRE_CODEGEN_DLL void gravityUp();
 
-    GEODE_CODEGEN_DLL void hardFlipGravity();
+    SAPPHIRE_CODEGEN_DLL void hardFlipGravity();
 
-    GEODE_CODEGEN_DLL void hitGround(bool p0);
+    SAPPHIRE_CODEGEN_DLL void hitGround(bool p0);
 
-    GEODE_CODEGEN_DLL void incrementJumps();
+    SAPPHIRE_CODEGEN_DLL void incrementJumps();
 
-    GEODE_CODEGEN_DLL bool init(int p0, int p1, cocos2d::CCLayer* p2);
+    SAPPHIRE_CODEGEN_DLL bool init(int p0, int p1, cocos2d::CCLayer* p2);
 
-    GEODE_CODEGEN_DLL void isBoostValid(float p0);
+    SAPPHIRE_CODEGEN_DLL void isBoostValid(float p0);
 
-    GEODE_CODEGEN_DLL void isFlying();
+    SAPPHIRE_CODEGEN_DLL void isFlying();
 
-    GEODE_CODEGEN_DLL void isSafeFlip(float p0);
+    SAPPHIRE_CODEGEN_DLL void isSafeFlip(float p0);
 
-    GEODE_CODEGEN_DLL void isSafeMode(float p0);
+    SAPPHIRE_CODEGEN_DLL void isSafeMode(float p0);
 
-    GEODE_CODEGEN_DLL void isSafeSpiderFlip(float p0);
+    SAPPHIRE_CODEGEN_DLL void isSafeSpiderFlip(float p0);
 
-    GEODE_CODEGEN_DLL void levelFlipFinished();
+    SAPPHIRE_CODEGEN_DLL void levelFlipFinished();
 
-    GEODE_CODEGEN_DLL void levelFlipping();
+    SAPPHIRE_CODEGEN_DLL void levelFlipping();
 
-    GEODE_CODEGEN_DLL void levelWillFlip();
+    SAPPHIRE_CODEGEN_DLL void levelWillFlip();
 
-    GEODE_CODEGEN_DLL void loadFromCheckpoint(PlayerCheckpoint* p0);
+    SAPPHIRE_CODEGEN_DLL void loadFromCheckpoint(PlayerCheckpoint* p0);
 
-    GEODE_CODEGEN_DLL void lockPlayer();
+    SAPPHIRE_CODEGEN_DLL void lockPlayer();
 
-    GEODE_CODEGEN_DLL void logValues();
+    SAPPHIRE_CODEGEN_DLL void logValues();
 
-    GEODE_CODEGEN_DLL void modeDidChange();
+    SAPPHIRE_CODEGEN_DLL void modeDidChange();
 
-    GEODE_CODEGEN_DLL void placeStreakPoint();
+    SAPPHIRE_CODEGEN_DLL void placeStreakPoint();
 
-    GEODE_CODEGEN_DLL void playBurstEffect();
+    SAPPHIRE_CODEGEN_DLL void playBurstEffect();
 
-    GEODE_CODEGEN_DLL void playDeathEffect();
+    SAPPHIRE_CODEGEN_DLL void playDeathEffect();
 
-    GEODE_CODEGEN_DLL void playDynamicSpiderRun();
+    SAPPHIRE_CODEGEN_DLL void playDynamicSpiderRun();
 
-    GEODE_CODEGEN_DLL void playerDestroyed(bool p0);
+    SAPPHIRE_CODEGEN_DLL void playerDestroyed(bool p0);
 
-    GEODE_CODEGEN_DLL bool playerIsFalling();
+    SAPPHIRE_CODEGEN_DLL bool playerIsFalling();
 
-    GEODE_CODEGEN_DLL void playerTeleported();
+    SAPPHIRE_CODEGEN_DLL void playerTeleported();
 
-    GEODE_CODEGEN_DLL void playingEndEffect();
+    SAPPHIRE_CODEGEN_DLL void playingEndEffect();
 
-    GEODE_CODEGEN_DLL void postCollision(float p0);
+    SAPPHIRE_CODEGEN_DLL void postCollision(float p0);
 
-    GEODE_CODEGEN_DLL void preCollision();
+    SAPPHIRE_CODEGEN_DLL void preCollision();
 
-    GEODE_CODEGEN_DLL void preSlopeCollision(float p0, GameObject* p1);
+    SAPPHIRE_CODEGEN_DLL void preSlopeCollision(float p0, GameObject* p1);
 
-    GEODE_CODEGEN_DLL void propellPlayer(float p0);
+    SAPPHIRE_CODEGEN_DLL void propellPlayer(float p0);
 
-    GEODE_CODEGEN_DLL void pushButton(int p0);
+    SAPPHIRE_CODEGEN_DLL void pushButton(int p0);
 
-    GEODE_CODEGEN_DLL void pushDown();
+    SAPPHIRE_CODEGEN_DLL void pushDown();
 
-    GEODE_CODEGEN_DLL void pushPlayer(float p0);
+    SAPPHIRE_CODEGEN_DLL void pushPlayer(float p0);
 
-    GEODE_CODEGEN_DLL void releaseButton(int p0);
+    SAPPHIRE_CODEGEN_DLL void releaseButton(int p0);
 
-    GEODE_CODEGEN_DLL void removeAllParticles();
+    SAPPHIRE_CODEGEN_DLL void removeAllParticles();
 
-    GEODE_CODEGEN_DLL void removePendingCheckpoint();
+    SAPPHIRE_CODEGEN_DLL void removePendingCheckpoint();
 
-    GEODE_CODEGEN_DLL void resetAllParticles();
+    SAPPHIRE_CODEGEN_DLL void resetAllParticles();
 
-    GEODE_CODEGEN_DLL void resetCollisionLog();
+    SAPPHIRE_CODEGEN_DLL void resetCollisionLog();
 
-    GEODE_CODEGEN_DLL void resetPlayerIcon();
+    SAPPHIRE_CODEGEN_DLL void resetPlayerIcon();
 
-    GEODE_CODEGEN_DLL void resetStateVariables();
+    SAPPHIRE_CODEGEN_DLL void resetStateVariables();
 
-    GEODE_CODEGEN_DLL void resetStreak();
+    SAPPHIRE_CODEGEN_DLL void resetStreak();
 
-    GEODE_CODEGEN_DLL void ringJump(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void ringJump(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void runBallRotation(float p0);
+    SAPPHIRE_CODEGEN_DLL void runBallRotation(float p0);
 
-    GEODE_CODEGEN_DLL void runBallRotation2();
+    SAPPHIRE_CODEGEN_DLL void runBallRotation2();
 
-    GEODE_CODEGEN_DLL void runNormalRotation();
+    SAPPHIRE_CODEGEN_DLL void runNormalRotation();
 
-    GEODE_CODEGEN_DLL void runRotateAction(bool p0);
+    SAPPHIRE_CODEGEN_DLL void runRotateAction(bool p0);
 
-    GEODE_CODEGEN_DLL void saveToCheckpoint(PlayerCheckpoint* p0);
+    SAPPHIRE_CODEGEN_DLL void saveToCheckpoint(PlayerCheckpoint* p0);
 
-    GEODE_CODEGEN_DLL void setSecondColor(cocos2d::_ccColor3B const& p0);
+    SAPPHIRE_CODEGEN_DLL void setSecondColor(cocos2d::_ccColor3B const& p0);
 
-    GEODE_CODEGEN_DLL void setupStreak();
+    SAPPHIRE_CODEGEN_DLL void setupStreak();
 
-    GEODE_CODEGEN_DLL void spawnCircle();
+    SAPPHIRE_CODEGEN_DLL void spawnCircle();
 
-    GEODE_CODEGEN_DLL void spawnCircle2();
+    SAPPHIRE_CODEGEN_DLL void spawnCircle2();
 
-    GEODE_CODEGEN_DLL void spawnDualCircle();
+    SAPPHIRE_CODEGEN_DLL void spawnDualCircle();
 
-    GEODE_CODEGEN_DLL void spawnFromPlayer(PlayerObject* p0);
+    SAPPHIRE_CODEGEN_DLL void spawnFromPlayer(PlayerObject* p0);
 
-    GEODE_CODEGEN_DLL void spawnPortalCircle(cocos2d::_ccColor3B p0, float p1);
+    SAPPHIRE_CODEGEN_DLL void spawnPortalCircle(cocos2d::_ccColor3B p0, float p1);
 
-    GEODE_CODEGEN_DLL void spawnScaleCircle();
+    SAPPHIRE_CODEGEN_DLL void spawnScaleCircle();
 
-    GEODE_CODEGEN_DLL void specialGroundHit();
+    SAPPHIRE_CODEGEN_DLL void specialGroundHit();
 
-    GEODE_CODEGEN_DLL void speedDown();
+    SAPPHIRE_CODEGEN_DLL void speedDown();
 
-    GEODE_CODEGEN_DLL void speedUp();
+    SAPPHIRE_CODEGEN_DLL void speedUp();
 
-    GEODE_CODEGEN_DLL void spiderTestJump(bool p0);
+    SAPPHIRE_CODEGEN_DLL void spiderTestJump(bool p0);
 
-    GEODE_CODEGEN_DLL void startDashing(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void startDashing(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void stopBurstEffect();
+    SAPPHIRE_CODEGEN_DLL void stopBurstEffect();
 
-    GEODE_CODEGEN_DLL void stopDashing();
+    SAPPHIRE_CODEGEN_DLL void stopDashing();
 
-    GEODE_CODEGEN_DLL void stopRotation(bool p0);
+    SAPPHIRE_CODEGEN_DLL void stopRotation(bool p0);
 
-    GEODE_CODEGEN_DLL void storeCollision(bool p0, int p1);
+    SAPPHIRE_CODEGEN_DLL void storeCollision(bool p0, int p1);
 
-    GEODE_CODEGEN_DLL void switchedToMode(GameObjectType p0);
+    SAPPHIRE_CODEGEN_DLL void switchedToMode(GameObjectType p0);
 
-    GEODE_CODEGEN_DLL void testForMoving(float p0, GameObject* p1);
+    SAPPHIRE_CODEGEN_DLL void testForMoving(float p0, GameObject* p1);
 
-    GEODE_CODEGEN_DLL void toggleBirdMode(bool p0);
+    SAPPHIRE_CODEGEN_DLL void toggleBirdMode(bool p0);
 
-    GEODE_CODEGEN_DLL void toggleDartMode(bool p0);
+    SAPPHIRE_CODEGEN_DLL void toggleDartMode(bool p0);
 
-    GEODE_CODEGEN_DLL void toggleFlyMode(bool p0);
+    SAPPHIRE_CODEGEN_DLL void toggleFlyMode(bool p0);
 
-    GEODE_CODEGEN_DLL void toggleGhostEffect(GhostType p0);
+    SAPPHIRE_CODEGEN_DLL void toggleGhostEffect(GhostType p0);
 
-    GEODE_CODEGEN_DLL void togglePlayerScale(bool p0);
+    SAPPHIRE_CODEGEN_DLL void togglePlayerScale(bool p0);
 
-    GEODE_CODEGEN_DLL void toggleRobotMode(bool p0);
+    SAPPHIRE_CODEGEN_DLL void toggleRobotMode(bool p0);
 
-    GEODE_CODEGEN_DLL void toggleRollMode(bool p0);
+    SAPPHIRE_CODEGEN_DLL void toggleRollMode(bool p0);
 
-    GEODE_CODEGEN_DLL void toggleSpiderMode(bool p0);
+    SAPPHIRE_CODEGEN_DLL void toggleSpiderMode(bool p0);
 
-    GEODE_CODEGEN_DLL void toggleVisibility(bool p0);
+    SAPPHIRE_CODEGEN_DLL void toggleVisibility(bool p0);
 
-    GEODE_CODEGEN_DLL void touchedObject(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void touchedObject(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void tryPlaceCheckpoint();
+    SAPPHIRE_CODEGEN_DLL void tryPlaceCheckpoint();
 
-    GEODE_CODEGEN_DLL void updateCheckpointMode(bool p0);
+    SAPPHIRE_CODEGEN_DLL void updateCheckpointMode(bool p0);
 
-    GEODE_CODEGEN_DLL void updateCheckpointTest();
+    SAPPHIRE_CODEGEN_DLL void updateCheckpointTest();
 
-    GEODE_CODEGEN_DLL void updateCollide(bool p0, int p1);
+    SAPPHIRE_CODEGEN_DLL void updateCollide(bool p0, int p1);
 
-    GEODE_CODEGEN_DLL void updateCollideBottom(float p0, int p1);
+    SAPPHIRE_CODEGEN_DLL void updateCollideBottom(float p0, int p1);
 
-    GEODE_CODEGEN_DLL void updateCollideTop(float p0, int p1);
+    SAPPHIRE_CODEGEN_DLL void updateCollideTop(float p0, int p1);
 
-    GEODE_CODEGEN_DLL void updateDashAnimation();
+    SAPPHIRE_CODEGEN_DLL void updateDashAnimation();
 
-    GEODE_CODEGEN_DLL void updateDashArt();
+    SAPPHIRE_CODEGEN_DLL void updateDashArt();
 
-    GEODE_CODEGEN_DLL void updateGlowColor();
+    SAPPHIRE_CODEGEN_DLL void updateGlowColor();
 
-    GEODE_CODEGEN_DLL void updateJump(float p0);
+    SAPPHIRE_CODEGEN_DLL void updateJump(float p0);
 
-    GEODE_CODEGEN_DLL void updateJumpVariables();
+    SAPPHIRE_CODEGEN_DLL void updateJumpVariables();
 
-    GEODE_CODEGEN_DLL void updatePlayerBirdFrame(int p0);
+    SAPPHIRE_CODEGEN_DLL void updatePlayerBirdFrame(int p0);
 
-    GEODE_CODEGEN_DLL void updatePlayerDartFrame(int p0);
+    SAPPHIRE_CODEGEN_DLL void updatePlayerDartFrame(int p0);
 
-    GEODE_CODEGEN_DLL void updatePlayerFrame(int p0);
+    SAPPHIRE_CODEGEN_DLL void updatePlayerFrame(int p0);
 
-    GEODE_CODEGEN_DLL void updatePlayerGlow();
+    SAPPHIRE_CODEGEN_DLL void updatePlayerGlow();
 
-    GEODE_CODEGEN_DLL void updatePlayerRobotFrame(int p0);
+    SAPPHIRE_CODEGEN_DLL void updatePlayerRobotFrame(int p0);
 
-    GEODE_CODEGEN_DLL void updatePlayerRollFrame(int p0);
+    SAPPHIRE_CODEGEN_DLL void updatePlayerRollFrame(int p0);
 
-    GEODE_CODEGEN_DLL void updatePlayerScale();
+    SAPPHIRE_CODEGEN_DLL void updatePlayerScale();
 
-    GEODE_CODEGEN_DLL void updatePlayerShipFrame(int p0);
+    SAPPHIRE_CODEGEN_DLL void updatePlayerShipFrame(int p0);
 
-    GEODE_CODEGEN_DLL void updatePlayerSpiderFrame(int p0);
+    SAPPHIRE_CODEGEN_DLL void updatePlayerSpiderFrame(int p0);
 
-    GEODE_CODEGEN_DLL void updatePlayerSpriteExtra(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL void updatePlayerSpriteExtra(gd::string p0);
 
-    GEODE_CODEGEN_DLL void updateRobotAnimationSpeed();
+    SAPPHIRE_CODEGEN_DLL void updateRobotAnimationSpeed();
 
-    GEODE_CODEGEN_DLL void updateRotation(float p0);
+    SAPPHIRE_CODEGEN_DLL void updateRotation(float p0);
 
-    GEODE_CODEGEN_DLL void updateRotation(float p0, float p1);
+    SAPPHIRE_CODEGEN_DLL void updateRotation(float p0, float p1);
 
-    GEODE_CODEGEN_DLL void updateShipRotation(float p0);
+    SAPPHIRE_CODEGEN_DLL void updateShipRotation(float p0);
 
-    GEODE_CODEGEN_DLL void updateShipSpriteExtra(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL void updateShipSpriteExtra(gd::string p0);
 
-    GEODE_CODEGEN_DLL void updateSlopeRotation(float p0);
+    SAPPHIRE_CODEGEN_DLL void updateSlopeRotation(float p0);
 
-    GEODE_CODEGEN_DLL void updateSlopeYVelocity(float p0);
+    SAPPHIRE_CODEGEN_DLL void updateSlopeYVelocity(float p0);
 
-    GEODE_CODEGEN_DLL void updateSpecial(float p0);
+    SAPPHIRE_CODEGEN_DLL void updateSpecial(float p0);
 
-    GEODE_CODEGEN_DLL void updateStateVariables();
+    SAPPHIRE_CODEGEN_DLL void updateStateVariables();
 
-    GEODE_CODEGEN_DLL void updateTimeMod(float p0);
+    SAPPHIRE_CODEGEN_DLL void updateTimeMod(float p0);
 
-    GEODE_CODEGEN_DLL void usingWallLimitedMode();
+    SAPPHIRE_CODEGEN_DLL void usingWallLimitedMode();
 
-    GEODE_CODEGEN_DLL void yStartDown();
+    SAPPHIRE_CODEGEN_DLL void yStartDown();
 
-    GEODE_CODEGEN_DLL void yStartUp();
+    SAPPHIRE_CODEGEN_DLL void yStartUp();
 
     template <bool T=false>
     void runRotateAction(){
@@ -1549,15 +1549,15 @@ public:
         static_assert(T, "Implement PlayerObject::runBallRotation");
     }
 
-        GEODE_PAD(0x18);
+        SAPPHIRE_PAD(0x18);
         bool m_unk480;
         cocos2d::CCNode* m_unk484;
         cocos2d::CCDictionary* m_collisionLog;
         cocos2d::CCDictionary* m_collisionLog1;
-        GEODE_PAD(0x38);
+        SAPPHIRE_PAD(0x38);
         bool m_unk4B0;
         cocos2d::CCSprite* m_unk4B4;
-        GEODE_PAD(0x1c);
+        SAPPHIRE_PAD(0x1c);
         bool m_unk4D4;
         cocos2d::CCArray* m_particleSystems;
         bool m_unk4DC;
@@ -1579,7 +1579,7 @@ public:
         double m_xAccel;
         double m_jumpAccel;
         double m_gravity;
-        GEODE_PAD(0x10);
+        SAPPHIRE_PAD(0x10);
         bool m_unk538;
         bool m_unk539;
         bool m_unk53A;
@@ -1588,14 +1588,14 @@ public:
         bool m_unk53D;
         bool m_unk53E;
         bool m_unk53F;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         double m_lastJumpTime;
         double m_unk558;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         float m_unk584;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         GameObject* m_unk59C;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         GJRobotSprite* m_robot;
         GJSpiderSprite* m_spider;
         bool m_unk5B0;
@@ -1606,14 +1606,14 @@ public:
         cocos2d::CCParticleSystemQuad* m_unk5C4;
         cocos2d::CCParticleSystemQuad* m_unk5C8;
         cocos2d::CCParticleSystemQuad* m_unk5CC;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         cocos2d::CCParticleSystemQuad* m_unk5D4;
         cocos2d::CCParticleSystemQuad* m_unk5D8;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         bool m_unk5FC;
         bool m_unk5FD;
         bool m_unk5FE;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         bool m_unk610;
         bool m_isHolding;
         bool m_hasJustHeld;
@@ -1648,26 +1648,26 @@ public:
         cocos2d::CCArray* m_touchingRings;
         GameObject* m_lastActivatedPortal;
         bool m_unk674;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         cocos2d::CCPoint m_position;
         bool m_unk684;
         bool m_unk685;
         double m_unk688;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         float m_groundHeight;
         float m_unk69C;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         float m_unk6A4[200];
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
 };
 
 class PlayerCheckpoint : public cocos2d::CCNode {
 public:
 
-        GEODE_CODEGEN_DLL ~PlayerCheckpoint();
-    GEODE_CODEGEN_DLL virtual bool init();
+        SAPPHIRE_CODEGEN_DLL ~PlayerCheckpoint();
+    SAPPHIRE_CODEGEN_DLL virtual bool init();
 
-    GEODE_CODEGEN_DLL static PlayerCheckpoint* create();
+    SAPPHIRE_CODEGEN_DLL static PlayerCheckpoint* create();
 
         cocos2d::CCPoint m_position;
         float m_yAccel;
@@ -1688,158 +1688,158 @@ public:
 class TriggerEffectDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void toggleGroupTriggered(int p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL virtual void toggleGroupTriggered(int p0, bool p1);
 
-    GEODE_CODEGEN_DLL virtual void spawnGroup(int p0);
+    SAPPHIRE_CODEGEN_DLL virtual void spawnGroup(int p0);
 
 };
 
 class GJBaseGameLayer : public cocos2d::CCLayer, public TriggerEffectDelegate {
 public:
 
-    GEODE_CODEGEN_DLL cocos2d::CCLayer* getObjectLayer();
+    SAPPHIRE_CODEGEN_DLL cocos2d::CCLayer* getObjectLayer();
 
-    GEODE_CODEGEN_DLL cocos2d::CCArray* getAllObjects();
+    SAPPHIRE_CODEGEN_DLL cocos2d::CCArray* getAllObjects();
 
-    GEODE_CODEGEN_DLL static GJBaseGameLayer* get();
+    SAPPHIRE_CODEGEN_DLL static GJBaseGameLayer* get();
 
-    GEODE_CODEGEN_DLL virtual void objectsCollided(int p0, int p1);
+    SAPPHIRE_CODEGEN_DLL virtual void objectsCollided(int p0, int p1);
 
-    GEODE_CODEGEN_DLL virtual void createMoveCommand(cocos2d::CCPoint p0, int p1, float p2, int p3, float p4, bool p5, bool p6, int p7);
+    SAPPHIRE_CODEGEN_DLL virtual void createMoveCommand(cocos2d::CCPoint p0, int p1, float p2, int p3, float p4, bool p5, bool p6, int p7);
 
-    GEODE_CODEGEN_DLL virtual void updateColor(cocos2d::_ccColor3B p0, float p1, int p2, bool p3, float p4, cocos2d::_ccHSVValue p5, int p6, bool p7, int p8, EffectGameObject* p9);
+    SAPPHIRE_CODEGEN_DLL virtual void updateColor(cocos2d::_ccColor3B p0, float p1, int p2, bool p3, float p4, cocos2d::_ccHSVValue p5, int p6, bool p7, int p8, EffectGameObject* p9);
 
-    GEODE_CODEGEN_DLL virtual void flipGravity(PlayerObject* p0, bool p1, bool p2);
+    SAPPHIRE_CODEGEN_DLL virtual void flipGravity(PlayerObject* p0, bool p1, bool p2);
 
-    GEODE_CODEGEN_DLL virtual void calculateColorValues(EffectGameObject* p0, EffectGameObject* p1, int p2, float p3, ColorActionSprite* p4, GJEffectManager* p5);
+    SAPPHIRE_CODEGEN_DLL virtual void calculateColorValues(EffectGameObject* p0, EffectGameObject* p1, int p2, float p3, ColorActionSprite* p4, GJEffectManager* p5);
 
-    GEODE_CODEGEN_DLL virtual void toggleGroupTriggered(int p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL virtual void toggleGroupTriggered(int p0, bool p1);
 
-    GEODE_CODEGEN_DLL virtual void spawnGroup(int p0);
+    SAPPHIRE_CODEGEN_DLL virtual void spawnGroup(int p0);
 
-    GEODE_CODEGEN_DLL virtual void addToSection(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void addToSection(GameObject* p0);
 
-    GEODE_CODEGEN_DLL virtual void addToGroup(GameObject* p0, int p1, bool p2);
+    SAPPHIRE_CODEGEN_DLL virtual void addToGroup(GameObject* p0, int p1, bool p2);
 
-    GEODE_CODEGEN_DLL virtual void removeFromGroup(GameObject* p0, int p1);
+    SAPPHIRE_CODEGEN_DLL virtual void removeFromGroup(GameObject* p0, int p1);
 
-    GEODE_CODEGEN_DLL virtual bool init();
+    SAPPHIRE_CODEGEN_DLL virtual bool init();
 
-    GEODE_CODEGEN_DLL void addObjectCounter(LabelGameObject* p0, int p1);
+    SAPPHIRE_CODEGEN_DLL void addObjectCounter(LabelGameObject* p0, int p1);
 
-    GEODE_CODEGEN_DLL void addToGroups(GameObject* p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void addToGroups(GameObject* p0, bool p1);
 
-    GEODE_CODEGEN_DLL void atlasValue(int p0);
+    SAPPHIRE_CODEGEN_DLL void atlasValue(int p0);
 
-    GEODE_CODEGEN_DLL void bumpPlayer(PlayerObject* p0, GameObject* p1);
+    SAPPHIRE_CODEGEN_DLL void bumpPlayer(PlayerObject* p0, GameObject* p1);
 
-    GEODE_CODEGEN_DLL void calculateOpacityValues(EffectGameObject* p0, EffectGameObject* p1, float p2, GJEffectManager* p3);
+    SAPPHIRE_CODEGEN_DLL void calculateOpacityValues(EffectGameObject* p0, EffectGameObject* p1, float p2, GJEffectManager* p3);
 
-    GEODE_CODEGEN_DLL void checkSpawnObjects();
+    SAPPHIRE_CODEGEN_DLL void checkSpawnObjects();
 
-    GEODE_CODEGEN_DLL void collectItem(int p0, int p1);
+    SAPPHIRE_CODEGEN_DLL void collectItem(int p0, int p1);
 
-    GEODE_CODEGEN_DLL void collectedObject(EffectGameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void collectedObject(EffectGameObject* p0);
 
-    GEODE_CODEGEN_DLL void createTextLayers();
+    SAPPHIRE_CODEGEN_DLL void createTextLayers();
 
-    GEODE_CODEGEN_DLL cocos2d::CCArray* damagingObjectsInRect(cocos2d::CCRect p0);
+    SAPPHIRE_CODEGEN_DLL cocos2d::CCArray* damagingObjectsInRect(cocos2d::CCRect p0);
 
-    GEODE_CODEGEN_DLL void enableHighCapacityMode();
+    SAPPHIRE_CODEGEN_DLL void enableHighCapacityMode();
 
-    GEODE_CODEGEN_DLL void getCapacityString();
+    SAPPHIRE_CODEGEN_DLL void getCapacityString();
 
-    GEODE_CODEGEN_DLL void getGroundHeightForMode(int p0);
+    SAPPHIRE_CODEGEN_DLL void getGroundHeightForMode(int p0);
 
-    GEODE_CODEGEN_DLL void getGroup(int p0);
+    SAPPHIRE_CODEGEN_DLL void getGroup(int p0);
 
-    GEODE_CODEGEN_DLL void getMoveDeltaForObjects(int p0, int p1);
+    SAPPHIRE_CODEGEN_DLL void getMoveDeltaForObjects(int p0, int p1);
 
-    GEODE_CODEGEN_DLL void getOptimizedGroup(int p0);
+    SAPPHIRE_CODEGEN_DLL void getOptimizedGroup(int p0);
 
-    GEODE_CODEGEN_DLL void getStaticGroup(int p0);
+    SAPPHIRE_CODEGEN_DLL void getStaticGroup(int p0);
 
-    GEODE_CODEGEN_DLL void isGroupDisabledForObject(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void isGroupDisabledForObject(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void isGroupDisabledForObjectFull(GameObject* p0, cocos2d::CCArray* p1);
+    SAPPHIRE_CODEGEN_DLL void isGroupDisabledForObjectFull(GameObject* p0, cocos2d::CCArray* p1);
 
-    GEODE_CODEGEN_DLL void loadUpToPosition(float p0);
+    SAPPHIRE_CODEGEN_DLL void loadUpToPosition(float p0);
 
-    GEODE_CODEGEN_DLL void objectIntersectsCircle(GameObject* p0, GameObject* p1);
+    SAPPHIRE_CODEGEN_DLL void objectIntersectsCircle(GameObject* p0, GameObject* p1);
 
-    GEODE_CODEGEN_DLL void objectTriggered(EffectGameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void objectTriggered(EffectGameObject* p0);
 
-    GEODE_CODEGEN_DLL void optimizeMoveGroups();
+    SAPPHIRE_CODEGEN_DLL void optimizeMoveGroups();
 
-    GEODE_CODEGEN_DLL void parentForZLayer(int p0, bool p1, int p2);
+    SAPPHIRE_CODEGEN_DLL void parentForZLayer(int p0, bool p1, int p2);
 
-    GEODE_CODEGEN_DLL void playerTouchedRing(PlayerObject* p0, GameObject* p1);
+    SAPPHIRE_CODEGEN_DLL void playerTouchedRing(PlayerObject* p0, GameObject* p1);
 
-    GEODE_CODEGEN_DLL void processColorObject(EffectGameObject* p0, int p1, cocos2d::CCDictionary* p2, float p3, GJEffectManager* p4);
+    SAPPHIRE_CODEGEN_DLL void processColorObject(EffectGameObject* p0, int p1, cocos2d::CCDictionary* p2, float p3, GJEffectManager* p4);
 
-    GEODE_CODEGEN_DLL void processFollowActions();
+    SAPPHIRE_CODEGEN_DLL void processFollowActions();
 
-    GEODE_CODEGEN_DLL void processMoveActions();
+    SAPPHIRE_CODEGEN_DLL void processMoveActions();
 
-    GEODE_CODEGEN_DLL void processMoveActionsStep(float p0);
+    SAPPHIRE_CODEGEN_DLL void processMoveActionsStep(float p0);
 
-    GEODE_CODEGEN_DLL void processOpacityObject(EffectGameObject* p0, cocos2d::CCDictionary* p1, float p2, GJEffectManager* p3);
+    SAPPHIRE_CODEGEN_DLL void processOpacityObject(EffectGameObject* p0, cocos2d::CCDictionary* p1, float p2, GJEffectManager* p3);
 
-    GEODE_CODEGEN_DLL void processPlayerFollowActions(float p0);
+    SAPPHIRE_CODEGEN_DLL void processPlayerFollowActions(float p0);
 
-    GEODE_CODEGEN_DLL void processRotationActions();
+    SAPPHIRE_CODEGEN_DLL void processRotationActions();
 
-    GEODE_CODEGEN_DLL void pushButton(int p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void pushButton(int p0, bool p1);
 
-    GEODE_CODEGEN_DLL void rectIntersectsCircle(cocos2d::CCRect p0, cocos2d::CCPoint p1, float p2);
+    SAPPHIRE_CODEGEN_DLL void rectIntersectsCircle(cocos2d::CCRect p0, cocos2d::CCPoint p1, float p2);
 
-    GEODE_CODEGEN_DLL void refreshCounterLabels();
+    SAPPHIRE_CODEGEN_DLL void refreshCounterLabels();
 
-    GEODE_CODEGEN_DLL void releaseButton(int p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void releaseButton(int p0, bool p1);
 
-    GEODE_CODEGEN_DLL void removeFromGroups(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void removeFromGroups(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void removeObjectFromSection(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void removeObjectFromSection(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void reorderObjectSection(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void reorderObjectSection(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void resetGroupCounters(bool p0);
+    SAPPHIRE_CODEGEN_DLL void resetGroupCounters(bool p0);
 
-    GEODE_CODEGEN_DLL void resetMoveOptimizedValue();
+    SAPPHIRE_CODEGEN_DLL void resetMoveOptimizedValue();
 
-    GEODE_CODEGEN_DLL int sectionForPos(float p0);
+    SAPPHIRE_CODEGEN_DLL int sectionForPos(float p0);
 
-    GEODE_CODEGEN_DLL void setupLayers();
+    SAPPHIRE_CODEGEN_DLL void setupLayers();
 
-    GEODE_CODEGEN_DLL void shouldExitHackedLevel();
+    SAPPHIRE_CODEGEN_DLL void shouldExitHackedLevel();
 
-    GEODE_CODEGEN_DLL void spawnGroupTriggered(int p0, float p1, int p2);
+    SAPPHIRE_CODEGEN_DLL void spawnGroupTriggered(int p0, float p1, int p2);
 
-    GEODE_CODEGEN_DLL cocos2d::CCArray* staticObjectsInRect(cocos2d::CCRect p0);
+    SAPPHIRE_CODEGEN_DLL cocos2d::CCArray* staticObjectsInRect(cocos2d::CCRect p0);
 
-    GEODE_CODEGEN_DLL void testInstantCountTrigger(int p0, int p1, int p2, bool p3, int p4);
+    SAPPHIRE_CODEGEN_DLL void testInstantCountTrigger(int p0, int p1, int p2, bool p3, int p4);
 
-    GEODE_CODEGEN_DLL void toggleGroup(int p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void toggleGroup(int p0, bool p1);
 
-    GEODE_CODEGEN_DLL void togglePlayerVisibility(bool p0);
+    SAPPHIRE_CODEGEN_DLL void togglePlayerVisibility(bool p0);
 
-    GEODE_CODEGEN_DLL void triggerMoveCommand(EffectGameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void triggerMoveCommand(EffectGameObject* p0);
 
-    GEODE_CODEGEN_DLL void updateCollisionBlocks();
+    SAPPHIRE_CODEGEN_DLL void updateCollisionBlocks();
 
-    GEODE_CODEGEN_DLL void updateCounters(int p0, int p1);
+    SAPPHIRE_CODEGEN_DLL void updateCounters(int p0, int p1);
 
-    GEODE_CODEGEN_DLL void updateDisabledObjectsLastPos(cocos2d::CCArray* p0);
+    SAPPHIRE_CODEGEN_DLL void updateDisabledObjectsLastPos(cocos2d::CCArray* p0);
 
-    GEODE_CODEGEN_DLL void updateLayerCapacity(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL void updateLayerCapacity(gd::string p0);
 
-    GEODE_CODEGEN_DLL void updateLegacyLayerCapacity(int p0, int p1, int p2, int p3);
+    SAPPHIRE_CODEGEN_DLL void updateLegacyLayerCapacity(int p0, int p1, int p2, int p3);
 
-    GEODE_CODEGEN_DLL void updateOBB2(cocos2d::CCRect p0);
+    SAPPHIRE_CODEGEN_DLL void updateOBB2(cocos2d::CCRect p0);
 
-    GEODE_CODEGEN_DLL void updateQueuedLabels();
+    SAPPHIRE_CODEGEN_DLL void updateQueuedLabels();
 
-        GEODE_CODEGEN_DLL ~GJBaseGameLayer();
+        SAPPHIRE_CODEGEN_DLL ~GJBaseGameLayer();
         OBB2D* m_boundingBox;
         GJEffectManager* m_effectManager;
         cocos2d::CCLayer* m_objectLayer;
@@ -1937,331 +1937,331 @@ public:
         int m_oldSection;
         bool m_objectsAreDisabled;
         bool m_blending;
-        GEODE_PAD(0x16);
+        SAPPHIRE_PAD(0x16);
 };
 
 class CCCircleWaveDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void circleWaveWillBeRemoved(CCCircleWave* wave);
+    SAPPHIRE_CODEGEN_DLL virtual void circleWaveWillBeRemoved(CCCircleWave* wave);
 
 };
 
 class DialogDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void dialogClosed(DialogLayer* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void dialogClosed(DialogLayer* p0);
 
 };
 
 class PlayLayer : public GJBaseGameLayer, public CCCircleWaveDelegate, public DialogDelegate {
 public:
 
-    GEODE_CODEGEN_DLL static PlayLayer* get();
+    SAPPHIRE_CODEGEN_DLL static PlayLayer* get();
 
-    GEODE_CODEGEN_DLL void addCircle(CCCircleWave* p0);
+    SAPPHIRE_CODEGEN_DLL void addCircle(CCCircleWave* p0);
 
-    GEODE_CODEGEN_DLL void addObject(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void addObject(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void addToGroupOld(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void addToGroupOld(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void addToSpeedObjects(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void addToSpeedObjects(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void animateInDualGround(GameObject* p0, float p1, bool p2);
+    SAPPHIRE_CODEGEN_DLL void animateInDualGround(GameObject* p0, float p1, bool p2);
 
-    GEODE_CODEGEN_DLL void animateInGround(bool p0);
+    SAPPHIRE_CODEGEN_DLL void animateInGround(bool p0);
 
-    GEODE_CODEGEN_DLL void animateOutGround(bool p0);
+    SAPPHIRE_CODEGEN_DLL void animateOutGround(bool p0);
 
-    GEODE_CODEGEN_DLL void animateOutGroundFinished();
+    SAPPHIRE_CODEGEN_DLL void animateOutGroundFinished();
 
-    GEODE_CODEGEN_DLL void applyEnterEffect(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void applyEnterEffect(GameObject* p0);
 
-    GEODE_CODEGEN_DLL virtual void calculateColorValues(EffectGameObject* p0, EffectGameObject* p1, int p2, float p3, ColorActionSprite* p4, GJEffectManager* p5);
+    SAPPHIRE_CODEGEN_DLL virtual void calculateColorValues(EffectGameObject* p0, EffectGameObject* p1, int p2, float p3, ColorActionSprite* p4, GJEffectManager* p5);
 
-    GEODE_CODEGEN_DLL void cameraMoveX(float p0, float p1, float p2);
+    SAPPHIRE_CODEGEN_DLL void cameraMoveX(float p0, float p1, float p2);
 
-    GEODE_CODEGEN_DLL void cameraMoveY(float p0, float p1, float p2);
+    SAPPHIRE_CODEGEN_DLL void cameraMoveY(float p0, float p1, float p2);
 
-    GEODE_CODEGEN_DLL void checkCollisions(PlayerObject* p0, float p1);
+    SAPPHIRE_CODEGEN_DLL void checkCollisions(PlayerObject* p0, float p1);
 
-    GEODE_CODEGEN_DLL void circleWaveWillBeRemoved(CCCircleWave* p0);
+    SAPPHIRE_CODEGEN_DLL void circleWaveWillBeRemoved(CCCircleWave* p0);
 
-    GEODE_CODEGEN_DLL void claimParticle(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL void claimParticle(gd::string p0);
 
-    GEODE_CODEGEN_DLL void clearPickedUpItems();
+    SAPPHIRE_CODEGEN_DLL void clearPickedUpItems();
 
-    GEODE_CODEGEN_DLL void colorObject(int p0, cocos2d::_ccColor3B p1);
+    SAPPHIRE_CODEGEN_DLL void colorObject(int p0, cocos2d::_ccColor3B p1);
 
-    GEODE_CODEGEN_DLL void commitJumps();
+    SAPPHIRE_CODEGEN_DLL void commitJumps();
 
-    GEODE_CODEGEN_DLL static PlayLayer* create(GJGameLevel* p0);
+    SAPPHIRE_CODEGEN_DLL static PlayLayer* create(GJGameLevel* p0);
 
-    GEODE_CODEGEN_DLL void createCheckpoint();
+    SAPPHIRE_CODEGEN_DLL void createCheckpoint();
 
-    GEODE_CODEGEN_DLL void createObjectsFromSetup(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL void createObjectsFromSetup(gd::string p0);
 
-    GEODE_CODEGEN_DLL void createParticle(int p0, char const* p1, int p2, cocos2d::tCCPositionType p3);
+    SAPPHIRE_CODEGEN_DLL void createParticle(int p0, char const* p1, int p2, cocos2d::tCCPositionType p3);
 
-    GEODE_CODEGEN_DLL void currencyWillExit(CurrencyRewardLayer* p0);
+    SAPPHIRE_CODEGEN_DLL void currencyWillExit(CurrencyRewardLayer* p0);
 
-    GEODE_CODEGEN_DLL void delayedResetLevel();
+    SAPPHIRE_CODEGEN_DLL void delayedResetLevel();
 
-    GEODE_CODEGEN_DLL void destroyPlayer(PlayerObject* p0, GameObject* p1);
+    SAPPHIRE_CODEGEN_DLL void destroyPlayer(PlayerObject* p0, GameObject* p1);
 
-    GEODE_CODEGEN_DLL void dialogClosed(DialogLayer* p0);
+    SAPPHIRE_CODEGEN_DLL void dialogClosed(DialogLayer* p0);
 
-    GEODE_CODEGEN_DLL virtual void draw();
+    SAPPHIRE_CODEGEN_DLL virtual void draw();
 
-    GEODE_CODEGEN_DLL void enterDualMode(GameObject* p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void enterDualMode(GameObject* p0, bool p1);
 
-    GEODE_CODEGEN_DLL void exitAirMode();
+    SAPPHIRE_CODEGEN_DLL void exitAirMode();
 
-    GEODE_CODEGEN_DLL void exitBirdMode(PlayerObject* p0);
+    SAPPHIRE_CODEGEN_DLL void exitBirdMode(PlayerObject* p0);
 
-    GEODE_CODEGEN_DLL void exitDartMode(PlayerObject* p0);
+    SAPPHIRE_CODEGEN_DLL void exitDartMode(PlayerObject* p0);
 
-    GEODE_CODEGEN_DLL void exitFlyMode(PlayerObject* p0);
+    SAPPHIRE_CODEGEN_DLL void exitFlyMode(PlayerObject* p0);
 
-    GEODE_CODEGEN_DLL void exitRobotMode(PlayerObject* p0);
+    SAPPHIRE_CODEGEN_DLL void exitRobotMode(PlayerObject* p0);
 
-    GEODE_CODEGEN_DLL void exitRollMode(PlayerObject* p0);
+    SAPPHIRE_CODEGEN_DLL void exitRollMode(PlayerObject* p0);
 
-    GEODE_CODEGEN_DLL void exitSpiderMode(PlayerObject* p0);
+    SAPPHIRE_CODEGEN_DLL void exitSpiderMode(PlayerObject* p0);
 
-    GEODE_CODEGEN_DLL void flipFinished();
+    SAPPHIRE_CODEGEN_DLL void flipFinished();
 
-    GEODE_CODEGEN_DLL virtual void flipGravity(PlayerObject* p0, bool p1, bool p2);
+    SAPPHIRE_CODEGEN_DLL virtual void flipGravity(PlayerObject* p0, bool p1, bool p2);
 
-    GEODE_CODEGEN_DLL void flipObjects();
+    SAPPHIRE_CODEGEN_DLL void flipObjects();
 
-    GEODE_CODEGEN_DLL void fullReset();
+    SAPPHIRE_CODEGEN_DLL void fullReset();
 
-    GEODE_CODEGEN_DLL void getLastCheckpoint();
+    SAPPHIRE_CODEGEN_DLL void getLastCheckpoint();
 
-    GEODE_CODEGEN_DLL void getMaxPortalY();
+    SAPPHIRE_CODEGEN_DLL void getMaxPortalY();
 
-    GEODE_CODEGEN_DLL void getMinPortalY();
+    SAPPHIRE_CODEGEN_DLL void getMinPortalY();
 
-    GEODE_CODEGEN_DLL void getObjectsState();
+    SAPPHIRE_CODEGEN_DLL void getObjectsState();
 
-    GEODE_CODEGEN_DLL void getOtherPlayer(PlayerObject* p0);
+    SAPPHIRE_CODEGEN_DLL void getOtherPlayer(PlayerObject* p0);
 
-    GEODE_CODEGEN_DLL void getParticleKey(int p0, char const* p1, int p2, cocos2d::tCCPositionType p3);
+    SAPPHIRE_CODEGEN_DLL void getParticleKey(int p0, char const* p1, int p2, cocos2d::tCCPositionType p3);
 
-    GEODE_CODEGEN_DLL void getParticleKey2(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL void getParticleKey2(gd::string p0);
 
-    GEODE_CODEGEN_DLL void getRelativeMod(cocos2d::CCPoint p0, float p1, float p2, float p3);
+    SAPPHIRE_CODEGEN_DLL void getRelativeMod(cocos2d::CCPoint p0, float p1, float p2, float p3);
 
-    GEODE_CODEGEN_DLL void getTempMilliTime();
+    SAPPHIRE_CODEGEN_DLL void getTempMilliTime();
 
-    GEODE_CODEGEN_DLL void gravityEffectFinished();
+    SAPPHIRE_CODEGEN_DLL void gravityEffectFinished();
 
-    GEODE_CODEGEN_DLL void hasItem(int p0);
+    SAPPHIRE_CODEGEN_DLL void hasItem(int p0);
 
-    GEODE_CODEGEN_DLL void hasUniqueCoin(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void hasUniqueCoin(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void incrementJumps();
+    SAPPHIRE_CODEGEN_DLL void incrementJumps();
 
-    GEODE_CODEGEN_DLL bool init(GJGameLevel* p0);
+    SAPPHIRE_CODEGEN_DLL bool init(GJGameLevel* p0);
 
-    GEODE_CODEGEN_DLL void isFlipping();
+    SAPPHIRE_CODEGEN_DLL void isFlipping();
 
-    GEODE_CODEGEN_DLL void levelComplete();
+    SAPPHIRE_CODEGEN_DLL void levelComplete();
 
-    GEODE_CODEGEN_DLL void lightningFlash(cocos2d::CCPoint p0, cocos2d::CCPoint p1, cocos2d::_ccColor3B p2, float p3, float p4, int p5, bool p6, float p7);
+    SAPPHIRE_CODEGEN_DLL void lightningFlash(cocos2d::CCPoint p0, cocos2d::CCPoint p1, cocos2d::_ccColor3B p2, float p3, float p4, int p5, bool p6, float p7);
 
-    GEODE_CODEGEN_DLL void lightningFlash(cocos2d::CCPoint p0, cocos2d::_ccColor3B p1);
+    SAPPHIRE_CODEGEN_DLL void lightningFlash(cocos2d::CCPoint p0, cocos2d::_ccColor3B p1);
 
-    GEODE_CODEGEN_DLL void loadDefaultColors();
+    SAPPHIRE_CODEGEN_DLL void loadDefaultColors();
 
-    GEODE_CODEGEN_DLL void loadFromCheckpoint(CheckpointObject* p0);
+    SAPPHIRE_CODEGEN_DLL void loadFromCheckpoint(CheckpointObject* p0);
 
-    GEODE_CODEGEN_DLL void loadLastCheckpoint();
+    SAPPHIRE_CODEGEN_DLL void loadLastCheckpoint();
 
-    GEODE_CODEGEN_DLL void loadSavedObjectsState(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL void loadSavedObjectsState(gd::string p0);
 
-    GEODE_CODEGEN_DLL void markCheckpoint();
+    SAPPHIRE_CODEGEN_DLL void markCheckpoint();
 
-    GEODE_CODEGEN_DLL void moveCameraToPos(cocos2d::CCPoint p0);
+    SAPPHIRE_CODEGEN_DLL void moveCameraToPos(cocos2d::CCPoint p0);
 
-    GEODE_CODEGEN_DLL virtual void onEnterTransitionDidFinish();
+    SAPPHIRE_CODEGEN_DLL virtual void onEnterTransitionDidFinish();
 
-    GEODE_CODEGEN_DLL virtual void onExit();
+    SAPPHIRE_CODEGEN_DLL virtual void onExit();
 
-    GEODE_CODEGEN_DLL void onQuit();
+    SAPPHIRE_CODEGEN_DLL void onQuit();
 
-    GEODE_CODEGEN_DLL void optimizeColorGroups();
+    SAPPHIRE_CODEGEN_DLL void optimizeColorGroups();
 
-    GEODE_CODEGEN_DLL void optimizeOpacityGroups();
+    SAPPHIRE_CODEGEN_DLL void optimizeOpacityGroups();
 
-    GEODE_CODEGEN_DLL void optimizeSaveRequiredGroups();
+    SAPPHIRE_CODEGEN_DLL void optimizeSaveRequiredGroups();
 
-    GEODE_CODEGEN_DLL void pauseGame(bool p0);
+    SAPPHIRE_CODEGEN_DLL void pauseGame(bool p0);
 
-    GEODE_CODEGEN_DLL void pickupItem(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void pickupItem(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void playAnimationCommand(int p0, int p1);
+    SAPPHIRE_CODEGEN_DLL void playAnimationCommand(int p0, int p1);
 
-    GEODE_CODEGEN_DLL void playEndAnimationToPos(cocos2d::CCPoint p0);
+    SAPPHIRE_CODEGEN_DLL void playEndAnimationToPos(cocos2d::CCPoint p0);
 
-    GEODE_CODEGEN_DLL void playExitDualEffect(PlayerObject* p0);
+    SAPPHIRE_CODEGEN_DLL void playExitDualEffect(PlayerObject* p0);
 
-    GEODE_CODEGEN_DLL void playFlashEffect(float p0, int p1, float p2);
+    SAPPHIRE_CODEGEN_DLL void playFlashEffect(float p0, int p1, float p2);
 
-    GEODE_CODEGEN_DLL void playGravityEffect(bool p0);
+    SAPPHIRE_CODEGEN_DLL void playGravityEffect(bool p0);
 
-    GEODE_CODEGEN_DLL void playSpeedParticle(float p0);
+    SAPPHIRE_CODEGEN_DLL void playSpeedParticle(float p0);
 
-    GEODE_CODEGEN_DLL void playerWillSwitchMode(PlayerObject* p0, GameObject* p1);
+    SAPPHIRE_CODEGEN_DLL void playerWillSwitchMode(PlayerObject* p0, GameObject* p1);
 
-    GEODE_CODEGEN_DLL void prepareSpawnObjects();
+    SAPPHIRE_CODEGEN_DLL void prepareSpawnObjects();
 
-    GEODE_CODEGEN_DLL void processItems();
+    SAPPHIRE_CODEGEN_DLL void processItems();
 
-    GEODE_CODEGEN_DLL void processLoadedMoveActions();
+    SAPPHIRE_CODEGEN_DLL void processLoadedMoveActions();
 
-    GEODE_CODEGEN_DLL void recordAction(bool p0, PlayerObject* p1);
+    SAPPHIRE_CODEGEN_DLL void recordAction(bool p0, PlayerObject* p1);
 
-    GEODE_CODEGEN_DLL void registerActiveObject(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void registerActiveObject(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void registerStateObject(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void registerStateObject(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void removeAllObjects();
+    SAPPHIRE_CODEGEN_DLL void removeAllObjects();
 
-    GEODE_CODEGEN_DLL void removeFromGroupOld(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void removeFromGroupOld(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void removeLastCheckpoint();
+    SAPPHIRE_CODEGEN_DLL void removeLastCheckpoint();
 
-    GEODE_CODEGEN_DLL void removePlayer2();
+    SAPPHIRE_CODEGEN_DLL void removePlayer2();
 
-    GEODE_CODEGEN_DLL void resetLevel();
+    SAPPHIRE_CODEGEN_DLL void resetLevel();
 
-    GEODE_CODEGEN_DLL void resume();
+    SAPPHIRE_CODEGEN_DLL void resume();
 
-    GEODE_CODEGEN_DLL void resumeAndRestart();
+    SAPPHIRE_CODEGEN_DLL void resumeAndRestart();
 
-    GEODE_CODEGEN_DLL void saveRecordAction(bool p0, PlayerObject* p1);
+    SAPPHIRE_CODEGEN_DLL void saveRecordAction(bool p0, PlayerObject* p1);
 
-    GEODE_CODEGEN_DLL static cocos2d::CCScene* scene(GJGameLevel* p0);
+    SAPPHIRE_CODEGEN_DLL static cocos2d::CCScene* scene(GJGameLevel* p0);
 
-    GEODE_CODEGEN_DLL void setupLevelStart(LevelSettingsObject* p0);
+    SAPPHIRE_CODEGEN_DLL void setupLevelStart(LevelSettingsObject* p0);
 
-    GEODE_CODEGEN_DLL void setupReplay(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL void setupReplay(gd::string p0);
 
-    GEODE_CODEGEN_DLL void shakeCamera(float p0, float p1, float p2);
+    SAPPHIRE_CODEGEN_DLL void shakeCamera(float p0, float p1, float p2);
 
-    GEODE_CODEGEN_DLL void shouldBlend(int p0);
+    SAPPHIRE_CODEGEN_DLL void shouldBlend(int p0);
 
-    GEODE_CODEGEN_DLL void showCompleteEffect();
+    SAPPHIRE_CODEGEN_DLL void showCompleteEffect();
 
-    GEODE_CODEGEN_DLL void showCompleteText();
+    SAPPHIRE_CODEGEN_DLL void showCompleteText();
 
-    GEODE_CODEGEN_DLL void showEndLayer();
+    SAPPHIRE_CODEGEN_DLL void showEndLayer();
 
-    GEODE_CODEGEN_DLL void showHint();
+    SAPPHIRE_CODEGEN_DLL void showHint();
 
-    GEODE_CODEGEN_DLL void showNewBest(bool p0, int p1, int p2, bool p3, bool p4, bool p5);
+    SAPPHIRE_CODEGEN_DLL void showNewBest(bool p0, int p1, int p2, bool p3, bool p4, bool p5);
 
-    GEODE_CODEGEN_DLL void showRetryLayer();
+    SAPPHIRE_CODEGEN_DLL void showRetryLayer();
 
-    GEODE_CODEGEN_DLL void showTwoPlayerGuide();
+    SAPPHIRE_CODEGEN_DLL void showTwoPlayerGuide();
 
-    GEODE_CODEGEN_DLL void sortGroups();
+    SAPPHIRE_CODEGEN_DLL void sortGroups();
 
-    GEODE_CODEGEN_DLL void spawnCircle();
+    SAPPHIRE_CODEGEN_DLL void spawnCircle();
 
-    GEODE_CODEGEN_DLL void spawnFirework();
+    SAPPHIRE_CODEGEN_DLL void spawnFirework();
 
-    GEODE_CODEGEN_DLL void spawnParticle(char const* p0, int p1, cocos2d::tCCPositionType p2, cocos2d::CCPoint p3);
+    SAPPHIRE_CODEGEN_DLL void spawnParticle(char const* p0, int p1, cocos2d::tCCPositionType p2, cocos2d::CCPoint p3);
 
-    GEODE_CODEGEN_DLL void spawnPlayer2();
+    SAPPHIRE_CODEGEN_DLL void spawnPlayer2();
 
-    GEODE_CODEGEN_DLL void startGame();
+    SAPPHIRE_CODEGEN_DLL void startGame();
 
-    GEODE_CODEGEN_DLL void startMusic();
+    SAPPHIRE_CODEGEN_DLL void startMusic();
 
-    GEODE_CODEGEN_DLL void startRecording();
+    SAPPHIRE_CODEGEN_DLL void startRecording();
 
-    GEODE_CODEGEN_DLL void startRecordingDelayed();
+    SAPPHIRE_CODEGEN_DLL void startRecordingDelayed();
 
-    GEODE_CODEGEN_DLL void stopCameraShake();
+    SAPPHIRE_CODEGEN_DLL void stopCameraShake();
 
-    GEODE_CODEGEN_DLL void stopRecording();
+    SAPPHIRE_CODEGEN_DLL void stopRecording();
 
-    GEODE_CODEGEN_DLL void storeCheckpoint(CheckpointObject* p0);
+    SAPPHIRE_CODEGEN_DLL void storeCheckpoint(CheckpointObject* p0);
 
-    GEODE_CODEGEN_DLL void switchToFlyMode(PlayerObject* p0, GameObject* p1, bool p2, int p3);
+    SAPPHIRE_CODEGEN_DLL void switchToFlyMode(PlayerObject* p0, GameObject* p1, bool p2, int p3);
 
-    GEODE_CODEGEN_DLL void switchToRobotMode(PlayerObject* p0, GameObject* p1, bool p2);
+    SAPPHIRE_CODEGEN_DLL void switchToRobotMode(PlayerObject* p0, GameObject* p1, bool p2);
 
-    GEODE_CODEGEN_DLL void switchToRollMode(PlayerObject* p0, GameObject* p1, bool p2);
+    SAPPHIRE_CODEGEN_DLL void switchToRollMode(PlayerObject* p0, GameObject* p1, bool p2);
 
-    GEODE_CODEGEN_DLL void switchToSpiderMode(PlayerObject* p0, GameObject* p1, bool p2);
+    SAPPHIRE_CODEGEN_DLL void switchToSpiderMode(PlayerObject* p0, GameObject* p1, bool p2);
 
-    GEODE_CODEGEN_DLL void timeForXPos(float p0);
+    SAPPHIRE_CODEGEN_DLL void timeForXPos(float p0);
 
-    GEODE_CODEGEN_DLL void timeForXPos2(float p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void timeForXPos2(float p0, bool p1);
 
-    GEODE_CODEGEN_DLL void toggleBGEffectVisibility(bool p0);
+    SAPPHIRE_CODEGEN_DLL void toggleBGEffectVisibility(bool p0);
 
-    GEODE_CODEGEN_DLL void toggleDualMode(GameObject* p0, bool p1, PlayerObject* p2, bool p3);
+    SAPPHIRE_CODEGEN_DLL void toggleDualMode(GameObject* p0, bool p1, PlayerObject* p2, bool p3);
 
-    GEODE_CODEGEN_DLL void toggleFlipped(bool p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void toggleFlipped(bool p0, bool p1);
 
-    GEODE_CODEGEN_DLL void toggleGhostEffect(int p0);
+    SAPPHIRE_CODEGEN_DLL void toggleGhostEffect(int p0);
 
-    GEODE_CODEGEN_DLL void toggleGlitter(bool p0);
+    SAPPHIRE_CODEGEN_DLL void toggleGlitter(bool p0);
 
-    GEODE_CODEGEN_DLL void togglePracticeMode(bool p0);
+    SAPPHIRE_CODEGEN_DLL void togglePracticeMode(bool p0);
 
-    GEODE_CODEGEN_DLL void toggleProgressbar();
+    SAPPHIRE_CODEGEN_DLL void toggleProgressbar();
 
-    GEODE_CODEGEN_DLL void tryStartRecord();
+    SAPPHIRE_CODEGEN_DLL void tryStartRecord();
 
-    GEODE_CODEGEN_DLL void unclaimParticle(char const* p0, cocos2d::CCParticleSystemQuad* p1);
+    SAPPHIRE_CODEGEN_DLL void unclaimParticle(char const* p0, cocos2d::CCParticleSystemQuad* p1);
 
-    GEODE_CODEGEN_DLL void unregisterActiveObject(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void unregisterActiveObject(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void unregisterStateObject(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void unregisterStateObject(GameObject* p0);
 
-    GEODE_CODEGEN_DLL virtual void update(float p0);
+    SAPPHIRE_CODEGEN_DLL virtual void update(float p0);
 
-    GEODE_CODEGEN_DLL void updateAttempts();
+    SAPPHIRE_CODEGEN_DLL void updateAttempts();
 
-    GEODE_CODEGEN_DLL void updateCamera(float p0);
+    SAPPHIRE_CODEGEN_DLL void updateCamera(float p0);
 
-    GEODE_CODEGEN_DLL virtual void updateColor(cocos2d::_ccColor3B p0, float p1, int p2, bool p3, float p4, cocos2d::_ccHSVValue p5, int p6, bool p7, int p8, EffectGameObject* p9);
+    SAPPHIRE_CODEGEN_DLL virtual void updateColor(cocos2d::_ccColor3B p0, float p1, int p2, bool p3, float p4, cocos2d::_ccHSVValue p5, int p6, bool p7, int p8, EffectGameObject* p9);
 
-    GEODE_CODEGEN_DLL void updateDualGround(PlayerObject* p0, int p1, bool p2);
+    SAPPHIRE_CODEGEN_DLL void updateDualGround(PlayerObject* p0, int p1, bool p2);
 
-    GEODE_CODEGEN_DLL void updateEffectPositions();
+    SAPPHIRE_CODEGEN_DLL void updateEffectPositions();
 
-    GEODE_CODEGEN_DLL void updateLevelColors();
+    SAPPHIRE_CODEGEN_DLL void updateLevelColors();
 
-    GEODE_CODEGEN_DLL void updateMoveObjectsLastPosition();
+    SAPPHIRE_CODEGEN_DLL void updateMoveObjectsLastPosition();
 
-    GEODE_CODEGEN_DLL void updateProgressbar();
+    SAPPHIRE_CODEGEN_DLL void updateProgressbar();
 
-    GEODE_CODEGEN_DLL void updateReplay(float p0);
+    SAPPHIRE_CODEGEN_DLL void updateReplay(float p0);
 
-    GEODE_CODEGEN_DLL void updateTimeMod(float p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void updateTimeMod(float p0, bool p1);
 
-    GEODE_CODEGEN_DLL virtual void updateTweenAction(float p0, char const* p1);
+    SAPPHIRE_CODEGEN_DLL virtual void updateTweenAction(float p0, char const* p1);
 
-    GEODE_CODEGEN_DLL void updateVisibility();
+    SAPPHIRE_CODEGEN_DLL void updateVisibility();
 
-    GEODE_CODEGEN_DLL void vfDChk();
+    SAPPHIRE_CODEGEN_DLL void vfDChk();
 
-    GEODE_CODEGEN_DLL virtual void visit();
+    SAPPHIRE_CODEGEN_DLL virtual void visit();
 
-    GEODE_CODEGEN_DLL void visitWithColorFlash();
+    SAPPHIRE_CODEGEN_DLL void visitWithColorFlash();
 
-    GEODE_CODEGEN_DLL void willSwitchToMode(int p0, PlayerObject* p1);
+    SAPPHIRE_CODEGEN_DLL void willSwitchToMode(int p0, PlayerObject* p1);
 
-    GEODE_CODEGEN_DLL void xPosForTime(float p0);
+    SAPPHIRE_CODEGEN_DLL void xPosForTime(float p0);
 
-        GEODE_CODEGEN_DLL ~PlayLayer();
+        SAPPHIRE_CODEGEN_DLL ~PlayLayer();
         float unused4c8;
         bool unused4cc;
         bool m_hasCheated;
@@ -2393,7 +2393,7 @@ public:
         bool unk4BF;
         int m_lastDeathPercent;
         bool unk4C4;
-        GEODE_PAD(0xb);
+        SAPPHIRE_PAD(0xb);
         bool unk4D0;
         bool unk4D1;
         cocos2d::CCArray* unk4D4;
@@ -2404,12 +2404,12 @@ public:
         bool m_shouldTryToKick;
         float m_kickCheckDeltaSnapshot;
         int m_accumulatedKickCounter;
-        GEODE_PAD(0x4);
+        SAPPHIRE_PAD(0x4);
         double unk508;
-        GEODE_PAD(0x8);
+        SAPPHIRE_PAD(0x8);
         double unk518;
         double unk520;
-        GEODE_PAD(0x4);
+        SAPPHIRE_PAD(0x4);
         bool m_hasGlitter;
         bool m_isBgEffectOff;
         bool unk52F;
@@ -2422,11 +2422,11 @@ public:
 class PlatformToolbox {
 public:
 
-    GEODE_CODEGEN_DLL static void hideCursor();
+    SAPPHIRE_CODEGEN_DLL static void hideCursor();
 
-    GEODE_CODEGEN_DLL static void showCursor();
+    SAPPHIRE_CODEGEN_DLL static void showCursor();
 
-    GEODE_CODEGEN_DLL static bool isControllerConnected();
+    SAPPHIRE_CODEGEN_DLL static bool isControllerConnected();
 
 };
 
@@ -2443,43 +2443,43 @@ public:
 		m_unknown = nullptr;
 	}
 
-    GEODE_CODEGEN_DLL virtual void customSetup();
+    SAPPHIRE_CODEGEN_DLL virtual void customSetup();
 
-    GEODE_CODEGEN_DLL virtual void enterLayer();
+    SAPPHIRE_CODEGEN_DLL virtual void enterLayer();
 
-    GEODE_CODEGEN_DLL virtual void exitLayer(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void exitLayer(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL virtual void showLayer(bool p0);
+    SAPPHIRE_CODEGEN_DLL virtual void showLayer(bool p0);
 
-    GEODE_CODEGEN_DLL virtual void hideLayer(bool p0);
+    SAPPHIRE_CODEGEN_DLL virtual void hideLayer(bool p0);
 
-    GEODE_CODEGEN_DLL virtual void layerVisible();
+    SAPPHIRE_CODEGEN_DLL virtual void layerVisible();
 
-    GEODE_CODEGEN_DLL virtual void layerHidden();
+    SAPPHIRE_CODEGEN_DLL virtual void layerHidden();
 
-    GEODE_CODEGEN_DLL virtual void enterAnimFinished();
+    SAPPHIRE_CODEGEN_DLL virtual void enterAnimFinished();
 
-    GEODE_CODEGEN_DLL virtual void disableUI();
+    SAPPHIRE_CODEGEN_DLL virtual void disableUI();
 
-    GEODE_CODEGEN_DLL virtual void enableUI();
+    SAPPHIRE_CODEGEN_DLL virtual void enableUI();
 
-    GEODE_CODEGEN_DLL static GJDropDownLayer* create(const char* title, float height);
+    SAPPHIRE_CODEGEN_DLL static GJDropDownLayer* create(const char* title, float height);
 
-    GEODE_CODEGEN_DLL virtual bool ccTouchBegan(cocos2d::CCTouch* pTouch, cocos2d::CCEvent* pEvent);
+    SAPPHIRE_CODEGEN_DLL virtual bool ccTouchBegan(cocos2d::CCTouch* pTouch, cocos2d::CCEvent* pEvent);
 
-    GEODE_CODEGEN_DLL virtual void ccTouchMoved(cocos2d::CCTouch* pTouch, cocos2d::CCEvent* pEvent);
+    SAPPHIRE_CODEGEN_DLL virtual void ccTouchMoved(cocos2d::CCTouch* pTouch, cocos2d::CCEvent* pEvent);
 
-    GEODE_CODEGEN_DLL virtual void ccTouchEnded(cocos2d::CCTouch* pTouch, cocos2d::CCEvent* pEvent);
+    SAPPHIRE_CODEGEN_DLL virtual void ccTouchEnded(cocos2d::CCTouch* pTouch, cocos2d::CCEvent* pEvent);
 
-    GEODE_CODEGEN_DLL virtual void ccTouchCancelled(cocos2d::CCTouch* pTouch, cocos2d::CCEvent* pEvent);
+    SAPPHIRE_CODEGEN_DLL virtual void ccTouchCancelled(cocos2d::CCTouch* pTouch, cocos2d::CCEvent* pEvent);
 
-    GEODE_CODEGEN_DLL virtual void draw();
+    SAPPHIRE_CODEGEN_DLL virtual void draw();
 
-    GEODE_CODEGEN_DLL bool init(const char* title, float height);
+    SAPPHIRE_CODEGEN_DLL bool init(const char* title, float height);
 
-    GEODE_CODEGEN_DLL virtual void registerWithTouchDispatcher();
+    SAPPHIRE_CODEGEN_DLL virtual void registerWithTouchDispatcher();
 
-    GEODE_CODEGEN_DLL virtual void keyBackClicked();
+    SAPPHIRE_CODEGEN_DLL virtual void keyBackClicked();
 
         cocos2d::CCPoint m_endPosition;
         cocos2d::CCPoint m_startPosition;
@@ -2494,29 +2494,29 @@ public:
 class FLAlertLayerProtocol {
 public:
 
-    GEODE_CODEGEN_DLL virtual void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL virtual void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
 
 };
 
 class OptionsLayer : public GJDropDownLayer, public FLAlertLayerProtocol {
 public:
 
-    GEODE_CODEGEN_DLL static OptionsLayer* addToCurrentScene(bool noTransition);
+    SAPPHIRE_CODEGEN_DLL static OptionsLayer* addToCurrentScene(bool noTransition);
 
-    GEODE_CODEGEN_DLL static OptionsLayer* create();
+    SAPPHIRE_CODEGEN_DLL static OptionsLayer* create();
 
 };
 
 class OpacityEffectAction : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL static OpacityEffectAction* create(float p0, float p1, float p2, int p3);
+    SAPPHIRE_CODEGEN_DLL static OpacityEffectAction* create(float p0, float p1, float p2, int p3);
 
-    GEODE_CODEGEN_DLL static OpacityEffectAction* createFromString(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL static OpacityEffectAction* createFromString(gd::string p0);
 
-    GEODE_CODEGEN_DLL bool init(float p0, float p1, float p2, int p3);
+    SAPPHIRE_CODEGEN_DLL bool init(float p0, float p1, float p2, int p3);
 
-    GEODE_CODEGEN_DLL void step(float p0);
+    SAPPHIRE_CODEGEN_DLL void step(float p0);
 
         float m_time;
         float m_beginOpacity;
@@ -2532,19 +2532,19 @@ public:
 class ObjectToolbox : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL cocos2d::CCArray* allKeys();
+    SAPPHIRE_CODEGEN_DLL cocos2d::CCArray* allKeys();
 
-    GEODE_CODEGEN_DLL const char* frameToKey(const char* frame);
+    SAPPHIRE_CODEGEN_DLL const char* frameToKey(const char* frame);
 
-    GEODE_CODEGEN_DLL const char* intKeyToFrame(int key);
+    SAPPHIRE_CODEGEN_DLL const char* intKeyToFrame(int key);
 
-    GEODE_CODEGEN_DLL const char* keyToFrame(const char* key);
+    SAPPHIRE_CODEGEN_DLL const char* keyToFrame(const char* key);
 
-    GEODE_CODEGEN_DLL void addObject(int id, const char* frame);
+    SAPPHIRE_CODEGEN_DLL void addObject(int id, const char* frame);
 
-    GEODE_CODEGEN_DLL virtual bool init();
+    SAPPHIRE_CODEGEN_DLL virtual bool init();
 
-    GEODE_CODEGEN_DLL static ObjectToolbox* sharedState();
+    SAPPHIRE_CODEGEN_DLL static ObjectToolbox* sharedState();
 
     template <bool T=false>
     float gridNodeSizeForKey(int key){
@@ -2563,15 +2563,15 @@ public:
 class OBB2D : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL void calculateWithCenter(cocos2d::CCPoint p0, float p1, float p2, float p3);
+    SAPPHIRE_CODEGEN_DLL void calculateWithCenter(cocos2d::CCPoint p0, float p1, float p2, float p3);
 
-    GEODE_CODEGEN_DLL static OBB2D* create(cocos2d::CCPoint p0, float p1, float p2, float p3);
+    SAPPHIRE_CODEGEN_DLL static OBB2D* create(cocos2d::CCPoint p0, float p1, float p2, float p3);
 
-    GEODE_CODEGEN_DLL cocos2d::CCRect getBoundingRect();
+    SAPPHIRE_CODEGEN_DLL cocos2d::CCRect getBoundingRect();
 
-    GEODE_CODEGEN_DLL void overlaps(OBB2D* p0);
+    SAPPHIRE_CODEGEN_DLL void overlaps(OBB2D* p0);
 
-    GEODE_CODEGEN_DLL void overlaps1Way(OBB2D* p0);
+    SAPPHIRE_CODEGEN_DLL void overlaps1Way(OBB2D* p0);
 
         cocos2d::CCPoint m_p1_1;
         cocos2d::CCPoint m_p1_2;
@@ -2598,27 +2598,27 @@ public:
 class NumberInputDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void numberInputClosed(NumberInputLayer* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void numberInputClosed(NumberInputLayer* p0);
 
 };
 
 class PlatformDownloadDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void downloadFinished(char const* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void downloadFinished(char const* p0);
 
-    GEODE_CODEGEN_DLL virtual void downloadFailed(char const* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void downloadFailed(char const* p0);
 
 };
 
 class MusicDownloadManager : public cocos2d::CCNode, public PlatformDownloadDelegate {
 public:
 
-    GEODE_CODEGEN_DLL void incrementPriorityForSong(int p0);
+    SAPPHIRE_CODEGEN_DLL void incrementPriorityForSong(int p0);
 
-    GEODE_CODEGEN_DLL static MusicDownloadManager* sharedState();
+    SAPPHIRE_CODEGEN_DLL static MusicDownloadManager* sharedState();
 
-    GEODE_CODEGEN_DLL gd::string pathForSong(int id);
+    SAPPHIRE_CODEGEN_DLL gd::string pathForSong(int id);
 
     template <bool T=false>
     cocos2d::CCArray* getDownloadedSongs(){
@@ -2639,15 +2639,15 @@ public:
 class MusicDownloadDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void downloadSongFailed(int p0, GJSongError p1);
+    SAPPHIRE_CODEGEN_DLL virtual void downloadSongFailed(int p0, GJSongError p1);
 
-    GEODE_CODEGEN_DLL virtual void downloadSongFinished(SongInfoObject* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void downloadSongFinished(SongInfoObject* p0);
 
-    GEODE_CODEGEN_DLL virtual void loadSongInfoFailed(int p0, GJSongError p1);
+    SAPPHIRE_CODEGEN_DLL virtual void loadSongInfoFailed(int p0, GJSongError p1);
 
-    GEODE_CODEGEN_DLL virtual void loadSongInfoFinished(SongInfoObject* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void loadSongInfoFinished(SongInfoObject* p0);
 
-    GEODE_CODEGEN_DLL virtual void songStateChanged();
+    SAPPHIRE_CODEGEN_DLL virtual void songStateChanged();
 
 };
 
@@ -2659,38 +2659,38 @@ public:
 class MoreVideoOptionsLayer : public FLAlertLayer {
 public:
 
-    GEODE_CODEGEN_DLL static MoreVideoOptionsLayer* create();
+    SAPPHIRE_CODEGEN_DLL static MoreVideoOptionsLayer* create();
 
-    GEODE_CODEGEN_DLL virtual bool init();
+    SAPPHIRE_CODEGEN_DLL virtual bool init();
 
-    GEODE_CODEGEN_DLL void onClose(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onClose(cocos2d::CCObject* p0);
 
 };
 
 class MenuLayer : public cocos2d::CCLayer, public FLAlertLayerProtocol {
 public:
 
-        GEODE_CODEGEN_DLL ~MenuLayer();
-    GEODE_CODEGEN_DLL virtual bool init();
+        SAPPHIRE_CODEGEN_DLL ~MenuLayer();
+    SAPPHIRE_CODEGEN_DLL virtual bool init();
 
-    GEODE_CODEGEN_DLL virtual void keyBackClicked();
+    SAPPHIRE_CODEGEN_DLL virtual void keyBackClicked();
 
-    GEODE_CODEGEN_DLL virtual void keyDown(cocos2d::enumKeyCodes p0);
+    SAPPHIRE_CODEGEN_DLL virtual void keyDown(cocos2d::enumKeyCodes p0);
 
-    GEODE_CODEGEN_DLL virtual void googlePlaySignedIn();
+    SAPPHIRE_CODEGEN_DLL virtual void googlePlaySignedIn();
 
-    GEODE_CODEGEN_DLL virtual void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL virtual void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
 
-    GEODE_CODEGEN_DLL void onMoreGames(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onMoreGames(cocos2d::CCObject* p0);
 
     template <bool T=false>
     void onGarage(cocos2d::CCObject* p0){
         static_assert(T, "Implement MenuLayer::onGarage");
     }
 
-    GEODE_CODEGEN_DLL void onQuit(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onQuit(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL void onMyProfile(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onMyProfile(cocos2d::CCObject* p0);
 
     template <bool T=false>
     void onPlay(cocos2d::CCObject* p0){
@@ -2747,7 +2747,7 @@ public:
         static_assert(T, "Implement MenuLayer::onYouTube");
     }
 
-    GEODE_CODEGEN_DLL static cocos2d::CCScene* scene(bool p0);
+    SAPPHIRE_CODEGEN_DLL static cocos2d::CCScene* scene(bool p0);
 
     template <bool T=false>
     MenuLayer* node(){
@@ -2759,9 +2759,9 @@ public:
 class MenuGameLayer {
 public:
 
-    GEODE_CODEGEN_DLL void resetPlayer();
+    SAPPHIRE_CODEGEN_DLL void resetPlayer();
 
-    GEODE_CODEGEN_DLL void update(float p0);
+    SAPPHIRE_CODEGEN_DLL void update(float p0);
 
 };
 
@@ -2778,15 +2778,15 @@ public:
 class LoadingCircle : public cocos2d::CCLayerColor {
 public:
 
-    GEODE_CODEGEN_DLL void setParentLayer(cocos2d::CCLayer* layer);
+    SAPPHIRE_CODEGEN_DLL void setParentLayer(cocos2d::CCLayer* layer);
 
-    GEODE_CODEGEN_DLL void setFade(bool fade);
+    SAPPHIRE_CODEGEN_DLL void setFade(bool fade);
 
-    GEODE_CODEGEN_DLL static LoadingCircle* create();
+    SAPPHIRE_CODEGEN_DLL static LoadingCircle* create();
 
-    GEODE_CODEGEN_DLL void show();
+    SAPPHIRE_CODEGEN_DLL void show();
 
-    GEODE_CODEGEN_DLL void fadeAndRemove();
+    SAPPHIRE_CODEGEN_DLL void fadeAndRemove();
 
         cocos2d::CCSprite* m_sprite;
         cocos2d::CCLayer* m_parentLayer;
@@ -2832,7 +2832,7 @@ public:
         static_assert(T, "Implement LevelSearchLayer::onSearch");
     }
 
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         CCTextInputNode* m_searchInput;
 };
 
@@ -2917,13 +2917,13 @@ public:
 class SetupInstantCountPopup : public FLAlertLayer {
 public:
 
-    GEODE_CODEGEN_DLL static SetupInstantCountPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    SAPPHIRE_CODEGEN_DLL static SetupInstantCountPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
 
-    GEODE_CODEGEN_DLL void onTargetIDArrow(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onTargetIDArrow(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL void textChanged(CCTextInputNode* p0);
+    SAPPHIRE_CODEGEN_DLL void textChanged(CCTextInputNode* p0);
 
-    GEODE_CODEGEN_DLL void updateTargetID();
+    SAPPHIRE_CODEGEN_DLL void updateTargetID();
 
 };
 
@@ -2935,33 +2935,33 @@ public:
 class LevelUpdateDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void levelUpdateFinished(GJGameLevel* p0, UpdateResponse p1);
+    SAPPHIRE_CODEGEN_DLL virtual void levelUpdateFinished(GJGameLevel* p0, UpdateResponse p1);
 
-    GEODE_CODEGEN_DLL virtual void levelUpdateFailed(int p0);
+    SAPPHIRE_CODEGEN_DLL virtual void levelUpdateFailed(int p0);
 
 };
 
 class LevelCommentDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void loadCommentsFinished(cocos2d::CCArray* p0, const char* p1);
+    SAPPHIRE_CODEGEN_DLL virtual void loadCommentsFinished(cocos2d::CCArray* p0, const char* p1);
 
-    GEODE_CODEGEN_DLL virtual void loadCommentsFailed(const char* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void loadCommentsFailed(const char* p0);
 
-    GEODE_CODEGEN_DLL virtual void updateUserScoreFinished();
+    SAPPHIRE_CODEGEN_DLL virtual void updateUserScoreFinished();
 
-    GEODE_CODEGEN_DLL virtual void setupPageInfo(gd::string p0, const char* p1);
+    SAPPHIRE_CODEGEN_DLL virtual void setupPageInfo(gd::string p0, const char* p1);
 
 };
 
 class CommentUploadDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void commentUploadFinished(int p0);
+    SAPPHIRE_CODEGEN_DLL virtual void commentUploadFinished(int p0);
 
-    GEODE_CODEGEN_DLL virtual void commentUploadFailed(int p0, CommentError p1);
+    SAPPHIRE_CODEGEN_DLL virtual void commentUploadFailed(int p0, CommentError p1);
 
-    GEODE_CODEGEN_DLL virtual void commentDeleteFailed(int p0, int p1);
+    SAPPHIRE_CODEGEN_DLL virtual void commentDeleteFailed(int p0, int p1);
 
 };
 
@@ -3048,46 +3048,46 @@ public:
 class LevelDownloadDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void levelDownloadFinished(GJGameLevel* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void levelDownloadFinished(GJGameLevel* p0);
 
-    GEODE_CODEGEN_DLL virtual void levelDownloadFailed(int p0);
+    SAPPHIRE_CODEGEN_DLL virtual void levelDownloadFailed(int p0);
 
 };
 
 class RateLevelDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void rateLevelClosed();
+    SAPPHIRE_CODEGEN_DLL virtual void rateLevelClosed();
 
 };
 
 class LikeItemDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void likedItem(LikeItemType p0, int p1, bool p2);
+    SAPPHIRE_CODEGEN_DLL virtual void likedItem(LikeItemType p0, int p1, bool p2);
 
 };
 
 class LevelDeleteDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void levelDeleteFinished(int p0);
+    SAPPHIRE_CODEGEN_DLL virtual void levelDeleteFinished(int p0);
 
-    GEODE_CODEGEN_DLL virtual void levelDeleteFailed(int p0);
+    SAPPHIRE_CODEGEN_DLL virtual void levelDeleteFailed(int p0);
 
 };
 
 class SetIDPopupDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void setIDPopupClosed(SetIDPopup* p0, int p1);
+    SAPPHIRE_CODEGEN_DLL virtual void setIDPopupClosed(SetIDPopup* p0, int p1);
 
 };
 
 class LevelInfoLayer : public cocos2d::CCLayer, public LevelDownloadDelegate, public LevelUpdateDelegate, public RateLevelDelegate, public LikeItemDelegate, public FLAlertLayerProtocol, public LevelDeleteDelegate, public NumberInputDelegate, public SetIDPopupDelegate {
 public:
 
-    GEODE_CODEGEN_DLL static LevelInfoLayer* create(GJGameLevel* level);
+    SAPPHIRE_CODEGEN_DLL static LevelInfoLayer* create(GJGameLevel* level);
 
     template <bool T=false>
     void onGarage(cocos2d::CCObject* pSender){
@@ -3109,14 +3109,14 @@ public:
         static_assert(T, "Implement LevelInfoLayer::setupProgressBars");
     }
 
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         cocos2d::CCMenu* m_playBtnMenu;
         GJGameLevel* m_level;
         cocos2d::CCArray* m_unknown;
         CCMenuItemSpriteExtra* m_likeBtn;
         CCMenuItemSpriteExtra* m_starRateBtn;
         CCMenuItemSpriteExtra* m_demonRateBtn;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         CCMenuItemToggler* m_toggler;
         cocos2d::CCLabelBMFont* m_label0;
         cocos2d::CCLabelBMFont* m_label1;
@@ -3125,7 +3125,7 @@ public:
         cocos2d::CCLabelBMFont* m_label4;
         cocos2d::CCLabelBMFont* m_label5;
         CCMenuItemSpriteExtra* m_cloneBtn;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
 };
 
 class GauntletSelectLayer {
@@ -3146,9 +3146,9 @@ public:
 class CCAnimatedSprite : public cocos2d::CCSprite {
 public:
 
-    GEODE_CODEGEN_DLL void runAnimation(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL void runAnimation(gd::string p0);
 
-    GEODE_CODEGEN_DLL void tweenToAnimation(gd::string p0, float p1);
+    SAPPHIRE_CODEGEN_DLL void tweenToAnimation(gd::string p0, float p1);
 
     template <bool T=false>
     static CCAnimatedSprite* create(const char* file){
@@ -3157,56 +3157,56 @@ public:
 
         gd::string m_unknown1;
         gd::string m_unknown2;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         gd::string m_unknown3;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
 };
 
 class GJRobotSprite : public CCAnimatedSprite {
 public:
 
-        GEODE_CODEGEN_DLL ~GJRobotSprite();
-    GEODE_CODEGEN_DLL virtual bool init();
+        SAPPHIRE_CODEGEN_DLL ~GJRobotSprite();
+    SAPPHIRE_CODEGEN_DLL virtual bool init();
 
-    GEODE_CODEGEN_DLL virtual void setOpacity(unsigned char p0);
+    SAPPHIRE_CODEGEN_DLL virtual void setOpacity(unsigned char p0);
 
-    GEODE_CODEGEN_DLL virtual void hideSecondary();
+    SAPPHIRE_CODEGEN_DLL virtual void hideSecondary();
 
-    GEODE_CODEGEN_DLL static GJRobotSprite* create();
+    SAPPHIRE_CODEGEN_DLL static GJRobotSprite* create();
 
-    GEODE_CODEGEN_DLL void updateColor02(cocos2d::_ccColor3B p0);
+    SAPPHIRE_CODEGEN_DLL void updateColor02(cocos2d::_ccColor3B p0);
 
-    GEODE_CODEGEN_DLL void updateFrame(int p0);
+    SAPPHIRE_CODEGEN_DLL void updateFrame(int p0);
 
-    GEODE_CODEGEN_DLL void hideGlow();
+    SAPPHIRE_CODEGEN_DLL void hideGlow();
 
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         cocos2d::ccColor3B m_secondaryColor;
 };
 
 class GooglePlayDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void googlePlaySignedIn();
+    SAPPHIRE_CODEGEN_DLL virtual void googlePlaySignedIn();
 
 };
 
 class GManager : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL virtual void setup();
+    SAPPHIRE_CODEGEN_DLL virtual void setup();
 
-    GEODE_CODEGEN_DLL void encodeDataTo(DS_Dictionary* data);
+    SAPPHIRE_CODEGEN_DLL void encodeDataTo(DS_Dictionary* data);
 
-    GEODE_CODEGEN_DLL void dataLoaded(DS_Dictionary* data);
+    SAPPHIRE_CODEGEN_DLL void dataLoaded(DS_Dictionary* data);
 
-    GEODE_CODEGEN_DLL void firstLoad();
+    SAPPHIRE_CODEGEN_DLL void firstLoad();
 
-    GEODE_CODEGEN_DLL void save();
+    SAPPHIRE_CODEGEN_DLL void save();
 
-    GEODE_CODEGEN_DLL void saveData(DS_Dictionary* p0, gd::string p1);
+    SAPPHIRE_CODEGEN_DLL void saveData(DS_Dictionary* p0, gd::string p1);
 
-    GEODE_CODEGEN_DLL void saveGMTo(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL void saveGMTo(gd::string p0);
 
         gd::string m_fileName;
         bool m_setup;
@@ -3217,33 +3217,33 @@ public:
 class GJUserScore : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL IconType getIconType() const;
+    SAPPHIRE_CODEGEN_DLL IconType getIconType() const;
 
-    GEODE_CODEGEN_DLL int getPlayerCube() const;
+    SAPPHIRE_CODEGEN_DLL int getPlayerCube() const;
 
-    GEODE_CODEGEN_DLL int getPlayerShip() const;
+    SAPPHIRE_CODEGEN_DLL int getPlayerShip() const;
 
-    GEODE_CODEGEN_DLL int getPlayerBall() const;
+    SAPPHIRE_CODEGEN_DLL int getPlayerBall() const;
 
-    GEODE_CODEGEN_DLL int getPlayerUfo() const;
+    SAPPHIRE_CODEGEN_DLL int getPlayerUfo() const;
 
-    GEODE_CODEGEN_DLL int getPlayerWave() const;
+    SAPPHIRE_CODEGEN_DLL int getPlayerWave() const;
 
-    GEODE_CODEGEN_DLL int getPlayerRobot() const;
+    SAPPHIRE_CODEGEN_DLL int getPlayerRobot() const;
 
-    GEODE_CODEGEN_DLL int getPlayerSpider() const;
+    SAPPHIRE_CODEGEN_DLL int getPlayerSpider() const;
 
-    GEODE_CODEGEN_DLL int getPlayerStreak() const;
+    SAPPHIRE_CODEGEN_DLL int getPlayerStreak() const;
 
-    GEODE_CODEGEN_DLL bool getGlowEnabled() const;
+    SAPPHIRE_CODEGEN_DLL bool getGlowEnabled() const;
 
-    GEODE_CODEGEN_DLL int getPlayerExplosion() const;
+    SAPPHIRE_CODEGEN_DLL int getPlayerExplosion() const;
 
-    GEODE_CODEGEN_DLL int getPlayerColor1() const;
+    SAPPHIRE_CODEGEN_DLL int getPlayerColor1() const;
 
-    GEODE_CODEGEN_DLL int getPlayerColor2() const;
+    SAPPHIRE_CODEGEN_DLL int getPlayerColor2() const;
 
-    GEODE_CODEGEN_DLL gd::string getPlayerName() const;
+    SAPPHIRE_CODEGEN_DLL gd::string getPlayerName() const;
 
     template <bool T=false>
     static GJUserScore* create(){
@@ -3337,11 +3337,11 @@ public:
 class GJScaleControlDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void scaleChangeBegin();
+    SAPPHIRE_CODEGEN_DLL virtual void scaleChangeBegin();
 
-    GEODE_CODEGEN_DLL virtual void scaleChangeEnded();
+    SAPPHIRE_CODEGEN_DLL virtual void scaleChangeEnded();
 
-    GEODE_CODEGEN_DLL virtual void scaleChanged(float p0);
+    SAPPHIRE_CODEGEN_DLL virtual void scaleChanged(float p0);
 
 };
 
@@ -3349,33 +3349,33 @@ class CCMenuItemToggler : public cocos2d::CCMenuItem {
 public:
 	 CCMenuItemToggler() : CCMenuItem(), m_onButton(nullptr), m_offButton(nullptr), m_toggled(false), m_notClickable(false) {}
 
-    GEODE_CODEGEN_DLL static CCMenuItemToggler* createWithSize(const char* spr1, const char* spr2, cocos2d::CCObject* target, cocos2d::SEL_MenuHandler callback, float scale);
+    SAPPHIRE_CODEGEN_DLL static CCMenuItemToggler* createWithSize(const char* spr1, const char* spr2, cocos2d::CCObject* target, cocos2d::SEL_MenuHandler callback, float scale);
 
-    GEODE_CODEGEN_DLL static CCMenuItemToggler* createWithStandardSprites(cocos2d::CCObject* target, cocos2d::SEL_MenuHandler callback, float scale);
+    SAPPHIRE_CODEGEN_DLL static CCMenuItemToggler* createWithStandardSprites(cocos2d::CCObject* target, cocos2d::SEL_MenuHandler callback, float scale);
 
-    GEODE_CODEGEN_DLL bool isOn();
+    SAPPHIRE_CODEGEN_DLL bool isOn();
 
-    GEODE_CODEGEN_DLL bool isToggled();
+    SAPPHIRE_CODEGEN_DLL bool isToggled();
 
-    GEODE_CODEGEN_DLL void setClickable(bool on);
+    SAPPHIRE_CODEGEN_DLL void setClickable(bool on);
 
-    GEODE_CODEGEN_DLL void toggleWithCallback(bool on);
+    SAPPHIRE_CODEGEN_DLL void toggleWithCallback(bool on);
 
-    GEODE_CODEGEN_DLL static CCMenuItemToggler* create(cocos2d::CCNode* offSpr, cocos2d::CCNode* onSpr, cocos2d::CCObject* target, cocos2d::SEL_MenuHandler callback);
+    SAPPHIRE_CODEGEN_DLL static CCMenuItemToggler* create(cocos2d::CCNode* offSpr, cocos2d::CCNode* onSpr, cocos2d::CCObject* target, cocos2d::SEL_MenuHandler callback);
 
-    GEODE_CODEGEN_DLL void setSizeMult(float p0);
+    SAPPHIRE_CODEGEN_DLL void setSizeMult(float p0);
 
-    GEODE_CODEGEN_DLL void toggle(bool p0);
+    SAPPHIRE_CODEGEN_DLL void toggle(bool p0);
 
-    GEODE_CODEGEN_DLL bool init(cocos2d::CCNode* off, cocos2d::CCNode* on, cocos2d::CCObject* target, cocos2d::SEL_MenuHandler handler);
+    SAPPHIRE_CODEGEN_DLL bool init(cocos2d::CCNode* off, cocos2d::CCNode* on, cocos2d::CCObject* target, cocos2d::SEL_MenuHandler handler);
 
-    GEODE_CODEGEN_DLL void activate();
+    SAPPHIRE_CODEGEN_DLL void activate();
 
-    GEODE_CODEGEN_DLL void selected();
+    SAPPHIRE_CODEGEN_DLL void selected();
 
-    GEODE_CODEGEN_DLL void unselected();
+    SAPPHIRE_CODEGEN_DLL void unselected();
 
-    GEODE_CODEGEN_DLL void setEnabled(bool enabled);
+    SAPPHIRE_CODEGEN_DLL void setEnabled(bool enabled);
 
         CCMenuItemSpriteExtra* m_offButton;
         CCMenuItemSpriteExtra* m_onButton;
@@ -3395,11 +3395,11 @@ public:
 class OnlineListDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void loadListFinished(cocos2d::CCArray* p0, const char* p1);
+    SAPPHIRE_CODEGEN_DLL virtual void loadListFinished(cocos2d::CCArray* p0, const char* p1);
 
-    GEODE_CODEGEN_DLL virtual void loadListFailed(const char* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void loadListFailed(const char* p0);
 
-    GEODE_CODEGEN_DLL virtual void setupPageInfo(gd::string p0, const char* p1);
+    SAPPHIRE_CODEGEN_DLL virtual void setupPageInfo(gd::string p0, const char* p1);
 
 };
 
@@ -3466,16 +3466,16 @@ public:
 		m_updateSelector = false;
 	}
 
-    GEODE_CODEGEN_DLL void onPlayerColor1(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onPlayerColor1(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL void onPlayerColor2(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onPlayerColor2(cocos2d::CCObject* p0);
 
     template <bool T=false>
     static GJGarageLayer* create(){
         static_assert(T, "Implement GJGarageLayer::create");
     }
 
-    GEODE_CODEGEN_DLL virtual bool init();
+    SAPPHIRE_CODEGEN_DLL virtual bool init();
 
     template <bool T=false>
     void onSelectTab(cocos2d::CCObject* pSender){
@@ -3534,14 +3534,14 @@ public:
 
         CCTextInputNode* m_nameInput;
         SimplePlayer* m_playerPreview;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         cocos2d::CCSprite* m_unkSprite0x140;
         cocos2d::CCSprite* m_unkSprite0x144;
         CCMenuItemSpriteExtra* m_unkButton0x148;
         CCMenuItemSpriteExtra* m_unkButton0x14c;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         cocos2d::CCArray* m_pagesArray;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         CCMenuItemToggler* m_tabToggleCube;
         CCMenuItemToggler* m_tabToggleShip;
         CCMenuItemToggler* m_tabToggleBall;
@@ -3551,37 +3551,37 @@ public:
         CCMenuItemToggler* m_tabToggleSpider;
         CCMenuItemToggler* m_tabToggleSpecial;
         CCMenuItemToggler* m_tabToggleDeathEffect;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         bool m_updateSelector;
 };
 
 class GJGameLevel : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL static GJGameLevel* createWithCoder(DS_Dictionary* dict);
+    SAPPHIRE_CODEGEN_DLL static GJGameLevel* createWithCoder(DS_Dictionary* dict);
 
-        GEODE_CODEGEN_DLL ~GJGameLevel();
-    GEODE_CODEGEN_DLL virtual void encodeWithCoder(DS_Dictionary* p0);
+        SAPPHIRE_CODEGEN_DLL ~GJGameLevel();
+    SAPPHIRE_CODEGEN_DLL virtual void encodeWithCoder(DS_Dictionary* p0);
 
-    GEODE_CODEGEN_DLL virtual bool canEncode();
+    SAPPHIRE_CODEGEN_DLL virtual bool canEncode();
 
-    GEODE_CODEGEN_DLL virtual bool init();
+    SAPPHIRE_CODEGEN_DLL virtual bool init();
 
-    GEODE_CODEGEN_DLL static GJGameLevel* create();
+    SAPPHIRE_CODEGEN_DLL static GJGameLevel* create();
 
-    GEODE_CODEGEN_DLL gd::string getAudioFileName();
+    SAPPHIRE_CODEGEN_DLL gd::string getAudioFileName();
 
-    GEODE_CODEGEN_DLL const char* getCoinKey(int p0);
+    SAPPHIRE_CODEGEN_DLL const char* getCoinKey(int p0);
 
-    GEODE_CODEGEN_DLL void getLengthKey(int p0);
+    SAPPHIRE_CODEGEN_DLL void getLengthKey(int p0);
 
-    GEODE_CODEGEN_DLL void getNormalPercent();
+    SAPPHIRE_CODEGEN_DLL void getNormalPercent();
 
-    GEODE_CODEGEN_DLL void levelWasAltered();
+    SAPPHIRE_CODEGEN_DLL void levelWasAltered();
 
-    GEODE_CODEGEN_DLL void savePercentage(int p0, bool p1, int p2, int p3, bool p4);
+    SAPPHIRE_CODEGEN_DLL void savePercentage(int p0, bool p1, int p2, int p3, bool p4);
 
-    GEODE_CODEGEN_DLL void dataLoaded(DS_Dictionary* dict);
+    SAPPHIRE_CODEGEN_DLL void dataLoaded(DS_Dictionary* dict);
 
     template <bool T=false>
     GJDifficulty getAverageDifficulty(){
@@ -3747,34 +3747,34 @@ class CCScrollLayerExt : public cocos2d::CCLayer {
 public:
 	 CCScrollLayerExt() {}
 
-    GEODE_CODEGEN_DLL static CCScrollLayerExt* create(cocos2d::CCRect rect, bool vertical);
+    SAPPHIRE_CODEGEN_DLL static CCScrollLayerExt* create(cocos2d::CCRect rect, bool vertical);
 
-    GEODE_CODEGEN_DLL float getMinY();
+    SAPPHIRE_CODEGEN_DLL float getMinY();
 
-    GEODE_CODEGEN_DLL float getMaxY();
+    SAPPHIRE_CODEGEN_DLL float getMaxY();
 
-    GEODE_CODEGEN_DLL virtual void visit();
+    SAPPHIRE_CODEGEN_DLL virtual void visit();
 
-    GEODE_CODEGEN_DLL virtual bool ccTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    SAPPHIRE_CODEGEN_DLL virtual bool ccTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
 
-    GEODE_CODEGEN_DLL virtual void ccTouchMoved(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    SAPPHIRE_CODEGEN_DLL virtual void ccTouchMoved(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
 
-    GEODE_CODEGEN_DLL virtual void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    SAPPHIRE_CODEGEN_DLL virtual void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
 
-    GEODE_CODEGEN_DLL virtual void ccTouchCancelled(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    SAPPHIRE_CODEGEN_DLL virtual void ccTouchCancelled(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
 
-    GEODE_CODEGEN_DLL virtual void registerWithTouchDispatcher();
+    SAPPHIRE_CODEGEN_DLL virtual void registerWithTouchDispatcher();
 
-    GEODE_CODEGEN_DLL virtual void preVisitWithClippingRect(cocos2d::CCRect p0);
+    SAPPHIRE_CODEGEN_DLL virtual void preVisitWithClippingRect(cocos2d::CCRect p0);
 
-    GEODE_CODEGEN_DLL virtual void postVisit();
+    SAPPHIRE_CODEGEN_DLL virtual void postVisit();
 
-    GEODE_CODEGEN_DLL void moveToTop();
+    SAPPHIRE_CODEGEN_DLL void moveToTop();
 
-    GEODE_CODEGEN_DLL void moveToTopWithOffset(float p0);
+    SAPPHIRE_CODEGEN_DLL void moveToTopWithOffset(float p0);
 
-        GEODE_CODEGEN_DLL CCScrollLayerExt(cocos2d::CCRect rect);
-    GEODE_CODEGEN_DLL void scrollLayer(float scroll);
+        SAPPHIRE_CODEGEN_DLL CCScrollLayerExt(cocos2d::CCRect rect);
+    SAPPHIRE_CODEGEN_DLL void scrollLayer(float scroll);
 
         cocos2d::CCTouch* m_touch;
         cocos2d::CCPoint m_touchPosition;
@@ -3801,17 +3801,17 @@ public:
 class CCScrollLayerExtDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void scrllViewWillBeginDecelerating(CCScrollLayerExt* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void scrllViewWillBeginDecelerating(CCScrollLayerExt* p0);
 
-    GEODE_CODEGEN_DLL virtual void scrollViewDidEndDecelerating(CCScrollLayerExt* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void scrollViewDidEndDecelerating(CCScrollLayerExt* p0);
 
-    GEODE_CODEGEN_DLL virtual void scrollViewTouchMoving(CCScrollLayerExt* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void scrollViewTouchMoving(CCScrollLayerExt* p0);
 
-    GEODE_CODEGEN_DLL virtual void scrollViewDidEndMoving(CCScrollLayerExt* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void scrollViewDidEndMoving(CCScrollLayerExt* p0);
 
-    GEODE_CODEGEN_DLL virtual void scrollViewTouchBegin(CCScrollLayerExt* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void scrollViewTouchBegin(CCScrollLayerExt* p0);
 
-    GEODE_CODEGEN_DLL virtual void scrollViewTouchEnd(CCScrollLayerExt* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void scrollViewTouchEnd(CCScrollLayerExt* p0);
 
 };
 
@@ -3820,9 +3820,9 @@ public:
 	 TableView() {}
 	 TableView(cocos2d::CCRect rect) : CCScrollLayerExt(rect) {}
 
-    GEODE_CODEGEN_DLL static TableView* create(TableViewDelegate* p0, TableViewDataSource* p1, cocos2d::CCRect p2);
+    SAPPHIRE_CODEGEN_DLL static TableView* create(TableViewDelegate* p0, TableViewDataSource* p1, cocos2d::CCRect p2);
 
-    GEODE_CODEGEN_DLL void reloadData();
+    SAPPHIRE_CODEGEN_DLL void reloadData();
 
         bool m_touchOutOfBoundary;
         cocos2d::CCTouch* m_touchStart;
@@ -3847,22 +3847,22 @@ public:
 class GJDropDownLayerDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void dropDownLayerWillClose(GJDropDownLayer* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void dropDownLayerWillClose(GJDropDownLayer* p0);
 
 };
 
 class TopArtistsLayer : public FLAlertLayer {
 public:
 
-    GEODE_CODEGEN_DLL static TopArtistsLayer* create();
+    SAPPHIRE_CODEGEN_DLL static TopArtistsLayer* create();
 
-    GEODE_CODEGEN_DLL void setupLeaderboard(cocos2d::CCArray* p0);
+    SAPPHIRE_CODEGEN_DLL void setupLeaderboard(cocos2d::CCArray* p0);
 
-    GEODE_CODEGEN_DLL virtual bool init();
+    SAPPHIRE_CODEGEN_DLL virtual bool init();
 
-    GEODE_CODEGEN_DLL void loadPage(int p0);
+    SAPPHIRE_CODEGEN_DLL void loadPage(int p0);
 
-    GEODE_CODEGEN_DLL void setupPageInfo(gd::string p0, char const* p1);
+    SAPPHIRE_CODEGEN_DLL void setupPageInfo(gd::string p0, char const* p1);
 
         CLASSPARAM(cocos2d::CCNode*, unknown, 0x220);
         CLASSPARAM(GJCommentListLayer*, commentLayer, 0x260);
@@ -3891,25 +3891,25 @@ public:
 class EndPortalObject : public GameObject {
 public:
 
-    GEODE_CODEGEN_DLL static EndPortalObject* create();
+    SAPPHIRE_CODEGEN_DLL static EndPortalObject* create();
 
-    GEODE_CODEGEN_DLL void updateColors(cocos2d::_ccColor3B p0);
+    SAPPHIRE_CODEGEN_DLL void updateColors(cocos2d::_ccColor3B p0);
 
 };
 
 class LevelPage {
 public:
 
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         GJGameLevel* m_level;
 };
 
 class GJAccountSyncDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual bool syncAccountFailed(BackupAccountError p0);
+    SAPPHIRE_CODEGEN_DLL virtual bool syncAccountFailed(BackupAccountError p0);
 
-    GEODE_CODEGEN_DLL virtual bool syncAccountFinished();
+    SAPPHIRE_CODEGEN_DLL virtual bool syncAccountFinished();
 
 };
 
@@ -3995,7 +3995,7 @@ public:
 class FMODAudioEngine : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL static FMODAudioEngine* sharedEngine();
+    SAPPHIRE_CODEGEN_DLL static FMODAudioEngine* sharedEngine();
 
     template <bool T=false>
     void preloadEffect(gd::string filename){
@@ -4043,9 +4043,9 @@ public:
 class PulseEffectAction : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL static PulseEffectAction* createFromString(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL static PulseEffectAction* createFromString(gd::string p0);
 
-    GEODE_CODEGEN_DLL void getSaveString();
+    SAPPHIRE_CODEGEN_DLL void getSaveString();
 
         CLASSPARAM(int, group, 0x130);
 };
@@ -4053,29 +4053,29 @@ public:
 class CCBlockLayer : public cocos2d::CCLayerColor {
 public:
 
-    GEODE_CODEGEN_DLL void disableUI();
+    SAPPHIRE_CODEGEN_DLL void disableUI();
 
-    GEODE_CODEGEN_DLL void draw();
+    SAPPHIRE_CODEGEN_DLL void draw();
 
-    GEODE_CODEGEN_DLL void enableUI();
+    SAPPHIRE_CODEGEN_DLL void enableUI();
 
-    GEODE_CODEGEN_DLL void enterAnimFinished();
+    SAPPHIRE_CODEGEN_DLL void enterAnimFinished();
 
-    GEODE_CODEGEN_DLL void enterLayer();
+    SAPPHIRE_CODEGEN_DLL void enterLayer();
 
-    GEODE_CODEGEN_DLL void exitLayer();
+    SAPPHIRE_CODEGEN_DLL void exitLayer();
 
-    GEODE_CODEGEN_DLL void hideLayer(bool p0);
+    SAPPHIRE_CODEGEN_DLL void hideLayer(bool p0);
 
-    GEODE_CODEGEN_DLL virtual bool init();
+    SAPPHIRE_CODEGEN_DLL virtual bool init();
 
-    GEODE_CODEGEN_DLL void layerHidden();
+    SAPPHIRE_CODEGEN_DLL void layerHidden();
 
-    GEODE_CODEGEN_DLL void layerVisible();
+    SAPPHIRE_CODEGEN_DLL void layerVisible();
 
-    GEODE_CODEGEN_DLL void registerWithTouchDispatcher();
+    SAPPHIRE_CODEGEN_DLL void registerWithTouchDispatcher();
 
-    GEODE_CODEGEN_DLL void showLayer(bool p0);
+    SAPPHIRE_CODEGEN_DLL void showLayer(bool p0);
 
         bool m_unknown;
         bool m_unknown2;
@@ -4084,20 +4084,20 @@ public:
 class EditorPauseLayer : public CCBlockLayer, public FLAlertLayerProtocol {
 public:
 
-    GEODE_CODEGEN_DLL static EditorPauseLayer* create(LevelEditorLayer* editor);
+    SAPPHIRE_CODEGEN_DLL static EditorPauseLayer* create(LevelEditorLayer* editor);
 
-        GEODE_CODEGEN_DLL ~EditorPauseLayer();
-    GEODE_CODEGEN_DLL virtual void keyBackClicked();
+        SAPPHIRE_CODEGEN_DLL ~EditorPauseLayer();
+    SAPPHIRE_CODEGEN_DLL virtual void keyBackClicked();
 
-    GEODE_CODEGEN_DLL virtual void keyDown(cocos2d::enumKeyCodes p0);
+    SAPPHIRE_CODEGEN_DLL virtual void keyDown(cocos2d::enumKeyCodes p0);
 
-    GEODE_CODEGEN_DLL virtual void customSetup();
+    SAPPHIRE_CODEGEN_DLL virtual void customSetup();
 
-    GEODE_CODEGEN_DLL virtual void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL virtual void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
 
-    GEODE_CODEGEN_DLL void saveLevel();
+    SAPPHIRE_CODEGEN_DLL void saveLevel();
 
-    GEODE_CODEGEN_DLL bool init(LevelEditorLayer* p0);
+    SAPPHIRE_CODEGEN_DLL bool init(LevelEditorLayer* p0);
 
     template <bool T=false>
     void onExitEditor(cocos2d::CCObject* pSender){
@@ -4140,7 +4140,7 @@ public:
     }
 
         bool m_saved;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         CCMenuItemSpriteExtra* m_button0;
         CCMenuItemSpriteExtra* m_button1;
         LevelEditorLayer* m_editorLayer;
@@ -4149,9 +4149,9 @@ public:
 class EditLevelLayer : public cocos2d::CCLayer {
 public:
 
-    GEODE_CODEGEN_DLL static void scene(GJGameLevel* level);
+    SAPPHIRE_CODEGEN_DLL static void scene(GJGameLevel* level);
 
-    GEODE_CODEGEN_DLL static EditLevelLayer* create(GJGameLevel* level);
+    SAPPHIRE_CODEGEN_DLL static EditLevelLayer* create(GJGameLevel* level);
 
     template <bool T=false>
     void onLevelInfo(){
@@ -4168,15 +4168,15 @@ public:
 class EditButtonBar : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL void removeAllItems();
+    SAPPHIRE_CODEGEN_DLL void removeAllItems();
 
-    GEODE_CODEGEN_DLL void reloadItems(int rowCount, int columnCount);
+    SAPPHIRE_CODEGEN_DLL void reloadItems(int rowCount, int columnCount);
 
-    GEODE_CODEGEN_DLL void reloadItemsInNormalSize();
+    SAPPHIRE_CODEGEN_DLL void reloadItemsInNormalSize();
 
-    GEODE_CODEGEN_DLL void addButton(CCMenuItemSpriteExtra* btn, bool reload);
+    SAPPHIRE_CODEGEN_DLL void addButton(CCMenuItemSpriteExtra* btn, bool reload);
 
-    GEODE_CODEGEN_DLL void loadFromItems(cocos2d::CCArray* buttons, int rowCount, int columnCount, bool idk);
+    SAPPHIRE_CODEGEN_DLL void loadFromItems(cocos2d::CCArray* buttons, int rowCount, int columnCount, bool idk);
 
         cocos2d::CCPoint m_position;
         int m_unknown;
@@ -4189,7 +4189,7 @@ public:
 class ToggleTriggerAction : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL static ToggleTriggerAction* createFromString(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL static ToggleTriggerAction* createFromString(gd::string p0);
 
 };
 
@@ -4201,25 +4201,25 @@ public:
 class LoadingLayer : public cocos2d::CCLayer {
 public:
 
-    GEODE_CODEGEN_DLL void setFromRefresh(bool value);
+    SAPPHIRE_CODEGEN_DLL void setFromRefresh(bool value);
 
-    GEODE_CODEGEN_DLL static LoadingLayer* create(bool fromReload);
+    SAPPHIRE_CODEGEN_DLL static LoadingLayer* create(bool fromReload);
 
-    GEODE_CODEGEN_DLL bool init(bool fromReload);
+    SAPPHIRE_CODEGEN_DLL bool init(bool fromReload);
 
     template <bool T=false>
     const char* getLoadingString(){
         static_assert(T, "Implement LoadingLayer::getLoadingString");
     }
 
-    GEODE_CODEGEN_DLL void loadAssets();
+    SAPPHIRE_CODEGEN_DLL void loadAssets();
 
     template <bool T=false>
     void loadingFinished(){
         static_assert(T, "Implement LoadingLayer::loadingFinished");
     }
 
-    GEODE_CODEGEN_DLL static cocos2d::CCScene* scene(bool fromReload);
+    SAPPHIRE_CODEGEN_DLL static cocos2d::CCScene* scene(bool fromReload);
 
         bool m_unknown;
         bool m_unknown2;
@@ -4256,7 +4256,7 @@ public:
 class SetIDLayer {
 public:
 
-    GEODE_CODEGEN_DLL static SetIDLayer* create(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL static SetIDLayer* create(GameObject* p0);
 
 };
 
@@ -4268,7 +4268,7 @@ public:
 class ColorSelectDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void colorSelectClosed(cocos2d::CCNode* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void colorSelectClosed(cocos2d::CCNode* p0);
 
 };
 
@@ -4300,7 +4300,7 @@ public:
         cocos2d::CCArray* m_colorButtons;
         cocos2d::CCArray* m_colorNodes;
         cocos2d::CCArray* m_textInputNodes;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         cocos2d::CCArray* m_detailColorButtons;
         int m_selectedMode;
         int m_customColorChannel;
@@ -4335,9 +4335,9 @@ public:
         static_assert(T, "Implement GameLevelManager::createAndGetScores");
     }
 
-    GEODE_CODEGEN_DLL GJGameLevel* createNewLevel();
+    SAPPHIRE_CODEGEN_DLL GJGameLevel* createNewLevel();
 
-    GEODE_CODEGEN_DLL static GameLevelManager* sharedState();
+    SAPPHIRE_CODEGEN_DLL static GameLevelManager* sharedState();
 
     template <bool T=false>
     void getCompletedLevels(bool newFilter){
@@ -4354,20 +4354,20 @@ public:
         static_assert(T, "Implement GameLevelManager::getOnlineLevels");
     }
 
-    GEODE_CODEGEN_DLL void getPageInfo(char const* p0);
+    SAPPHIRE_CODEGEN_DLL void getPageInfo(char const* p0);
 
     template <bool T=false>
     cocos2d::CCArray* getSavedLevels(bool favorite, int levelFolder){
         static_assert(T, "Implement GameLevelManager::getSavedLevels");
     }
 
-    GEODE_CODEGEN_DLL cocos2d::CCArray* getStoredOnlineLevels(char const* p0);
+    SAPPHIRE_CODEGEN_DLL cocos2d::CCArray* getStoredOnlineLevels(char const* p0);
 
-    GEODE_CODEGEN_DLL void getTopArtists(int p0, int p1);
+    SAPPHIRE_CODEGEN_DLL void getTopArtists(int p0, int p1);
 
-    GEODE_CODEGEN_DLL void getTopArtistsKey(int p0);
+    SAPPHIRE_CODEGEN_DLL void getTopArtistsKey(int p0);
 
-    GEODE_CODEGEN_DLL void makeTimeStamp(char const* p0);
+    SAPPHIRE_CODEGEN_DLL void makeTimeStamp(char const* p0);
 
     template <bool T=false>
     GJGameLevel* getMainLevel(int id, bool unk){
@@ -4397,7 +4397,7 @@ public:
         cocos2d::CCDictionary* m_mainLevels;
         cocos2d::CCDictionary* m_searchFilters;
         cocos2d::CCDictionary* m_onlineLevels;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         cocos2d::CCDictionary* m_followedCreators;
         cocos2d::CCDictionary* m_downloadedLevels;
         cocos2d::CCDictionary* m_likedLevels;
@@ -4410,13 +4410,13 @@ public:
         int m_dailyTimeLeft;
         int m_dailyID;
         int m_dailyIDUnk;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         int m_weeklyTimeLeft;
         int m_weeklyID;
         int m_weeklyIDUnk;
         cocos2d::CCDictionary* m_gauntletLevels;
         cocos2d::CCDictionary* m_unkDict13;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         cocos2d::CCDictionary* m_timerDict;
         cocos2d::CCDictionary* m_knownUsers;
         cocos2d::CCDictionary* m_accountIDtoUserIDDict;
@@ -4456,7 +4456,7 @@ public:
         GJDailyLevelDelegate* m_GJDailyLevelDelegate;
         MusicDownloadDelegate* m_musicDownloadDelegate;
         int m_unkDownload;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         gd::string m_unkStr3;
         cocos2d::CCString* m_unkStr4;
 };
@@ -4464,11 +4464,11 @@ public:
 class CustomSongLayer : public FLAlertLayer, public FLAlertLayerProtocol, public TextInputDelegate, public GJDropDownLayerDelegate {
 public:
 
-    GEODE_CODEGEN_DLL bool init(LevelSettingsObject* p0);
+    SAPPHIRE_CODEGEN_DLL bool init(LevelSettingsObject* p0);
 
-    GEODE_CODEGEN_DLL void onArtists(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onArtists(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL void onSongBrowser(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onSongBrowser(cocos2d::CCObject* p0);
 
         LevelSettingsObject* m_levelSettings;
         CCTextInputNode* m_songIDInput;
@@ -4479,7 +4479,7 @@ public:
 class CustomSongCell : public TableViewCell {
 public:
 
-    GEODE_CODEGEN_DLL void loadFromObject(SongInfoObject* p0);
+    SAPPHIRE_CODEGEN_DLL void loadFromObject(SongInfoObject* p0);
 
 };
 
@@ -4501,9 +4501,9 @@ public:
         static_assert(T, "Implement CreatorLayer::onLeaderboards");
     }
 
-    GEODE_CODEGEN_DLL void onMyLevels(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onMyLevels(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL void onSavedLevels(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onSavedLevels(cocos2d::CCObject* p0);
 
     template <bool T=false>
     void sceneWillResume(){
@@ -4525,7 +4525,7 @@ public:
 class CurrencyRewardDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void currencyWillExit(CurrencyRewardLayer* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void currencyWillExit(CurrencyRewardLayer* p0);
 
 };
 
@@ -4537,30 +4537,30 @@ public:
         static_assert(T, "Implement CreateGuidelinesLayer::onStop");
     }
 
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         gd::string m_guidelineString;
 };
 
 class GameObjectCopy : public cocos2d::CCObject {
 public:
 
-        GEODE_CODEGEN_DLL ~GameObjectCopy();
-    GEODE_CODEGEN_DLL static GameObjectCopy* create(GameObject* p0);
+        SAPPHIRE_CODEGEN_DLL ~GameObjectCopy();
+    SAPPHIRE_CODEGEN_DLL static GameObjectCopy* create(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void resetObject();
+    SAPPHIRE_CODEGEN_DLL void resetObject();
 
 };
 
 class CommentCell : public TableViewCell {
 public:
 
-    GEODE_CODEGEN_DLL void loadFromComment(GJComment* p0);
+    SAPPHIRE_CODEGEN_DLL void loadFromComment(GJComment* p0);
 
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         cocos2d::CCSprite* m_iconSprite;
         cocos2d::CCLabelBMFont* m_likeLabel;
         GJComment* m_comment;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
 };
 
 class MoreOptionsLayer {
@@ -4586,7 +4586,7 @@ public:
 class GJRotationControl : public cocos2d::CCLayer {
 public:
 
-    GEODE_CODEGEN_DLL void setAngle(float angle);
+    SAPPHIRE_CODEGEN_DLL void setAngle(float angle);
 
     template <bool T=false>
     void updateSliderPosition(cocos2d::CCPoint const& pos){
@@ -4605,15 +4605,15 @@ public:
 class ColorChannelSprite : public cocos2d::CCSprite {
 public:
 
-    GEODE_CODEGEN_DLL void updateBlending(bool p0);
+    SAPPHIRE_CODEGEN_DLL void updateBlending(bool p0);
 
-    GEODE_CODEGEN_DLL void updateCopyLabel(int p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void updateCopyLabel(int p0, bool p1);
 
-    GEODE_CODEGEN_DLL void updateOpacity(float p0);
+    SAPPHIRE_CODEGEN_DLL void updateOpacity(float p0);
 
-    GEODE_CODEGEN_DLL void updateValues(ColorAction* p0);
+    SAPPHIRE_CODEGEN_DLL void updateValues(ColorAction* p0);
 
-    GEODE_CODEGEN_DLL static ColorChannelSprite* create();
+    SAPPHIRE_CODEGEN_DLL static ColorChannelSprite* create();
 
         cocos2d::CCLabelBMFont* m_copyLabel;
         cocos2d::CCLabelBMFont* m_opacityLabel;
@@ -4628,18 +4628,18 @@ public:
 class ColorAction : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL void getSaveString();
+    SAPPHIRE_CODEGEN_DLL void getSaveString();
 
-    GEODE_CODEGEN_DLL void setupFromDict(cocos2d::CCDictionary* p0);
+    SAPPHIRE_CODEGEN_DLL void setupFromDict(cocos2d::CCDictionary* p0);
 
-    GEODE_CODEGEN_DLL void setupFromString(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL void setupFromString(gd::string p0);
 
-        GEODE_PAD(0xc);
+        SAPPHIRE_PAD(0xc);
         CLASSPARAM(cocos2d::ccColor3B, color, 0x12c);
-        GEODE_PAD(0x5);
+        SAPPHIRE_PAD(0x5);
         float m_unk100;
         bool m_blending;
-        GEODE_PAD(0x3);
+        SAPPHIRE_PAD(0x3);
         int m_playerColor;
         int m_unk10C;
         float m_opacity;
@@ -4650,101 +4650,101 @@ public:
         bool m_saturationChecked;
         bool m_brightnessChecked;
         int m_copyID;
-        GEODE_PAD(0x1);
+        SAPPHIRE_PAD(0x1);
         bool m_copyOpacity;
-        GEODE_PAD(0x4);
+        SAPPHIRE_PAD(0x4);
         ColorActionSprite* m_colorSprite;
-        GEODE_PAD(0xc);
+        SAPPHIRE_PAD(0xc);
 };
 
 class CollisionTriggerAction : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL static CollisionTriggerAction* createFromString(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL static CollisionTriggerAction* createFromString(gd::string p0);
 
 };
 
 class GJRotationControlDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void angleChangeBegin();
+    SAPPHIRE_CODEGEN_DLL virtual void angleChangeBegin();
 
-    GEODE_CODEGEN_DLL virtual void angleChangeEnded();
+    SAPPHIRE_CODEGEN_DLL virtual void angleChangeEnded();
 
-    GEODE_CODEGEN_DLL virtual void angleChanged(float p0);
+    SAPPHIRE_CODEGEN_DLL virtual void angleChanged(float p0);
 
 };
 
 class EditorUI : public cocos2d::CCLayer, public FLAlertLayerProtocol, public ColorSelectDelegate, public GJRotationControlDelegate, public GJScaleControlDelegate, public MusicDownloadDelegate {
 public:
 
-    GEODE_CODEGEN_DLL static EditorUI* get();
+    SAPPHIRE_CODEGEN_DLL static EditorUI* get();
 
-    GEODE_CODEGEN_DLL void constrainGameLayerPosition();
+    SAPPHIRE_CODEGEN_DLL void constrainGameLayerPosition();
 
-    GEODE_CODEGEN_DLL void create(LevelEditorLayer* p0);
+    SAPPHIRE_CODEGEN_DLL void create(LevelEditorLayer* p0);
 
-    GEODE_CODEGEN_DLL void deselectAll();
+    SAPPHIRE_CODEGEN_DLL void deselectAll();
 
-    GEODE_CODEGEN_DLL void onDeselectAll(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onDeselectAll(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL void disableButton(CreateMenuItem* p0);
+    SAPPHIRE_CODEGEN_DLL void disableButton(CreateMenuItem* p0);
 
-    GEODE_CODEGEN_DLL void editButtonUsable();
+    SAPPHIRE_CODEGEN_DLL void editButtonUsable();
 
-    GEODE_CODEGEN_DLL void editObject(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void editObject(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL void enableButton(CreateMenuItem* p0);
+    SAPPHIRE_CODEGEN_DLL void enableButton(CreateMenuItem* p0);
 
-    GEODE_CODEGEN_DLL CCMenuItemSpriteExtra* getCreateBtn(int p0, int p1);
+    SAPPHIRE_CODEGEN_DLL CCMenuItemSpriteExtra* getCreateBtn(int p0, int p1);
 
-    GEODE_CODEGEN_DLL cocos2d::CCPoint getGroupCenter(cocos2d::CCArray* p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL cocos2d::CCPoint getGroupCenter(cocos2d::CCArray* p0, bool p1);
 
-    GEODE_CODEGEN_DLL cocos2d::CCArray* getSelectedObjects();
+    SAPPHIRE_CODEGEN_DLL cocos2d::CCArray* getSelectedObjects();
 
-    GEODE_CODEGEN_DLL void init(LevelEditorLayer* p0);
+    SAPPHIRE_CODEGEN_DLL void init(LevelEditorLayer* p0);
 
-    GEODE_CODEGEN_DLL virtual bool ccTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    SAPPHIRE_CODEGEN_DLL virtual bool ccTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
 
-    GEODE_CODEGEN_DLL virtual void ccTouchMoved(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    SAPPHIRE_CODEGEN_DLL virtual void ccTouchMoved(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
 
-    GEODE_CODEGEN_DLL virtual void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    SAPPHIRE_CODEGEN_DLL virtual void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
 
-    GEODE_CODEGEN_DLL virtual void keyDown(cocos2d::enumKeyCodes p0);
+    SAPPHIRE_CODEGEN_DLL virtual void keyDown(cocos2d::enumKeyCodes p0);
 
-    GEODE_CODEGEN_DLL void moveObject(GameObject* p0, cocos2d::CCPoint p1);
+    SAPPHIRE_CODEGEN_DLL void moveObject(GameObject* p0, cocos2d::CCPoint p1);
 
-    GEODE_CODEGEN_DLL void onDuplicate(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onDuplicate(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL cocos2d::CCArray* pasteObjects(gd::string const& p0);
+    SAPPHIRE_CODEGEN_DLL cocos2d::CCArray* pasteObjects(gd::string const& p0);
 
-    GEODE_CODEGEN_DLL void playerTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    SAPPHIRE_CODEGEN_DLL void playerTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
 
-    GEODE_CODEGEN_DLL void playtestStopped();
+    SAPPHIRE_CODEGEN_DLL void playtestStopped();
 
-    GEODE_CODEGEN_DLL void redoLastAction(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void redoLastAction(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL void replaceGroupID(GameObject* p0, int p1, int p2);
+    SAPPHIRE_CODEGEN_DLL void replaceGroupID(GameObject* p0, int p1, int p2);
 
-    GEODE_CODEGEN_DLL void scaleChanged(float p0);
+    SAPPHIRE_CODEGEN_DLL void scaleChanged(float p0);
 
-    GEODE_CODEGEN_DLL void scaleObjects(cocos2d::CCArray* p0, float p1, cocos2d::CCPoint p2);
+    SAPPHIRE_CODEGEN_DLL void scaleObjects(cocos2d::CCArray* p0, float p1, cocos2d::CCPoint p2);
 
-    GEODE_CODEGEN_DLL void selectObjects(cocos2d::CCArray* p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void selectObjects(cocos2d::CCArray* p0, bool p1);
 
-    GEODE_CODEGEN_DLL void setupCreateMenu();
+    SAPPHIRE_CODEGEN_DLL void setupCreateMenu();
 
-    GEODE_CODEGEN_DLL void undoLastAction(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void undoLastAction(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL void updateButtons();
+    SAPPHIRE_CODEGEN_DLL void updateButtons();
 
-    GEODE_CODEGEN_DLL void updateObjectInfoLabel();
+    SAPPHIRE_CODEGEN_DLL void updateObjectInfoLabel();
 
-    GEODE_CODEGEN_DLL void updateSlider();
+    SAPPHIRE_CODEGEN_DLL void updateSlider();
 
-    GEODE_CODEGEN_DLL void updateZoom(float p0);
+    SAPPHIRE_CODEGEN_DLL void updateZoom(float p0);
 
-    GEODE_CODEGEN_DLL void selectObject(GameObject* obj, bool idk);
+    SAPPHIRE_CODEGEN_DLL void selectObject(GameObject* obj, bool idk);
 
     template <bool T=false>
     void selectAll(){
@@ -4786,31 +4786,31 @@ public:
         static_assert(T, "Implement EditorUI::updateDeleteMenu");
     }
 
-    GEODE_CODEGEN_DLL void updateCreateMenu(bool updateTab);
+    SAPPHIRE_CODEGEN_DLL void updateCreateMenu(bool updateTab);
 
-    GEODE_CODEGEN_DLL void toggleMode(cocos2d::CCObject* pSender);
+    SAPPHIRE_CODEGEN_DLL void toggleMode(cocos2d::CCObject* pSender);
 
-    GEODE_CODEGEN_DLL void zoomIn(cocos2d::CCObject* pSender);
+    SAPPHIRE_CODEGEN_DLL void zoomIn(cocos2d::CCObject* pSender);
 
-    GEODE_CODEGEN_DLL void zoomOut(cocos2d::CCObject* pSender);
+    SAPPHIRE_CODEGEN_DLL void zoomOut(cocos2d::CCObject* pSender);
 
     template <bool T=false>
     void rotateObjects(cocos2d::CCArray* objects, float angle, cocos2d::CCPoint center){
         static_assert(T, "Implement EditorUI::rotateObjects");
     }
 
-    GEODE_CODEGEN_DLL void updateGridNodeSize();
+    SAPPHIRE_CODEGEN_DLL void updateGridNodeSize();
 
     template <bool T=false>
     void updateSpecialUIElements(){
         static_assert(T, "Implement EditorUI::updateSpecialUIElements");
     }
 
-    GEODE_CODEGEN_DLL void constrainGameLayerPosition(float x, float y);
+    SAPPHIRE_CODEGEN_DLL void constrainGameLayerPosition(float x, float y);
 
-    GEODE_CODEGEN_DLL void moveGameLayer(cocos2d::CCPoint const& pos);
+    SAPPHIRE_CODEGEN_DLL void moveGameLayer(cocos2d::CCPoint const& pos);
 
-    GEODE_CODEGEN_DLL void showUI(bool show);
+    SAPPHIRE_CODEGEN_DLL void showUI(bool show);
 
     template <bool T=false>
     void editObject2(cocos2d::CCObject* pSender){
@@ -4822,37 +4822,37 @@ public:
         static_assert(T, "Implement EditorUI::editGroup");
     }
 
-    GEODE_CODEGEN_DLL void moveObjectCall(EditCommand pSender);
+    SAPPHIRE_CODEGEN_DLL void moveObjectCall(EditCommand pSender);
 
-    GEODE_CODEGEN_DLL void transformObjectCall(EditCommand pSender);
+    SAPPHIRE_CODEGEN_DLL void transformObjectCall(EditCommand pSender);
 
-    GEODE_CODEGEN_DLL void onDeleteSelected(cocos2d::CCObject* pSender);
+    SAPPHIRE_CODEGEN_DLL void onDeleteSelected(cocos2d::CCObject* pSender);
 
-    GEODE_CODEGEN_DLL void onCopy(cocos2d::CCObject* pSender);
+    SAPPHIRE_CODEGEN_DLL void onCopy(cocos2d::CCObject* pSender);
 
-    GEODE_CODEGEN_DLL void onPaste(cocos2d::CCObject* pSender);
+    SAPPHIRE_CODEGEN_DLL void onPaste(cocos2d::CCObject* pSender);
 
-    GEODE_CODEGEN_DLL void toggleEnableRotate(cocos2d::CCObject* pSender);
+    SAPPHIRE_CODEGEN_DLL void toggleEnableRotate(cocos2d::CCObject* pSender);
 
-    GEODE_CODEGEN_DLL void toggleFreeMove(cocos2d::CCObject* pSender);
+    SAPPHIRE_CODEGEN_DLL void toggleFreeMove(cocos2d::CCObject* pSender);
 
-    GEODE_CODEGEN_DLL void toggleSwipe(cocos2d::CCObject* pSender);
+    SAPPHIRE_CODEGEN_DLL void toggleSwipe(cocos2d::CCObject* pSender);
 
-    GEODE_CODEGEN_DLL void toggleSnap(cocos2d::CCObject* pSender);
+    SAPPHIRE_CODEGEN_DLL void toggleSnap(cocos2d::CCObject* pSender);
 
-    GEODE_CODEGEN_DLL void onPlayback(cocos2d::CCObject* pSender);
+    SAPPHIRE_CODEGEN_DLL void onPlayback(cocos2d::CCObject* pSender);
 
-    GEODE_CODEGEN_DLL void onPlaytest(cocos2d::CCObject* pSender);
+    SAPPHIRE_CODEGEN_DLL void onPlaytest(cocos2d::CCObject* pSender);
 
-    GEODE_CODEGEN_DLL void onStopPlaytest(cocos2d::CCObject* pSender);
+    SAPPHIRE_CODEGEN_DLL void onStopPlaytest(cocos2d::CCObject* pSender);
 
-    GEODE_CODEGEN_DLL void onGroupUp(cocos2d::CCObject* pSender);
+    SAPPHIRE_CODEGEN_DLL void onGroupUp(cocos2d::CCObject* pSender);
 
-    GEODE_CODEGEN_DLL void onGroupDown(cocos2d::CCObject* pSender);
+    SAPPHIRE_CODEGEN_DLL void onGroupDown(cocos2d::CCObject* pSender);
 
-    GEODE_CODEGEN_DLL void selectBuildTab(int tab);
+    SAPPHIRE_CODEGEN_DLL void selectBuildTab(int tab);
 
-    GEODE_CODEGEN_DLL void onPause(cocos2d::CCObject* pSender);
+    SAPPHIRE_CODEGEN_DLL void onPause(cocos2d::CCObject* pSender);
 
     template <bool T=false>
     void onSettings(cocos2d::CCObject* pSender){
@@ -4934,14 +4934,14 @@ public:
         static_assert(T, "Implement EditorUI::alignObjects");
     }
 
-    GEODE_CODEGEN_DLL virtual void keyUp(cocos2d::enumKeyCodes key);
+    SAPPHIRE_CODEGEN_DLL virtual void keyUp(cocos2d::enumKeyCodes key);
 
         EditButtonBar* m_buttonBar;
-        GEODE_PAD(0x8);
+        SAPPHIRE_PAD(0x8);
         cocos2d::CCArray* m_hideableUIElementArray;
-        GEODE_PAD(0x8);
+        SAPPHIRE_PAD(0x8);
         float m_gridSize;
-        GEODE_PAD(0x14);
+        SAPPHIRE_PAD(0x14);
         bool m_moveModifier;
         int m_rotationTouchID;
         int m_scaleTouchID;
@@ -4960,9 +4960,9 @@ public:
         float m_unknown2;
         bool m_swipeEnabled;
         bool m_freeMoveEnabled;
-        GEODE_PAD(0x12);
+        SAPPHIRE_PAD(0x12);
         cocos2d::CCArray* m_unknownArray2;
-        GEODE_PAD(0x16);
+        SAPPHIRE_PAD(0x16);
         cocos2d::CCArray* m_selectedObjects;
         cocos2d::CCMenu* m_deleteMenu;
         cocos2d::CCArray* m_unknownArray4;
@@ -5009,7 +5009,7 @@ public:
         CCMenuItemSpriteExtra* m_layerNextBtn;
         CCMenuItemSpriteExtra* m_layerPrevBtn;
         CCMenuItemSpriteExtra* m_goToBaseBtn;
-        GEODE_PAD(0x16);
+        SAPPHIRE_PAD(0x16);
         int m_selectedCreateObjectID;
         cocos2d::CCArray* m_createButtonArray;
         cocos2d::CCArray* m_customObjectButtonArray;
@@ -5018,32 +5018,32 @@ public:
         LevelEditorLayer* m_editorLayer;
         cocos2d::CCPoint m_swipeStart;
         cocos2d::CCPoint m_swipeEnd;
-        GEODE_PAD(0x40);
+        SAPPHIRE_PAD(0x40);
         GameObject* m_selectedObject;
-        GEODE_PAD(0x16);
+        SAPPHIRE_PAD(0x16);
         gd::string m_clipboard;
-        GEODE_PAD(0x16);
+        SAPPHIRE_PAD(0x16);
         int m_selectedTab;
         int m_timesSelected;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         bool m_spaceKeyPressed;
 };
 
 class CollisionBlockPopup {
 public:
 
-    GEODE_CODEGEN_DLL static CollisionBlockPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    SAPPHIRE_CODEGEN_DLL static CollisionBlockPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
 
-    GEODE_CODEGEN_DLL void onNextItemID(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onNextItemID(cocos2d::CCObject* p0);
 
 };
 
 class CheckpointObject : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL static CheckpointObject* create();
+    SAPPHIRE_CODEGEN_DLL static CheckpointObject* create();
 
-    GEODE_CODEGEN_DLL void getObject();
+    SAPPHIRE_CODEGEN_DLL void getObject();
 
         GameObject* m_gameObject;
         PlayerCheckpoint* m_player1;
@@ -5053,7 +5053,7 @@ public:
         cocos2d::CCPoint m_cameraPos;
         int m_unk104;
         GameObject* m_lastPortal;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         double m_unk110;
         gd::string m_currentStateString;
         gd::string m_objectsStateString;
@@ -5065,20 +5065,20 @@ public:
 		return CCMenuItemSpriteExtra::create(sprite, nullptr, target, callback);
 	}
 
-    GEODE_CODEGEN_DLL void useAnimationType(MenuAnimationType type);
+    SAPPHIRE_CODEGEN_DLL void useAnimationType(MenuAnimationType type);
 
-    GEODE_CODEGEN_DLL void setDestination(cocos2d::CCPoint const& pos);
+    SAPPHIRE_CODEGEN_DLL void setDestination(cocos2d::CCPoint const& pos);
 
-    GEODE_CODEGEN_DLL void setOffset(cocos2d::CCPoint const& pos);
+    SAPPHIRE_CODEGEN_DLL void setOffset(cocos2d::CCPoint const& pos);
 
-    GEODE_CODEGEN_DLL void setScale(float scale);
+    SAPPHIRE_CODEGEN_DLL void setScale(float scale);
 
-    GEODE_CODEGEN_DLL static CCMenuItemSpriteExtra* create(cocos2d::CCNode* p0, cocos2d::CCNode* p1, cocos2d::CCObject* p2, cocos2d::SEL_MenuHandler p3);
+    SAPPHIRE_CODEGEN_DLL static CCMenuItemSpriteExtra* create(cocos2d::CCNode* p0, cocos2d::CCNode* p1, cocos2d::CCObject* p2, cocos2d::SEL_MenuHandler p3);
 
-    GEODE_CODEGEN_DLL void setSizeMult(float p0);
+    SAPPHIRE_CODEGEN_DLL void setSizeMult(float p0);
 
-        GEODE_CODEGEN_DLL CCMenuItemSpriteExtra();
-    GEODE_CODEGEN_DLL bool init(cocos2d::CCNode* p0, cocos2d::CCNode* p1, cocos2d::CCObject* p2, cocos2d::SEL_MenuHandler p3);
+        SAPPHIRE_CODEGEN_DLL CCMenuItemSpriteExtra();
+    SAPPHIRE_CODEGEN_DLL bool init(cocos2d::CCNode* p0, cocos2d::CCNode* p1, cocos2d::CCObject* p2, cocos2d::SEL_MenuHandler p3);
 
     template <bool T=false>
     bool init(cocos2d::CCNode* spr){
@@ -5117,9 +5117,9 @@ public:
 class CreateMenuItem : public CCMenuItemSpriteExtra {
 public:
 
-    GEODE_CODEGEN_DLL static CreateMenuItem* create(cocos2d::CCNode* p0, cocos2d::CCNode* p1, cocos2d::CCObject* p2, cocos2d::SEL_MenuHandler p3);
+    SAPPHIRE_CODEGEN_DLL static CreateMenuItem* create(cocos2d::CCNode* p0, cocos2d::CCNode* p1, cocos2d::CCObject* p2, cocos2d::SEL_MenuHandler p3);
 
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         int m_objectID;
         int m_buildTabPage;
         int m_buildTab;
@@ -5128,9 +5128,9 @@ public:
 class LocalLevelManager : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL static LocalLevelManager* sharedState();
+    SAPPHIRE_CODEGEN_DLL static LocalLevelManager* sharedState();
 
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         cocos2d::CCDictionary* m_loadData;
         cocos2d::CCDictionary* m_levelData;
         cocos2d::CCArray* m_localLevels;
@@ -5139,11 +5139,11 @@ public:
 class CCMoveCNode : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL static CCMoveCNode* create();
+    SAPPHIRE_CODEGEN_DLL static CCMoveCNode* create();
 
-    GEODE_CODEGEN_DLL virtual bool init();
+    SAPPHIRE_CODEGEN_DLL virtual bool init();
 
-        GEODE_CODEGEN_DLL ~CCMoveCNode();
+        SAPPHIRE_CODEGEN_DLL ~CCMoveCNode();
 };
 
 class CCContentLayer : public cocos2d::CCLayerColor {
@@ -5164,11 +5164,11 @@ public:
 class GameStatsManager : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL void awardCurrencyForLevel(GJGameLevel* p0);
+    SAPPHIRE_CODEGEN_DLL void awardCurrencyForLevel(GJGameLevel* p0);
 
-    GEODE_CODEGEN_DLL void awardDiamondsForLevel(GJGameLevel* p0);
+    SAPPHIRE_CODEGEN_DLL void awardDiamondsForLevel(GJGameLevel* p0);
 
-    GEODE_CODEGEN_DLL void awardSecretKey();
+    SAPPHIRE_CODEGEN_DLL void awardSecretKey();
 
     template <bool T=false>
     int getAwardedCurrencyForLevel(GJGameLevel* p0){
@@ -5190,41 +5190,41 @@ public:
         static_assert(T, "Implement GameStatsManager::getChallenge");
     }
 
-    GEODE_CODEGEN_DLL void getSecretCoinKey(char const* p0);
+    SAPPHIRE_CODEGEN_DLL void getSecretCoinKey(char const* p0);
 
-    GEODE_CODEGEN_DLL void getStat(char const* p0);
+    SAPPHIRE_CODEGEN_DLL void getStat(char const* p0);
 
-    GEODE_CODEGEN_DLL void hasPendingUserCoin(char const* p0);
+    SAPPHIRE_CODEGEN_DLL void hasPendingUserCoin(char const* p0);
 
-    GEODE_CODEGEN_DLL void hasSecretCoin(char const* p0);
+    SAPPHIRE_CODEGEN_DLL void hasSecretCoin(char const* p0);
 
-    GEODE_CODEGEN_DLL void hasUserCoin(char const* p0);
+    SAPPHIRE_CODEGEN_DLL void hasUserCoin(char const* p0);
 
     template <bool T=false>
     void incrementChallenge(GJChallengeType type, int count){
         static_assert(T, "Implement GameStatsManager::incrementChallenge");
     }
 
-    GEODE_CODEGEN_DLL void incrementStat(char const* p0);
+    SAPPHIRE_CODEGEN_DLL void incrementStat(char const* p0);
 
-    GEODE_CODEGEN_DLL void incrementStat(char const* p0, int p1);
+    SAPPHIRE_CODEGEN_DLL void incrementStat(char const* p0, int p1);
 
-    GEODE_CODEGEN_DLL static GameStatsManager* sharedState();
+    SAPPHIRE_CODEGEN_DLL static GameStatsManager* sharedState();
 
-    GEODE_CODEGEN_DLL void storePendingUserCoin(char const* p0);
+    SAPPHIRE_CODEGEN_DLL void storePendingUserCoin(char const* p0);
 
-    GEODE_CODEGEN_DLL void storeSecretCoin(char const* p0);
+    SAPPHIRE_CODEGEN_DLL void storeSecretCoin(char const* p0);
 
-    GEODE_CODEGEN_DLL void storeUserCoin(char const* p0);
+    SAPPHIRE_CODEGEN_DLL void storeUserCoin(char const* p0);
 
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         cocos2d::CCDictionary* m_dailyChests;
         cocos2d::CCDictionary* m_worldAdvertChests;
         cocos2d::CCDictionary* m_activeChallenges;
         cocos2d::CCDictionary* m_upcomingChallenges;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         cocos2d::CCDictionary* m_playerStats;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         cocos2d::CCDictionary* m_completedLevels;
         cocos2d::CCDictionary* m_verifiedUserCoins;
         cocos2d::CCDictionary* m_pendingUserCoins;
@@ -5251,15 +5251,15 @@ public:
 class CCCircleWave : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL static CCCircleWave* create(float p0, float p1, float p2, bool p3);
+    SAPPHIRE_CODEGEN_DLL static CCCircleWave* create(float p0, float p1, float p2, bool p3);
 
-    GEODE_CODEGEN_DLL static CCCircleWave* create(float p0, float p1, float p2, bool p3, bool p4);
+    SAPPHIRE_CODEGEN_DLL static CCCircleWave* create(float p0, float p1, float p2, bool p3, bool p4);
 
-    GEODE_CODEGEN_DLL bool init(float p0, float p1, float p2, bool p3, bool p4);
+    SAPPHIRE_CODEGEN_DLL bool init(float p0, float p1, float p2, bool p3, bool p4);
 
-    GEODE_CODEGEN_DLL void followObject(cocos2d::CCNode* p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void followObject(cocos2d::CCNode* p0, bool p1);
 
-    GEODE_CODEGEN_DLL void updatePosition(float p0);
+    SAPPHIRE_CODEGEN_DLL void updatePosition(float p0);
 
     template <bool T=false>
     void setPosition(cocos2d::CCPoint const& pos){
@@ -5282,7 +5282,7 @@ public:
     }
 
         cocos2d::CCArray* m_children;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         float m_currentRadius;
         float m_currentOpacity;
         CLASSPARAM(cocos2d::ccColor3B, color, 0x134);
@@ -5297,7 +5297,7 @@ public:
 class LevelBrowserLayer : public cocos2d::CCLayer {
 public:
 
-    GEODE_CODEGEN_DLL static void scene(GJSearchObject* pSearch);
+    SAPPHIRE_CODEGEN_DLL static void scene(GJSearchObject* pSearch);
 
     template <bool T=false>
     bool init(GJSearchObject* pSearch){
@@ -5319,15 +5319,15 @@ public:
         static_assert(T, "Implement LevelBrowserLayer::updateLevelsLabel");
     }
 
-    GEODE_CODEGEN_DLL static LevelBrowserLayer* create(GJSearchObject* pSearch);
+    SAPPHIRE_CODEGEN_DLL static LevelBrowserLayer* create(GJSearchObject* pSearch);
 
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         GJListLayer* m_list;
         CCMenuItemSpriteExtra* m_leftArrow;
         CCMenuItemSpriteExtra* m_rightArrow;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         GJSearchObject* m_searchObject;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         int m_itemCount;
         int m_pageStartIdx;
         int m_pageEndIdx;
@@ -5336,15 +5336,15 @@ public:
 class ArtistCell : public TableViewCell {
 public:
 
-    GEODE_CODEGEN_DLL void draw();
+    SAPPHIRE_CODEGEN_DLL void draw();
 
-    GEODE_CODEGEN_DLL virtual bool init();
+    SAPPHIRE_CODEGEN_DLL virtual bool init();
 
-    GEODE_CODEGEN_DLL void loadFromObject(SongInfoObject* p0);
+    SAPPHIRE_CODEGEN_DLL void loadFromObject(SongInfoObject* p0);
 
-    GEODE_CODEGEN_DLL void onNewgrounds(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onNewgrounds(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL void updateBGColor(int p0);
+    SAPPHIRE_CODEGEN_DLL void updateBGColor(int p0);
 
         void* m_idk;
 };
@@ -5352,22 +5352,22 @@ public:
 class AchievementsLayer {
 public:
 
-    GEODE_CODEGEN_DLL void customSetup();
+    SAPPHIRE_CODEGEN_DLL void customSetup();
 
-    GEODE_CODEGEN_DLL void loadPage(int p0);
+    SAPPHIRE_CODEGEN_DLL void loadPage(int p0);
 
 };
 
 class AchievementNotifier : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL void notifyAchievement(const char* title, const char* desc, const char* icon, bool quest);
+    SAPPHIRE_CODEGEN_DLL void notifyAchievement(const char* title, const char* desc, const char* icon, bool quest);
 
-    GEODE_CODEGEN_DLL static AchievementNotifier* sharedState();
+    SAPPHIRE_CODEGEN_DLL static AchievementNotifier* sharedState();
 
-    GEODE_CODEGEN_DLL void willSwitchToScene(cocos2d::CCScene* p0);
+    SAPPHIRE_CODEGEN_DLL void willSwitchToScene(cocos2d::CCScene* p0);
 
-    GEODE_CODEGEN_DLL void showNextAchievement();
+    SAPPHIRE_CODEGEN_DLL void showNextAchievement();
 
         cocos2d::CCScene* m_currentScene;
         cocos2d::CCArray* m_queue;
@@ -5382,23 +5382,23 @@ public:
 class AchievementCell {
 public:
 
-    GEODE_CODEGEN_DLL void loadFromDict(cocos2d::CCDictionary* p0);
+    SAPPHIRE_CODEGEN_DLL void loadFromDict(cocos2d::CCDictionary* p0);
 
 };
 
 class AchievementBar : public cocos2d::CCNodeRGBA {
 public:
 
-    GEODE_CODEGEN_DLL static AchievementBar* create(const char* title, const char* desc, const char* icon, bool quest);
+    SAPPHIRE_CODEGEN_DLL static AchievementBar* create(const char* title, const char* desc, const char* icon, bool quest);
 
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
 };
 
 class CurrencyRewardLayer {
 public:
 
-        GEODE_CODEGEN_DLL ~CurrencyRewardLayer();
-    GEODE_CODEGEN_DLL virtual void update(float p0);
+        SAPPHIRE_CODEGEN_DLL ~CurrencyRewardLayer();
+    SAPPHIRE_CODEGEN_DLL virtual void update(float p0);
 
 };
 
@@ -5415,13 +5415,13 @@ public:
 class AchievementManager : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL void getAllAchievements();
+    SAPPHIRE_CODEGEN_DLL void getAllAchievements();
 
-    GEODE_CODEGEN_DLL static AchievementManager* sharedState();
+    SAPPHIRE_CODEGEN_DLL static AchievementManager* sharedState();
 
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         cocos2d::CCDictionary* m_achievements;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
 };
 
 class ConfigureHSVWidget : public cocos2d::CCNode {
@@ -5439,48 +5439,48 @@ public:
 class SetupInteractObjectPopup : public FLAlertLayer {
 public:
 
-    GEODE_CODEGEN_DLL static SetupInteractObjectPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    SAPPHIRE_CODEGEN_DLL static SetupInteractObjectPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
 
-    GEODE_CODEGEN_DLL void onTargetIDArrow(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onTargetIDArrow(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL void textChanged(CCTextInputNode* p0);
+    SAPPHIRE_CODEGEN_DLL void textChanged(CCTextInputNode* p0);
 
-    GEODE_CODEGEN_DLL void updateTargetID();
+    SAPPHIRE_CODEGEN_DLL void updateTargetID();
 
 };
 
 class GJAccountLoginDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual bool loginAccountFailed(AccountError p0);
+    SAPPHIRE_CODEGEN_DLL virtual bool loginAccountFailed(AccountError p0);
 
-    GEODE_CODEGEN_DLL virtual bool loginAccountFinished(int p0, int p1);
+    SAPPHIRE_CODEGEN_DLL virtual bool loginAccountFinished(int p0, int p1);
 
 };
 
 class EndLevelLayer {
 public:
 
-    GEODE_CODEGEN_DLL static EndLevelLayer* create();
+    SAPPHIRE_CODEGEN_DLL static EndLevelLayer* create();
 
 };
 
 class AnimatedGameObject {
 public:
 
-    GEODE_CODEGEN_DLL void playAnimation(int p0);
+    SAPPHIRE_CODEGEN_DLL void playAnimation(int p0);
 
-    GEODE_CODEGEN_DLL void updateChildSpriteColor(cocos2d::_ccColor3B p0);
+    SAPPHIRE_CODEGEN_DLL void updateChildSpriteColor(cocos2d::_ccColor3B p0);
 
 };
 
 class UndoObject : public cocos2d::CCObject {
 public:
 
-        GEODE_CODEGEN_DLL ~UndoObject();
-    GEODE_CODEGEN_DLL static UndoObject* create(GameObject* p0, UndoCommand p1);
+        SAPPHIRE_CODEGEN_DLL ~UndoObject();
+    SAPPHIRE_CODEGEN_DLL static UndoObject* create(GameObject* p0, UndoCommand p1);
 
-    GEODE_CODEGEN_DLL static UndoObject* createWithArray(cocos2d::CCArray* p0, UndoCommand p1);
+    SAPPHIRE_CODEGEN_DLL static UndoObject* createWithArray(cocos2d::CCArray* p0, UndoCommand p1);
 
     template <bool T=false>
     static UndoObject* createWithTransformObjects(cocos2d::CCArray* pObjects, UndoCommand nCommand){
@@ -5496,7 +5496,7 @@ public:
 class GJSearchObject : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL SearchType getType();
+    SAPPHIRE_CODEGEN_DLL SearchType getType();
 
     template <bool T=false>
     static GJSearchObject* create(SearchType nID){
@@ -5533,7 +5533,7 @@ public:
 class CountTriggerAction : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL static CountTriggerAction* createFromString(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL static CountTriggerAction* createFromString(gd::string p0);
 
         int m_previousCount;
         int m_targetCount;
@@ -5551,33 +5551,33 @@ public:
 		return this->init(entries, height, width, 0, type);
 	}
 
-    GEODE_CODEGEN_DLL static BoomListView* create(cocos2d::CCArray* p0, float p1, float p2, int p3, BoomListType p4);
+    SAPPHIRE_CODEGEN_DLL static BoomListView* create(cocos2d::CCArray* p0, float p1, float p2, int p3, BoomListType p4);
 
-    GEODE_CODEGEN_DLL bool init(cocos2d::CCArray* p0, float p1, float p2, int p3, BoomListType p4);
+    SAPPHIRE_CODEGEN_DLL bool init(cocos2d::CCArray* p0, float p1, float p2, int p3, BoomListType p4);
 
-    GEODE_CODEGEN_DLL virtual void draw();
+    SAPPHIRE_CODEGEN_DLL virtual void draw();
 
-    GEODE_CODEGEN_DLL virtual void setupList();
+    SAPPHIRE_CODEGEN_DLL virtual void setupList();
 
-    GEODE_CODEGEN_DLL virtual void TableViewWillDisplayCellForRowAtIndexPath(CCIndexPath& p0, TableViewCell* p1, TableView* p2);
+    SAPPHIRE_CODEGEN_DLL virtual void TableViewWillDisplayCellForRowAtIndexPath(CCIndexPath& p0, TableViewCell* p1, TableView* p2);
 
-    GEODE_CODEGEN_DLL virtual float cellHeightForRowAtIndexPath(CCIndexPath& p0, TableView* p1);
+    SAPPHIRE_CODEGEN_DLL virtual float cellHeightForRowAtIndexPath(CCIndexPath& p0, TableView* p1);
 
-    GEODE_CODEGEN_DLL virtual void didSelectRowAtIndexPath(CCIndexPath& p0, TableView* p1);
+    SAPPHIRE_CODEGEN_DLL virtual void didSelectRowAtIndexPath(CCIndexPath& p0, TableView* p1);
 
-    GEODE_CODEGEN_DLL virtual int numberOfRowsInSection(unsigned int p0, TableView* p1);
+    SAPPHIRE_CODEGEN_DLL virtual int numberOfRowsInSection(unsigned int p0, TableView* p1);
 
-    GEODE_CODEGEN_DLL virtual unsigned int numberOfSectionsInTableView(TableView* p0);
+    SAPPHIRE_CODEGEN_DLL virtual unsigned int numberOfSectionsInTableView(TableView* p0);
 
-    GEODE_CODEGEN_DLL virtual TableViewCell* cellForRowAtIndexPath(CCIndexPath& p0, TableView* p1);
+    SAPPHIRE_CODEGEN_DLL virtual TableViewCell* cellForRowAtIndexPath(CCIndexPath& p0, TableView* p1);
 
-    GEODE_CODEGEN_DLL virtual void TableViewCommitCellEditingStyleForRowAtIndexPath(TableView* p0, TableViewCellEditingStyle p1, CCIndexPath& p2);
+    SAPPHIRE_CODEGEN_DLL virtual void TableViewCommitCellEditingStyleForRowAtIndexPath(TableView* p0, TableViewCellEditingStyle p1, CCIndexPath& p2);
 
-    GEODE_CODEGEN_DLL virtual void TableViewWillReloadCellForRowAtIndexPath(CCIndexPath& p0, TableViewCell* p1, TableView* p2);
+    SAPPHIRE_CODEGEN_DLL virtual void TableViewWillReloadCellForRowAtIndexPath(CCIndexPath& p0, TableViewCell* p1, TableView* p2);
 
-    GEODE_CODEGEN_DLL virtual TableViewCell* getListCell(const char* p0);
+    SAPPHIRE_CODEGEN_DLL virtual TableViewCell* getListCell(const char* p0);
 
-    GEODE_CODEGEN_DLL virtual void loadCell(TableViewCell* p0, unsigned int p1);
+    SAPPHIRE_CODEGEN_DLL virtual void loadCell(TableViewCell* p0, unsigned int p1);
 
         TableView* m_tableView;
         cocos2d::CCArray* m_entries;
@@ -5625,61 +5625,61 @@ public:
 		return nullptr;
 	}
 
-    GEODE_CODEGEN_DLL void setLabelNormalColor(cocos2d::ccColor3B color);
+    SAPPHIRE_CODEGEN_DLL void setLabelNormalColor(cocos2d::ccColor3B color);
 
-    GEODE_CODEGEN_DLL void setLabelPlaceholderColor(cocos2d::ccColor3B color);
+    SAPPHIRE_CODEGEN_DLL void setLabelPlaceholderColor(cocos2d::ccColor3B color);
 
-    GEODE_CODEGEN_DLL void setLabelPlaceholderScale(float scale);
+    SAPPHIRE_CODEGEN_DLL void setLabelPlaceholderScale(float scale);
 
-    GEODE_CODEGEN_DLL void setMaxLabelScale(float scale);
+    SAPPHIRE_CODEGEN_DLL void setMaxLabelScale(float scale);
 
-    GEODE_CODEGEN_DLL void setMaxLabelWidth(int length);
+    SAPPHIRE_CODEGEN_DLL void setMaxLabelWidth(int length);
 
-    GEODE_CODEGEN_DLL void setAllowedChars(gd::string filter);
+    SAPPHIRE_CODEGEN_DLL void setAllowedChars(gd::string filter);
 
-    GEODE_CODEGEN_DLL void forceOffset();
+    SAPPHIRE_CODEGEN_DLL void forceOffset();
 
-    GEODE_CODEGEN_DLL void setString(gd::string text);
+    SAPPHIRE_CODEGEN_DLL void setString(gd::string text);
 
-    GEODE_CODEGEN_DLL const char* getString();
+    SAPPHIRE_CODEGEN_DLL const char* getString();
 
-    GEODE_CODEGEN_DLL cocos2d::CCTextFieldTTF* getTextField();
+    SAPPHIRE_CODEGEN_DLL cocos2d::CCTextFieldTTF* getTextField();
 
-    GEODE_CODEGEN_DLL cocos2d::CCLabelBMFont* getPlaceholderLabel();
+    SAPPHIRE_CODEGEN_DLL cocos2d::CCLabelBMFont* getPlaceholderLabel();
 
-    GEODE_CODEGEN_DLL void setDelegate(TextInputDelegate* delegate);
+    SAPPHIRE_CODEGEN_DLL void setDelegate(TextInputDelegate* delegate);
 
-    GEODE_CODEGEN_DLL bool init(float width, float height, const char* caption, const char* thonburi, int maxCharCount, const char* font);
+    SAPPHIRE_CODEGEN_DLL bool init(float width, float height, const char* caption, const char* thonburi, int maxCharCount, const char* font);
 
-    GEODE_CODEGEN_DLL void refreshLabel();
+    SAPPHIRE_CODEGEN_DLL void refreshLabel();
 
-    GEODE_CODEGEN_DLL void updateLabel(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL void updateLabel(gd::string p0);
 
-    GEODE_CODEGEN_DLL virtual void registerWithTouchDispatcher();
+    SAPPHIRE_CODEGEN_DLL virtual void registerWithTouchDispatcher();
 
-    GEODE_CODEGEN_DLL virtual void visit();
+    SAPPHIRE_CODEGEN_DLL virtual void visit();
 
-    GEODE_CODEGEN_DLL virtual bool ccTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    SAPPHIRE_CODEGEN_DLL virtual bool ccTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
 
-    GEODE_CODEGEN_DLL virtual void ccTouchCancelled(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    SAPPHIRE_CODEGEN_DLL virtual void ccTouchCancelled(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
 
-    GEODE_CODEGEN_DLL virtual void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    SAPPHIRE_CODEGEN_DLL virtual void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
 
-    GEODE_CODEGEN_DLL virtual void ccTouchMoved(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    SAPPHIRE_CODEGEN_DLL virtual void ccTouchMoved(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
 
-    GEODE_CODEGEN_DLL virtual void textChanged();
+    SAPPHIRE_CODEGEN_DLL virtual void textChanged();
 
-    GEODE_CODEGEN_DLL virtual void onClickTrackNode(bool p0);
+    SAPPHIRE_CODEGEN_DLL virtual void onClickTrackNode(bool p0);
 
-    GEODE_CODEGEN_DLL virtual void keyboardWillShow(cocos2d::CCIMEKeyboardNotificationInfo& p0);
+    SAPPHIRE_CODEGEN_DLL virtual void keyboardWillShow(cocos2d::CCIMEKeyboardNotificationInfo& p0);
 
-    GEODE_CODEGEN_DLL virtual void keyboardWillHide(cocos2d::CCIMEKeyboardNotificationInfo& p0);
+    SAPPHIRE_CODEGEN_DLL virtual void keyboardWillHide(cocos2d::CCIMEKeyboardNotificationInfo& p0);
 
-    GEODE_CODEGEN_DLL virtual bool onTextFieldInsertText(cocos2d::CCTextFieldTTF* p0, char const* p1, int p2);
+    SAPPHIRE_CODEGEN_DLL virtual bool onTextFieldInsertText(cocos2d::CCTextFieldTTF* p0, char const* p1, int p2);
 
-    GEODE_CODEGEN_DLL virtual bool onTextFieldAttachWithIME(cocos2d::CCTextFieldTTF* p0);
+    SAPPHIRE_CODEGEN_DLL virtual bool onTextFieldAttachWithIME(cocos2d::CCTextFieldTTF* p0);
 
-    GEODE_CODEGEN_DLL virtual bool onTextFieldDetachWithIME(cocos2d::CCTextFieldTTF* p0);
+    SAPPHIRE_CODEGEN_DLL virtual bool onTextFieldDetachWithIME(cocos2d::CCTextFieldTTF* p0);
 
         void* m_unknown0;
         gd::string m_caption;
@@ -5715,16 +5715,16 @@ public:
 class LevelSettingsObject : public cocos2d::CCNode {
 public:
 
-        GEODE_CODEGEN_DLL ~LevelSettingsObject();
-    GEODE_CODEGEN_DLL virtual bool init();
+        SAPPHIRE_CODEGEN_DLL ~LevelSettingsObject();
+    SAPPHIRE_CODEGEN_DLL virtual bool init();
 
-    GEODE_CODEGEN_DLL static LevelSettingsObject* create();
+    SAPPHIRE_CODEGEN_DLL static LevelSettingsObject* create();
 
-    GEODE_CODEGEN_DLL void objectFromDict(cocos2d::CCDictionary* p0);
+    SAPPHIRE_CODEGEN_DLL void objectFromDict(cocos2d::CCDictionary* p0);
 
-    GEODE_CODEGEN_DLL static LevelSettingsObject* objectFromString(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL static LevelSettingsObject* objectFromString(gd::string p0);
 
-    GEODE_CODEGEN_DLL void setupColorsFromLegacyMode(cocos2d::CCDictionary* p0);
+    SAPPHIRE_CODEGEN_DLL void setupColorsFromLegacyMode(cocos2d::CCDictionary* p0);
 
         GJEffectManager* m_effectManager;
         int m_startMode;
@@ -5738,7 +5738,7 @@ public:
         int m_backgroundIndex;
         int m_groundIndex;
         int m_fontIndex;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         GJGameLevel* m_level;
         gd::string m_unknownStr;
 };
@@ -5746,7 +5746,7 @@ public:
 class UploadPopupDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void onClosePopup();
+    SAPPHIRE_CODEGEN_DLL virtual void onClosePopup();
 
 };
 
@@ -5758,7 +5758,7 @@ public:
         static_assert(T, "Implement GameToolbox::createToggleButton");
     }
 
-    GEODE_CODEGEN_DLL static CCMenuItemToggler* createToggleButton(gd::string text, cocos2d::SEL_MenuHandler onToggled, bool isToggled, cocos2d::CCMenu* toggleMenu, cocos2d::CCPoint position, cocos2d::CCNode* callbackTarget, cocos2d::CCNode* labelParent, float checkboxScale, float labelSize, float maxWidth, cocos2d::CCPoint labelOffset, const char* unknown, bool anchorHorizontally, int toggleTag, cocos2d::CCArray* toggleArray);
+    SAPPHIRE_CODEGEN_DLL static CCMenuItemToggler* createToggleButton(gd::string text, cocos2d::SEL_MenuHandler onToggled, bool isToggled, cocos2d::CCMenu* toggleMenu, cocos2d::CCPoint position, cocos2d::CCNode* callbackTarget, cocos2d::CCNode* labelParent, float checkboxScale, float labelSize, float maxWidth, cocos2d::CCPoint labelOffset, const char* unknown, bool anchorHorizontally, int toggleTag, cocos2d::CCArray* toggleArray);
 
     template <bool T=false>
     static void transformColor(cocos2d::ccColor3B* src, cocos2d::ccColor3B* dest, cocos2d::ccHSVValue hsv){
@@ -5775,7 +5775,7 @@ public:
 class AnimatedShopKeeper : public CCAnimatedSprite {
 public:
 
-    GEODE_CODEGEN_DLL void animationFinished(const char* p0);
+    SAPPHIRE_CODEGEN_DLL void animationFinished(const char* p0);
 
     template <bool T=false>
     static AnimatedShopKeeper* create(ShopType type){
@@ -5795,7 +5795,7 @@ public:
 class BoomScrollLayer : public cocos2d::CCLayer {
 public:
 
-        GEODE_CODEGEN_DLL BoomScrollLayer();
+        SAPPHIRE_CODEGEN_DLL BoomScrollLayer();
     template <bool T=false>
     void instantMoveToPage(int page){
         static_assert(T, "Implement BoomScrollLayer::instantMoveToPage");
@@ -5807,31 +5807,31 @@ public:
     }
 
         cocos2d::CCArray* m_dots;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         ExtendedLayer* m_layer;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         int m_page;
 };
 
 class SetupCollisionTriggerPopup : public FLAlertLayer {
 public:
 
-    GEODE_CODEGEN_DLL static SetupCollisionTriggerPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    SAPPHIRE_CODEGEN_DLL static SetupCollisionTriggerPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
 
-    GEODE_CODEGEN_DLL void onTargetIDArrow(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onTargetIDArrow(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL void textChanged(CCTextInputNode* p0);
+    SAPPHIRE_CODEGEN_DLL void textChanged(CCTextInputNode* p0);
 
-    GEODE_CODEGEN_DLL void updateTargetID();
+    SAPPHIRE_CODEGEN_DLL void updateTargetID();
 
 };
 
 class CustomSongWidget : public cocos2d::CCNode, public MusicDownloadDelegate, public FLAlertLayerProtocol {
 public:
 
-    GEODE_CODEGEN_DLL void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void FLAlert_Clicked(FLAlertLayer* p0, bool p1);
 
-    GEODE_CODEGEN_DLL void loadSongInfoFinished(SongInfoObject* p0);
+    SAPPHIRE_CODEGEN_DLL void loadSongInfoFinished(SongInfoObject* p0);
 
     template <bool T=false>
     void updateSongObject(SongInfoObject* song){
@@ -5839,15 +5839,15 @@ public:
     }
 
         SongInfoObject* m_songInfo;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         CCMenuItemSpriteExtra* m_downloadBtn;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
 };
 
 class TeleportPortalObject : public GameObject {
 public:
 
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         TeleportPortalObject* m_orangePortal;
         bool m_unk470;
         float m_unk474;
@@ -5857,27 +5857,27 @@ public:
 class GJSpecialColorSelect {
 public:
 
-    GEODE_CODEGEN_DLL static const char* textForColorIdx(int id);
+    SAPPHIRE_CODEGEN_DLL static const char* textForColorIdx(int id);
 
 };
 
 class GJAccountDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual bool accountStatusChanged();
+    SAPPHIRE_CODEGEN_DLL virtual bool accountStatusChanged();
 
 };
 
 class SetupTouchTogglePopup : public FLAlertLayer {
 public:
 
-    GEODE_CODEGEN_DLL static SetupTouchTogglePopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    SAPPHIRE_CODEGEN_DLL static SetupTouchTogglePopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
 
-    GEODE_CODEGEN_DLL void onTargetIDArrow(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onTargetIDArrow(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL void textChanged(CCTextInputNode* p0);
+    SAPPHIRE_CODEGEN_DLL void textChanged(CCTextInputNode* p0);
 
-    GEODE_CODEGEN_DLL void updateTargetID();
+    SAPPHIRE_CODEGEN_DLL void updateTargetID();
 
 };
 
@@ -5889,35 +5889,35 @@ public:
 class EditorOptionsLayer {
 public:
 
-    GEODE_CODEGEN_DLL void onButtonsPerRow(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onButtonsPerRow(cocos2d::CCObject* p0);
 
 };
 
 class HardStreak : public cocos2d::CCDrawNode {
 public:
 
-        GEODE_CODEGEN_DLL ~HardStreak();
-    GEODE_CODEGEN_DLL virtual bool init();
+        SAPPHIRE_CODEGEN_DLL ~HardStreak();
+    SAPPHIRE_CODEGEN_DLL virtual bool init();
 
-    GEODE_CODEGEN_DLL void addPoint(cocos2d::CCPoint p0);
+    SAPPHIRE_CODEGEN_DLL void addPoint(cocos2d::CCPoint p0);
 
-    GEODE_CODEGEN_DLL void clearBehindXPos(float p0);
+    SAPPHIRE_CODEGEN_DLL void clearBehindXPos(float p0);
 
-    GEODE_CODEGEN_DLL static HardStreak* create();
+    SAPPHIRE_CODEGEN_DLL static HardStreak* create();
 
-    GEODE_CODEGEN_DLL void firstSetup();
+    SAPPHIRE_CODEGEN_DLL void firstSetup();
 
-    GEODE_CODEGEN_DLL double normalizeAngle(double p0);
+    SAPPHIRE_CODEGEN_DLL double normalizeAngle(double p0);
 
-    GEODE_CODEGEN_DLL cocos2d::CCPoint quadCornerOffset(cocos2d::CCPoint p0, cocos2d::CCPoint p1, float p2);
+    SAPPHIRE_CODEGEN_DLL cocos2d::CCPoint quadCornerOffset(cocos2d::CCPoint p0, cocos2d::CCPoint p1, float p2);
 
-    GEODE_CODEGEN_DLL void reset();
+    SAPPHIRE_CODEGEN_DLL void reset();
 
-    GEODE_CODEGEN_DLL void resumeStroke();
+    SAPPHIRE_CODEGEN_DLL void resumeStroke();
 
-    GEODE_CODEGEN_DLL void stopStroke();
+    SAPPHIRE_CODEGEN_DLL void stopStroke();
 
-    GEODE_CODEGEN_DLL void updateStroke(float p0);
+    SAPPHIRE_CODEGEN_DLL void updateStroke(float p0);
 
         cocos2d::CCArray* m_pointsArr;
         cocos2d::CCPoint m_currentPoint;
@@ -5950,13 +5950,13 @@ public:
 class SetGroupIDLayer : public FLAlertLayer, public TextInputDelegate {
 public:
 
-    GEODE_CODEGEN_DLL void onNextGroupID1(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onNextGroupID1(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL void textChanged(CCTextInputNode* p0);
+    SAPPHIRE_CODEGEN_DLL void textChanged(CCTextInputNode* p0);
 
-    GEODE_CODEGEN_DLL void updateGroupIDLabel();
+    SAPPHIRE_CODEGEN_DLL void updateGroupIDLabel();
 
-        GEODE_CODEGEN_DLL ~SetGroupIDLayer();
+        SAPPHIRE_CODEGEN_DLL ~SetGroupIDLayer();
     template <bool T=false>
     void updateEditorLayerID(){
         static_assert(T, "Implement SetGroupIDLayer::updateEditorLayerID");
@@ -5999,13 +5999,13 @@ public:
 class EffectGameObject : public GameObject {
 public:
 
-    GEODE_CODEGEN_DLL void updateLabel();
+    SAPPHIRE_CODEGEN_DLL void updateLabel();
 
-    GEODE_CODEGEN_DLL static EffectGameObject* create(const char* p0);
+    SAPPHIRE_CODEGEN_DLL static EffectGameObject* create(const char* p0);
 
-    GEODE_CODEGEN_DLL void getTargetColorIndex();
+    SAPPHIRE_CODEGEN_DLL void getTargetColorIndex();
 
-    GEODE_CODEGEN_DLL virtual void triggerObject(GJBaseGameLayer* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void triggerObject(GJBaseGameLayer* p0);
 
     template <bool T=false>
     gd::string getSaveString(){
@@ -6078,7 +6078,7 @@ public:
         bool m_dynamicBlock;
         int m_targetItemID;
         int m_pickupMode;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
 };
 
 class GJGroundLayer {
@@ -6094,9 +6094,9 @@ public:
 class UploadActionDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual void uploadActionFinished(int p0, int p1);
+    SAPPHIRE_CODEGEN_DLL virtual void uploadActionFinished(int p0, int p1);
 
-    GEODE_CODEGEN_DLL virtual void uploadActionFailed(int p0, int p1);
+    SAPPHIRE_CODEGEN_DLL virtual void uploadActionFailed(int p0, int p1);
 
 };
 
@@ -6108,11 +6108,11 @@ public:
 class DialogLayer : public cocos2d::CCLayerColor {
 public:
 
-    GEODE_CODEGEN_DLL static DialogLayer* create(DialogObject* dialog, int color);
+    SAPPHIRE_CODEGEN_DLL static DialogLayer* create(DialogObject* dialog, int color);
 
-    GEODE_CODEGEN_DLL static DialogLayer* createWithObjects(cocos2d::CCArray* dialogs, int color);
+    SAPPHIRE_CODEGEN_DLL static DialogLayer* createWithObjects(cocos2d::CCArray* dialogs, int color);
 
-    GEODE_CODEGEN_DLL static DialogLayer* createDialogLayer(DialogObject* p0, cocos2d::CCArray* p1, int p2);
+    SAPPHIRE_CODEGEN_DLL static DialogLayer* createDialogLayer(DialogObject* p0, cocos2d::CCArray* p1, int p2);
 
     template <bool T=false>
     bool init(DialogLayer* p0, DialogObject* p1, cocos2d::CCArray* p2, int p3){
@@ -6124,32 +6124,32 @@ public:
         static_assert(T, "Implement DialogLayer::animateIn");
     }
 
-        GEODE_CODEGEN_DLL ~DialogLayer();
-    GEODE_CODEGEN_DLL virtual void onEnter();
+        SAPPHIRE_CODEGEN_DLL ~DialogLayer();
+    SAPPHIRE_CODEGEN_DLL virtual void onEnter();
 
-    GEODE_CODEGEN_DLL virtual bool ccTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    SAPPHIRE_CODEGEN_DLL virtual bool ccTouchBegan(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
 
-    GEODE_CODEGEN_DLL virtual void ccTouchMoved(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    SAPPHIRE_CODEGEN_DLL virtual void ccTouchMoved(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
 
-    GEODE_CODEGEN_DLL virtual void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    SAPPHIRE_CODEGEN_DLL virtual void ccTouchEnded(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
 
-    GEODE_CODEGEN_DLL virtual void ccTouchCancelled(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
+    SAPPHIRE_CODEGEN_DLL virtual void ccTouchCancelled(cocos2d::CCTouch* p0, cocos2d::CCEvent* p1);
 
-    GEODE_CODEGEN_DLL virtual void registerWithTouchDispatcher();
+    SAPPHIRE_CODEGEN_DLL virtual void registerWithTouchDispatcher();
 
-    GEODE_CODEGEN_DLL virtual void keyBackClicked();
+    SAPPHIRE_CODEGEN_DLL virtual void keyBackClicked();
 
-    GEODE_CODEGEN_DLL virtual void keyDown(cocos2d::enumKeyCodes p0);
+    SAPPHIRE_CODEGEN_DLL virtual void keyDown(cocos2d::enumKeyCodes p0);
 
-    GEODE_CODEGEN_DLL virtual void fadeInTextFinished(TextArea* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void fadeInTextFinished(TextArea* p0);
 
 };
 
 class GJCommentListLayer : public cocos2d::CCLayerColor {
 public:
 
-        GEODE_CODEGEN_DLL ~GJCommentListLayer();
-    GEODE_CODEGEN_DLL static GJCommentListLayer* create(BoomListView* p0, char const* p1, cocos2d::_ccColor4B p2, float p3, float p4, bool p5);
+        SAPPHIRE_CODEGEN_DLL ~GJCommentListLayer();
+    SAPPHIRE_CODEGEN_DLL static GJCommentListLayer* create(BoomListView* p0, char const* p1, cocos2d::_ccColor4B p2, float p3, float p4, bool p5);
 
         BoomListView* m_list;
 };
@@ -6157,14 +6157,14 @@ public:
 class GaragePage : public cocos2d::CCLayer, public ListButtonBarDelegate {
 public:
 
-    GEODE_CODEGEN_DLL static GaragePage* create(IconType type, GJGarageLayer* pGarage, cocos2d::SEL_MenuHandler pSelectCallback);
+    SAPPHIRE_CODEGEN_DLL static GaragePage* create(IconType type, GJGarageLayer* pGarage, cocos2d::SEL_MenuHandler pSelectCallback);
 
     template <bool T=false>
     void listButtonBarSwitchedPage(ListButtonBar* bar, int idk){
         static_assert(T, "Implement GaragePage::listButtonBarSwitchedPage");
     }
 
-    GEODE_CODEGEN_DLL bool init(IconType type, GJGarageLayer* pGarage, cocos2d::SEL_MenuHandler pSelectCallback);
+    SAPPHIRE_CODEGEN_DLL bool init(IconType type, GJGarageLayer* pGarage, cocos2d::SEL_MenuHandler pSelectCallback);
 
         GJGarageLayer* m_garage;
         cocos2d::SEL_MenuHandler m_handler;
@@ -6172,7 +6172,7 @@ public:
         CCMenuItemSpriteExtra* m_unkNode0x12c;
         IconType m_type;
         int m_unknown;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
 };
 
 class GJAccountManager : public cocos2d::CCNode {
@@ -6183,7 +6183,7 @@ public:
         static_assert(T, "Implement GJAccountManager::sharedState");
     }
 
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         gd::string m_password;
         gd::string m_username;
         int m_accountID;
@@ -6192,155 +6192,155 @@ public:
 class LevelEditorLayer : public GJBaseGameLayer, public LevelSettingsDelegate {
 public:
 
-    GEODE_CODEGEN_DLL static LevelEditorLayer* get();
+    SAPPHIRE_CODEGEN_DLL static LevelEditorLayer* get();
 
-    GEODE_CODEGEN_DLL static cocos2d::CCScene* scene(GJGameLevel* level);
+    SAPPHIRE_CODEGEN_DLL static cocos2d::CCScene* scene(GJGameLevel* level);
 
-        GEODE_CODEGEN_DLL ~LevelEditorLayer();
-    GEODE_CODEGEN_DLL virtual void update(float p0);
+        SAPPHIRE_CODEGEN_DLL ~LevelEditorLayer();
+    SAPPHIRE_CODEGEN_DLL virtual void update(float p0);
 
-    GEODE_CODEGEN_DLL virtual void draw();
+    SAPPHIRE_CODEGEN_DLL virtual void draw();
 
-    GEODE_CODEGEN_DLL virtual void updateColor(cocos2d::_ccColor3B p0, float p1, int p2, bool p3, float p4, cocos2d::_ccHSVValue p5, int p6, bool p7, int p8, EffectGameObject* p9);
+    SAPPHIRE_CODEGEN_DLL virtual void updateColor(cocos2d::_ccColor3B p0, float p1, int p2, bool p3, float p4, cocos2d::_ccHSVValue p5, int p6, bool p7, int p8, EffectGameObject* p9);
 
-    GEODE_CODEGEN_DLL virtual void flipGravity(PlayerObject* p0, bool p1, bool p2);
+    SAPPHIRE_CODEGEN_DLL virtual void flipGravity(PlayerObject* p0, bool p1, bool p2);
 
-    GEODE_CODEGEN_DLL virtual void calculateColorValues(EffectGameObject* p0, EffectGameObject* p1, int p2, float p3, ColorActionSprite* p4, GJEffectManager* p5);
+    SAPPHIRE_CODEGEN_DLL virtual void calculateColorValues(EffectGameObject* p0, EffectGameObject* p1, int p2, float p3, ColorActionSprite* p4, GJEffectManager* p5);
 
-    GEODE_CODEGEN_DLL virtual void addToGroup(GameObject* p0, int p1, bool p2);
+    SAPPHIRE_CODEGEN_DLL virtual void addToGroup(GameObject* p0, int p1, bool p2);
 
-    GEODE_CODEGEN_DLL virtual void removeFromGroup(GameObject* p0, int p1);
+    SAPPHIRE_CODEGEN_DLL virtual void removeFromGroup(GameObject* p0, int p1);
 
-    GEODE_CODEGEN_DLL virtual void timeForXPos(float p0);
+    SAPPHIRE_CODEGEN_DLL virtual void timeForXPos(float p0);
 
-    GEODE_CODEGEN_DLL virtual void xPosForTime(float p0);
+    SAPPHIRE_CODEGEN_DLL virtual void xPosForTime(float p0);
 
-    GEODE_CODEGEN_DLL virtual void levelSettingsUpdated();
+    SAPPHIRE_CODEGEN_DLL virtual void levelSettingsUpdated();
 
-    GEODE_CODEGEN_DLL static LevelEditorLayer* create(GJGameLevel* level);
+    SAPPHIRE_CODEGEN_DLL static LevelEditorLayer* create(GJGameLevel* level);
 
-    GEODE_CODEGEN_DLL void activateTriggerEffect(EffectGameObject* p0, float p1, float p2, float p3);
+    SAPPHIRE_CODEGEN_DLL void activateTriggerEffect(EffectGameObject* p0, float p1, float p2, float p3);
 
-    GEODE_CODEGEN_DLL GameObject* addObjectFromString(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL GameObject* addObjectFromString(gd::string p0);
 
-    GEODE_CODEGEN_DLL void addSpecial(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void addSpecial(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void addToRedoList(UndoObject* p0);
+    SAPPHIRE_CODEGEN_DLL void addToRedoList(UndoObject* p0);
 
-    GEODE_CODEGEN_DLL void addToUndoList(UndoObject* p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void addToUndoList(UndoObject* p0, bool p1);
 
-    GEODE_CODEGEN_DLL void animateInDualGround(GameObject* p0, float p1, bool p2);
+    SAPPHIRE_CODEGEN_DLL void animateInDualGround(GameObject* p0, float p1, bool p2);
 
-    GEODE_CODEGEN_DLL void checkCollisions(PlayerObject* p0, float p1);
+    SAPPHIRE_CODEGEN_DLL void checkCollisions(PlayerObject* p0, float p1);
 
-    GEODE_CODEGEN_DLL void createBackground();
+    SAPPHIRE_CODEGEN_DLL void createBackground();
 
-    GEODE_CODEGEN_DLL void createGroundLayer();
+    SAPPHIRE_CODEGEN_DLL void createGroundLayer();
 
-    GEODE_CODEGEN_DLL GameObject* createObject(int p0, cocos2d::CCPoint p1, bool p2);
+    SAPPHIRE_CODEGEN_DLL GameObject* createObject(int p0, cocos2d::CCPoint p1, bool p2);
 
-    GEODE_CODEGEN_DLL void createObjectsFromSetup(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL void createObjectsFromSetup(gd::string p0);
 
-    GEODE_CODEGEN_DLL void createObjectsFromString(gd::string p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void createObjectsFromString(gd::string p0, bool p1);
 
-    GEODE_CODEGEN_DLL void getLastObjectX();
+    SAPPHIRE_CODEGEN_DLL void getLastObjectX();
 
-    GEODE_CODEGEN_DLL void getLevelString();
+    SAPPHIRE_CODEGEN_DLL void getLevelString();
 
-    GEODE_CODEGEN_DLL void getNextColorChannel();
+    SAPPHIRE_CODEGEN_DLL void getNextColorChannel();
 
-    GEODE_CODEGEN_DLL void getNextFreeBlockID(cocos2d::CCArray* p0);
+    SAPPHIRE_CODEGEN_DLL void getNextFreeBlockID(cocos2d::CCArray* p0);
 
-    GEODE_CODEGEN_DLL int getNextFreeGroupID(cocos2d::CCArray* p0);
+    SAPPHIRE_CODEGEN_DLL int getNextFreeGroupID(cocos2d::CCArray* p0);
 
-    GEODE_CODEGEN_DLL void getNextFreeItemID(cocos2d::CCArray* p0);
+    SAPPHIRE_CODEGEN_DLL void getNextFreeItemID(cocos2d::CCArray* p0);
 
-    GEODE_CODEGEN_DLL void getObjectRect(GameObject* p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void getObjectRect(GameObject* p0, bool p1);
 
-    GEODE_CODEGEN_DLL void getRelativeOffset(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void getRelativeOffset(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void handleAction(bool p0, cocos2d::CCArray* p1);
+    SAPPHIRE_CODEGEN_DLL void handleAction(bool p0, cocos2d::CCArray* p1);
 
-    GEODE_CODEGEN_DLL bool init(GJGameLevel* p0);
+    SAPPHIRE_CODEGEN_DLL bool init(GJGameLevel* p0);
 
-    GEODE_CODEGEN_DLL void objectAtPosition(cocos2d::CCPoint p0);
+    SAPPHIRE_CODEGEN_DLL void objectAtPosition(cocos2d::CCPoint p0);
 
-    GEODE_CODEGEN_DLL void objectMoved(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void objectMoved(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void objectsInRect(cocos2d::CCRect p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void objectsInRect(cocos2d::CCRect p0, bool p1);
 
-    GEODE_CODEGEN_DLL void onPlaytest();
+    SAPPHIRE_CODEGEN_DLL void onPlaytest();
 
-    GEODE_CODEGEN_DLL void onStopPlaytest();
+    SAPPHIRE_CODEGEN_DLL void onStopPlaytest();
 
     template <bool T=false>
     void pasteAttributeState(GameObject* obj, cocos2d::CCArray* objs){
         static_assert(T, "Implement LevelEditorLayer::pasteAttributeState");
     }
 
-    GEODE_CODEGEN_DLL void playMusic();
+    SAPPHIRE_CODEGEN_DLL void playMusic();
 
-    GEODE_CODEGEN_DLL void recreateGroups();
+    SAPPHIRE_CODEGEN_DLL void recreateGroups();
 
-    GEODE_CODEGEN_DLL void redoLastAction();
+    SAPPHIRE_CODEGEN_DLL void redoLastAction();
 
-    GEODE_CODEGEN_DLL void removeAllObjects();
+    SAPPHIRE_CODEGEN_DLL void removeAllObjects();
 
-    GEODE_CODEGEN_DLL void removeAllObjectsOfType(int p0);
+    SAPPHIRE_CODEGEN_DLL void removeAllObjectsOfType(int p0);
 
-    GEODE_CODEGEN_DLL void removeObject(GameObject* p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void removeObject(GameObject* p0, bool p1);
 
-    GEODE_CODEGEN_DLL void removeSpecial(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void removeSpecial(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void resetMovingObjects();
+    SAPPHIRE_CODEGEN_DLL void resetMovingObjects();
 
-    GEODE_CODEGEN_DLL void resetObjectVector();
+    SAPPHIRE_CODEGEN_DLL void resetObjectVector();
 
-    GEODE_CODEGEN_DLL void resetToggledGroups();
+    SAPPHIRE_CODEGEN_DLL void resetToggledGroups();
 
-    GEODE_CODEGEN_DLL void resetToggledGroupsAndObjects();
+    SAPPHIRE_CODEGEN_DLL void resetToggledGroupsAndObjects();
 
-    GEODE_CODEGEN_DLL void resetUnusedColorChannels();
+    SAPPHIRE_CODEGEN_DLL void resetUnusedColorChannels();
 
-    GEODE_CODEGEN_DLL void rotationForSlopeNearObject(GameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void rotationForSlopeNearObject(GameObject* p0);
 
-    GEODE_CODEGEN_DLL void runColorEffect(EffectGameObject* p0, int p1, float p2, float p3, bool p4);
+    SAPPHIRE_CODEGEN_DLL void runColorEffect(EffectGameObject* p0, int p1, float p2, float p3, bool p4);
 
-    GEODE_CODEGEN_DLL void setupLevelStart(LevelSettingsObject* p0);
+    SAPPHIRE_CODEGEN_DLL void setupLevelStart(LevelSettingsObject* p0);
 
-    GEODE_CODEGEN_DLL void sortStickyGroups();
+    SAPPHIRE_CODEGEN_DLL void sortStickyGroups();
 
-    GEODE_CODEGEN_DLL void stopTriggersInGroup(int p0, float p1);
+    SAPPHIRE_CODEGEN_DLL void stopTriggersInGroup(int p0, float p1);
 
-    GEODE_CODEGEN_DLL void toggleDualMode(GameObject* p0, bool p1, PlayerObject* p2, bool p3);
+    SAPPHIRE_CODEGEN_DLL void toggleDualMode(GameObject* p0, bool p1, PlayerObject* p2, bool p3);
 
-    GEODE_CODEGEN_DLL void toggleGroupPreview(int p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void toggleGroupPreview(int p0, bool p1);
 
-    GEODE_CODEGEN_DLL void transferDefaultColors(GJEffectManager* p0, GJEffectManager* p1);
+    SAPPHIRE_CODEGEN_DLL void transferDefaultColors(GJEffectManager* p0, GJEffectManager* p1);
 
-    GEODE_CODEGEN_DLL void undoLastAction();
+    SAPPHIRE_CODEGEN_DLL void undoLastAction();
 
-    GEODE_CODEGEN_DLL void updateBGAndGColors();
+    SAPPHIRE_CODEGEN_DLL void updateBGAndGColors();
 
-    GEODE_CODEGEN_DLL void updateBlendValues();
+    SAPPHIRE_CODEGEN_DLL void updateBlendValues();
 
-    GEODE_CODEGEN_DLL void updateDualGround(PlayerObject* p0, int p1, bool p2);
+    SAPPHIRE_CODEGEN_DLL void updateDualGround(PlayerObject* p0, int p1, bool p2);
 
-    GEODE_CODEGEN_DLL void updateEditorMode();
+    SAPPHIRE_CODEGEN_DLL void updateEditorMode();
 
-    GEODE_CODEGEN_DLL void updateGameObjectsNew();
+    SAPPHIRE_CODEGEN_DLL void updateGameObjectsNew();
 
-    GEODE_CODEGEN_DLL void updateGround(float p0);
+    SAPPHIRE_CODEGEN_DLL void updateGround(float p0);
 
-    GEODE_CODEGEN_DLL void updateGroundWidth();
+    SAPPHIRE_CODEGEN_DLL void updateGroundWidth();
 
-    GEODE_CODEGEN_DLL void updateOptions();
+    SAPPHIRE_CODEGEN_DLL void updateOptions();
 
-    GEODE_CODEGEN_DLL void updateToggledGroups();
+    SAPPHIRE_CODEGEN_DLL void updateToggledGroups();
 
-    GEODE_CODEGEN_DLL void updateVisibility(float p0);
+    SAPPHIRE_CODEGEN_DLL void updateVisibility(float p0);
 
-        GEODE_PAD(0x8);
+        SAPPHIRE_PAD(0x8);
         bool m_unk2d0;
         bool m_unk2d1;
         bool m_unk2d2;
@@ -6354,27 +6354,27 @@ public:
         bool m_unk2da;
         bool m_unk2db;
         bool m_highDetail;
-        GEODE_PAD(0x60);
+        SAPPHIRE_PAD(0x60);
         GameObject* m_copyStateObject;
-        GEODE_PAD(0x12);
+        SAPPHIRE_PAD(0x12);
         int m_coinCountRand1;
         int m_coinCountRand2;
         int m_coinCount;
-        GEODE_PAD(0x50);
+        SAPPHIRE_PAD(0x50);
         int m_currentLayer;
-        GEODE_PAD(0x50);
+        SAPPHIRE_PAD(0x50);
         EditorUI* m_editorUI;
-        GEODE_PAD(0x8);
+        SAPPHIRE_PAD(0x8);
         cocos2d::CCArray* m_undoObjects;
         cocos2d::CCArray* m_someArray;
-        GEODE_PAD(0x16);
+        SAPPHIRE_PAD(0x16);
         int m_objectsRand1;
         int m_objectsRand2;
         int m_objects;
         DrawGridLayer* m_drawGridLayer;
         GJGameLevel* m_level;
         PlaybackMode m_playbackMode;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         GJGroundLayer* m_groundLayer;
 };
 
@@ -6386,17 +6386,17 @@ public:
 class Slider : public cocos2d::CCLayer {
 public:
 
-    GEODE_CODEGEN_DLL void setValue(float val);
+    SAPPHIRE_CODEGEN_DLL void setValue(float val);
 
-    GEODE_CODEGEN_DLL void setBarVisibility(bool v);
+    SAPPHIRE_CODEGEN_DLL void setBarVisibility(bool v);
 
-    GEODE_CODEGEN_DLL static Slider* create(cocos2d::CCNode* target, cocos2d::SEL_MenuHandler click, float scale);
+    SAPPHIRE_CODEGEN_DLL static Slider* create(cocos2d::CCNode* target, cocos2d::SEL_MenuHandler click, float scale);
 
-    GEODE_CODEGEN_DLL float getValue();
+    SAPPHIRE_CODEGEN_DLL float getValue();
 
-    GEODE_CODEGEN_DLL void updateBar();
+    SAPPHIRE_CODEGEN_DLL void updateBar();
 
-    GEODE_CODEGEN_DLL static Slider* create(cocos2d::CCNode* target, cocos2d::SEL_MenuHandler click, const char* unused, const char* grooveSpr, const char* thumbSpr, const char* thumbSprSel, float scale);
+    SAPPHIRE_CODEGEN_DLL static Slider* create(cocos2d::CCNode* target, cocos2d::SEL_MenuHandler click, const char* unused, const char* grooveSpr, const char* thumbSpr, const char* thumbSprSel, float scale);
 
         SliderTouchLogic* m_touchLogic;
         cocos2d::CCSprite* m_sliderBar;
@@ -6408,14 +6408,14 @@ public:
 class SetItemIDLayer {
 public:
 
-    GEODE_CODEGEN_DLL static SetItemIDLayer* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    SAPPHIRE_CODEGEN_DLL static SetItemIDLayer* create(EffectGameObject* p0, cocos2d::CCArray* p1);
 
 };
 
 class ProfilePage : public FLAlertLayer, public FLAlertLayerProtocol, public LevelCommentDelegate, public CommentUploadDelegate, public UserInfoDelegate, public UploadActionDelegate, public UploadPopupDelegate, public LeaderboardManagerDelegate {
 public:
 
-    GEODE_CODEGEN_DLL static ProfilePage* create(int accountID, bool idk);
+    SAPPHIRE_CODEGEN_DLL static ProfilePage* create(int accountID, bool idk);
 
     template <bool T=false>
     void getUserInfoFailed(int p0){
@@ -6444,33 +6444,33 @@ public:
 
         GJUserScore* m_score;
         int m_accountID;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         cocos2d::CCArray* m_buttons;
 };
 
 class GameSoundManager : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL void disableMetering();
+    SAPPHIRE_CODEGEN_DLL void disableMetering();
 
-    GEODE_CODEGEN_DLL void enableMetering();
+    SAPPHIRE_CODEGEN_DLL void enableMetering();
 
-    GEODE_CODEGEN_DLL void getMeteringValue();
+    SAPPHIRE_CODEGEN_DLL void getMeteringValue();
 
-    GEODE_CODEGEN_DLL void playBackgroundMusic(gd::string p0, bool p1, bool p2);
+    SAPPHIRE_CODEGEN_DLL void playBackgroundMusic(gd::string p0, bool p1, bool p2);
 
-    GEODE_CODEGEN_DLL void playEffect(gd::string p0, float p1, float p2, float p3);
+    SAPPHIRE_CODEGEN_DLL void playEffect(gd::string p0, float p1, float p2, float p3);
 
-    GEODE_CODEGEN_DLL void stopBackgroundMusic();
+    SAPPHIRE_CODEGEN_DLL void stopBackgroundMusic();
 
-        GEODE_CODEGEN_DLL ~GameSoundManager();
-    GEODE_CODEGEN_DLL static GameSoundManager* sharedManager();
+        SAPPHIRE_CODEGEN_DLL ~GameSoundManager();
+    SAPPHIRE_CODEGEN_DLL static GameSoundManager* sharedManager();
 
         cocos2d::CCDictionary* m_dictionary1;
         cocos2d::CCDictionary* m_dictionary2;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         bool m_preloaded;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         gd::string m_filePath;
 };
 
@@ -6483,7 +6483,7 @@ public:
 		return ButtonSprite::create(caption, 0, 0, font, texture, .0f, scale);
 	}
 
-    GEODE_CODEGEN_DLL static ButtonSprite* create(const char* caption, int width, int unknown, float scale, bool absoluteWidth, const char* font, const char* texture, float height);
+    SAPPHIRE_CODEGEN_DLL static ButtonSprite* create(const char* caption, int width, int unknown, float scale, bool absoluteWidth, const char* font, const char* texture, float height);
 
     
 	/**
@@ -6497,13 +6497,13 @@ public:
 	* @param scale Scale of text
 	* @returns Pointer to the created ButtonSprite, or nullptr on error
 	*/
-	GEODE_CODEGEN_DLL static ButtonSprite* create(const char* caption, int width, bool absolute, const char* font, const char* texture, float height, float scale);
+	SAPPHIRE_CODEGEN_DLL static ButtonSprite* create(const char* caption, int width, bool absolute, const char* font, const char* texture, float height, float scale);
 
-    GEODE_CODEGEN_DLL static ButtonSprite* create(char const* p0, int p1, int p2, float p3, bool p4);
+    SAPPHIRE_CODEGEN_DLL static ButtonSprite* create(char const* p0, int p1, int p2, float p3, bool p4);
 
-    GEODE_CODEGEN_DLL void updateBGImage(const char* p0);
+    SAPPHIRE_CODEGEN_DLL void updateBGImage(const char* p0);
 
-    GEODE_CODEGEN_DLL static ButtonSprite* create(char const* p0, float p1);
+    SAPPHIRE_CODEGEN_DLL static ButtonSprite* create(char const* p0, float p1);
 
     template <bool T=false>
     void setString(const char* txt){
@@ -6515,30 +6515,30 @@ public:
         static_assert(T, "Implement ButtonSprite::updateSpriteBGSize");
     }
 
-    GEODE_CODEGEN_DLL void setColor(cocos2d::ccColor3B color);
+    SAPPHIRE_CODEGEN_DLL void setColor(cocos2d::ccColor3B color);
 
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         cocos2d::CCLabelBMFont* m_label;
         cocos2d::CCSprite* m_subSprite;
         cocos2d::CCSprite* m_subBGSprite;
         cocos2d::extension::CCScale9Sprite* m_BGSprite;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         cocos2d::CCPoint m_spritePosition;
 };
 
 class CCLightFlash {
 public:
 
-    GEODE_CODEGEN_DLL static CCLightFlash* create();
+    SAPPHIRE_CODEGEN_DLL static CCLightFlash* create();
 
-    GEODE_CODEGEN_DLL void playEffect(cocos2d::CCPoint p0, cocos2d::_ccColor3B p1, float p2, float p3, float p4, float p5, float p6, float p7, float p8, float p9, float p10, float p11, float p12, float p13, float p14, float p15, int p16, bool p17, bool p18, float p19);
+    SAPPHIRE_CODEGEN_DLL void playEffect(cocos2d::CCPoint p0, cocos2d::_ccColor3B p1, float p2, float p3, float p4, float p5, float p6, float p7, float p8, float p9, float p10, float p11, float p12, float p13, float p14, float p15, int p16, bool p17, bool p18, float p19);
 
 };
 
 class TouchToggleAction : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL static TouchToggleAction* createFromString(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL static TouchToggleAction* createFromString(gd::string p0);
 
 };
 
@@ -6572,38 +6572,38 @@ public:
 class AudioEffectsLayer {
 public:
 
-    GEODE_CODEGEN_DLL void audioStep(float p0);
+    SAPPHIRE_CODEGEN_DLL void audioStep(float p0);
 
-    GEODE_CODEGEN_DLL static AudioEffectsLayer* create(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL static AudioEffectsLayer* create(gd::string p0);
 
-    GEODE_CODEGEN_DLL void resetAudioVars();
+    SAPPHIRE_CODEGEN_DLL void resetAudioVars();
 
 };
 
 class GJItemIcon {
 public:
 
-    GEODE_CODEGEN_DLL GJItemIcon* createBrowserIcon(UnlockType _type, int _id);
+    SAPPHIRE_CODEGEN_DLL GJItemIcon* createBrowserIcon(UnlockType _type, int _id);
 
-    GEODE_CODEGEN_DLL static GJItemIcon* create(UnlockType _type, int _id, cocos2d::ccColor3B _col1, cocos2d::ccColor3B _col2, bool _un0, bool _un1, bool _un2, cocos2d::ccColor3B _col3);
+    SAPPHIRE_CODEGEN_DLL static GJItemIcon* create(UnlockType _type, int _id, cocos2d::ccColor3B _col1, cocos2d::ccColor3B _col2, bool _un0, bool _un1, bool _un2, cocos2d::ccColor3B _col3);
 
 };
 
 class VideoOptionsLayer : public FLAlertLayer {
 public:
 
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         cocos2d::CCArray* m_resolutions;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         int m_currentResolution;
 };
 
 class PauseLayer : public CCBlockLayer {
 public:
 
-    GEODE_CODEGEN_DLL static PauseLayer* create(bool p0);
+    SAPPHIRE_CODEGEN_DLL static PauseLayer* create(bool p0);
 
-    GEODE_CODEGEN_DLL void onEdit(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onEdit(cocos2d::CCObject* p0);
 
     template <bool T=false>
     void createToggleButton(cocos2d::SEL_MenuHandler callback, bool on, cocos2d::CCMenu* menu, gd::string caption, cocos2d::CCPoint pos){
@@ -6617,8 +6617,8 @@ public:
 class GJListLayer : public cocos2d::CCLayerColor {
 public:
 
-        GEODE_CODEGEN_DLL ~GJListLayer();
-    GEODE_CODEGEN_DLL static GJListLayer* create(cocos2d::CCObject* target, const char* title, cocos2d::ccColor4B color, float width, float height);
+        SAPPHIRE_CODEGEN_DLL ~GJListLayer();
+    SAPPHIRE_CODEGEN_DLL static GJListLayer* create(cocos2d::CCObject* target, const char* title, cocos2d::ccColor4B color, float width, float height);
 
         BoomListView* m_listView;
 };
@@ -6626,10 +6626,10 @@ public:
 class GJSpiderSprite : public GJRobotSprite {
 public:
 
-        GEODE_CODEGEN_DLL ~GJSpiderSprite();
-    GEODE_CODEGEN_DLL virtual bool init();
+        SAPPHIRE_CODEGEN_DLL ~GJSpiderSprite();
+    SAPPHIRE_CODEGEN_DLL virtual bool init();
 
-    GEODE_CODEGEN_DLL static GJSpiderSprite* create();
+    SAPPHIRE_CODEGEN_DLL static GJSpiderSprite* create();
 
 };
 
@@ -6649,7 +6649,7 @@ public:
         Slider* m_slider;
         unsigned int m_touchID;
         float m_value;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         cocos2d::CCLabelBMFont* m_label;
         GJScaleControlDelegate* m_delegate;
 };
@@ -6657,175 +6657,175 @@ public:
 class GJEffectManager : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL virtual bool init();
+    SAPPHIRE_CODEGEN_DLL virtual bool init();
 
-    GEODE_CODEGEN_DLL void activeColorForIndex(int p0);
+    SAPPHIRE_CODEGEN_DLL void activeColorForIndex(int p0);
 
-    GEODE_CODEGEN_DLL void activeOpacityForIndex(int p0);
+    SAPPHIRE_CODEGEN_DLL void activeOpacityForIndex(int p0);
 
-    GEODE_CODEGEN_DLL void addAllInheritedColorActions(cocos2d::CCArray* p0);
+    SAPPHIRE_CODEGEN_DLL void addAllInheritedColorActions(cocos2d::CCArray* p0);
 
-    GEODE_CODEGEN_DLL void addGroupPulseEffect(PulseEffectAction* p0);
+    SAPPHIRE_CODEGEN_DLL void addGroupPulseEffect(PulseEffectAction* p0);
 
-    GEODE_CODEGEN_DLL void calculateBaseActiveColors();
+    SAPPHIRE_CODEGEN_DLL void calculateBaseActiveColors();
 
-    GEODE_CODEGEN_DLL void calculateInheritedColor(int p0, ColorAction* p1);
+    SAPPHIRE_CODEGEN_DLL void calculateInheritedColor(int p0, ColorAction* p1);
 
-    GEODE_CODEGEN_DLL void calculateLightBGColor(cocos2d::_ccColor3B p0);
+    SAPPHIRE_CODEGEN_DLL void calculateLightBGColor(cocos2d::_ccColor3B p0);
 
-    GEODE_CODEGEN_DLL void colorActionChanged(ColorAction* p0);
+    SAPPHIRE_CODEGEN_DLL void colorActionChanged(ColorAction* p0);
 
-    GEODE_CODEGEN_DLL void colorExists(int p0);
+    SAPPHIRE_CODEGEN_DLL void colorExists(int p0);
 
-    GEODE_CODEGEN_DLL void colorForEffect(cocos2d::_ccColor3B p0, cocos2d::_ccHSVValue p1);
+    SAPPHIRE_CODEGEN_DLL void colorForEffect(cocos2d::_ccColor3B p0, cocos2d::_ccHSVValue p1);
 
-    GEODE_CODEGEN_DLL cocos2d::_ccColor3B colorForGroupID(int p0, cocos2d::_ccColor3B const& p1, bool p2);
+    SAPPHIRE_CODEGEN_DLL cocos2d::_ccColor3B colorForGroupID(int p0, cocos2d::_ccColor3B const& p1, bool p2);
 
-    GEODE_CODEGEN_DLL void colorForIndex(int p0);
+    SAPPHIRE_CODEGEN_DLL void colorForIndex(int p0);
 
-    GEODE_CODEGEN_DLL void colorForPulseEffect(cocos2d::_ccColor3B const& p0, PulseEffectAction* p1);
+    SAPPHIRE_CODEGEN_DLL void colorForPulseEffect(cocos2d::_ccColor3B const& p0, PulseEffectAction* p1);
 
-    GEODE_CODEGEN_DLL void countChangedForItem(int p0);
+    SAPPHIRE_CODEGEN_DLL void countChangedForItem(int p0);
 
-    GEODE_CODEGEN_DLL void countForItem(int p0);
+    SAPPHIRE_CODEGEN_DLL void countForItem(int p0);
 
-    GEODE_CODEGEN_DLL static GJEffectManager* create();
+    SAPPHIRE_CODEGEN_DLL static GJEffectManager* create();
 
-    GEODE_CODEGEN_DLL void createFollowCommand(float p0, float p1, float p2, int p3, int p4, bool p5, int p6);
+    SAPPHIRE_CODEGEN_DLL void createFollowCommand(float p0, float p1, float p2, int p3, int p4, bool p5, int p6);
 
-    GEODE_CODEGEN_DLL void createMoveCommand(cocos2d::CCPoint p0, int p1, float p2, int p3, float p4, bool p5, bool p6, int p7);
+    SAPPHIRE_CODEGEN_DLL void createMoveCommand(cocos2d::CCPoint p0, int p1, float p2, int p3, float p4, bool p5, bool p6, int p7);
 
-    GEODE_CODEGEN_DLL void createPlayerFollowCommand(float p0, float p1, int p2, float p3, float p4, int p5, int p6);
+    SAPPHIRE_CODEGEN_DLL void createPlayerFollowCommand(float p0, float p1, int p2, float p3, float p4, int p5, int p6);
 
-    GEODE_CODEGEN_DLL void createRotateCommand(int p0, float p1, int p2, int p3, int p4, float p5, bool p6, int p7);
+    SAPPHIRE_CODEGEN_DLL void createRotateCommand(int p0, float p1, int p2, int p3, int p4, float p5, bool p6, int p7);
 
-    GEODE_CODEGEN_DLL void getAllColorActions();
+    SAPPHIRE_CODEGEN_DLL void getAllColorActions();
 
-    GEODE_CODEGEN_DLL void getAllColorSprites();
+    SAPPHIRE_CODEGEN_DLL void getAllColorSprites();
 
-    GEODE_CODEGEN_DLL const cocos2d::_ccColor3B& getColorAction(int p0);
+    SAPPHIRE_CODEGEN_DLL const cocos2d::_ccColor3B& getColorAction(int p0);
 
-    GEODE_CODEGEN_DLL const cocos2d::_ccColor3B& getColorSprite(int p0);
+    SAPPHIRE_CODEGEN_DLL const cocos2d::_ccColor3B& getColorSprite(int p0);
 
-    GEODE_CODEGEN_DLL void getCurrentStateString();
+    SAPPHIRE_CODEGEN_DLL void getCurrentStateString();
 
-    GEODE_CODEGEN_DLL void getLoadedMoveOffset();
+    SAPPHIRE_CODEGEN_DLL void getLoadedMoveOffset();
 
-    GEODE_CODEGEN_DLL void getMixedColor(cocos2d::_ccColor3B p0, cocos2d::_ccColor3B p1, float p2);
+    SAPPHIRE_CODEGEN_DLL void getMixedColor(cocos2d::_ccColor3B p0, cocos2d::_ccColor3B p1, float p2);
 
-    GEODE_CODEGEN_DLL uint8_t getOpacityActionForGroup(int p0);
+    SAPPHIRE_CODEGEN_DLL uint8_t getOpacityActionForGroup(int p0);
 
-    GEODE_CODEGEN_DLL void getSaveString();
+    SAPPHIRE_CODEGEN_DLL void getSaveString();
 
-    GEODE_CODEGEN_DLL void handleObjectCollision(bool p0, int p1, int p2);
+    SAPPHIRE_CODEGEN_DLL void handleObjectCollision(bool p0, int p1, int p2);
 
-    GEODE_CODEGEN_DLL void hasActiveDualTouch();
+    SAPPHIRE_CODEGEN_DLL void hasActiveDualTouch();
 
-    GEODE_CODEGEN_DLL void hasBeenTriggered(int p0);
+    SAPPHIRE_CODEGEN_DLL void hasBeenTriggered(int p0);
 
-    GEODE_CODEGEN_DLL void hasPulseEffectForGroupID(int p0);
+    SAPPHIRE_CODEGEN_DLL void hasPulseEffectForGroupID(int p0);
 
-    GEODE_CODEGEN_DLL bool isGroupEnabled(int p0);
+    SAPPHIRE_CODEGEN_DLL bool isGroupEnabled(int p0);
 
-    GEODE_CODEGEN_DLL void keyForGroupIDColor(int p0, cocos2d::_ccColor3B const& p1, bool p2);
+    SAPPHIRE_CODEGEN_DLL void keyForGroupIDColor(int p0, cocos2d::_ccColor3B const& p1, bool p2);
 
-    GEODE_CODEGEN_DLL void loadState(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL void loadState(gd::string p0);
 
-    GEODE_CODEGEN_DLL void objectsCollided(int p0, int p1);
+    SAPPHIRE_CODEGEN_DLL void objectsCollided(int p0, int p1);
 
-    GEODE_CODEGEN_DLL void opacityForIndex(int p0);
+    SAPPHIRE_CODEGEN_DLL void opacityForIndex(int p0);
 
-    GEODE_CODEGEN_DLL float opacityModForGroup(int p0);
+    SAPPHIRE_CODEGEN_DLL float opacityModForGroup(int p0);
 
-    GEODE_CODEGEN_DLL void playerButton(bool p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void playerButton(bool p0, bool p1);
 
-    GEODE_CODEGEN_DLL void playerDied();
+    SAPPHIRE_CODEGEN_DLL void playerDied();
 
-    GEODE_CODEGEN_DLL void postCollisionCheck();
+    SAPPHIRE_CODEGEN_DLL void postCollisionCheck();
 
-    GEODE_CODEGEN_DLL void preCollisionCheck();
+    SAPPHIRE_CODEGEN_DLL void preCollisionCheck();
 
-    GEODE_CODEGEN_DLL void prepareMoveActions(float p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void prepareMoveActions(float p0, bool p1);
 
-    GEODE_CODEGEN_DLL void processColors();
+    SAPPHIRE_CODEGEN_DLL void processColors();
 
-    GEODE_CODEGEN_DLL void processCopyColorPulseActions();
+    SAPPHIRE_CODEGEN_DLL void processCopyColorPulseActions();
 
-    GEODE_CODEGEN_DLL void processInheritedColors();
+    SAPPHIRE_CODEGEN_DLL void processInheritedColors();
 
-    GEODE_CODEGEN_DLL void processPulseActions();
+    SAPPHIRE_CODEGEN_DLL void processPulseActions();
 
-    GEODE_CODEGEN_DLL void registerCollisionTrigger(int p0, int p1, int p2, bool p3, bool p4, int p5);
+    SAPPHIRE_CODEGEN_DLL void registerCollisionTrigger(int p0, int p1, int p2, bool p3, bool p4, int p5);
 
-    GEODE_CODEGEN_DLL void removeAllPulseActions();
+    SAPPHIRE_CODEGEN_DLL void removeAllPulseActions();
 
-    GEODE_CODEGEN_DLL void removeColorAction(int p0);
+    SAPPHIRE_CODEGEN_DLL void removeColorAction(int p0);
 
-    GEODE_CODEGEN_DLL void reset();
+    SAPPHIRE_CODEGEN_DLL void reset();
 
-    GEODE_CODEGEN_DLL void resetColorCache();
+    SAPPHIRE_CODEGEN_DLL void resetColorCache();
 
-    GEODE_CODEGEN_DLL void resetEffects();
+    SAPPHIRE_CODEGEN_DLL void resetEffects();
 
-    GEODE_CODEGEN_DLL void resetMoveActions();
+    SAPPHIRE_CODEGEN_DLL void resetMoveActions();
 
-    GEODE_CODEGEN_DLL void resetToggledGroups();
+    SAPPHIRE_CODEGEN_DLL void resetToggledGroups();
 
-    GEODE_CODEGEN_DLL void resetTriggeredIDs();
+    SAPPHIRE_CODEGEN_DLL void resetTriggeredIDs();
 
-    GEODE_CODEGEN_DLL void runCountTrigger(int p0, int p1, bool p2, int p3, bool p4, int p5);
+    SAPPHIRE_CODEGEN_DLL void runCountTrigger(int p0, int p1, bool p2, int p3, bool p4, int p5);
 
-    GEODE_CODEGEN_DLL void runDeathTrigger(int p0, bool p1, int p2);
+    SAPPHIRE_CODEGEN_DLL void runDeathTrigger(int p0, bool p1, int p2);
 
-    GEODE_CODEGEN_DLL OpacityEffectAction* runOpacityActionOnGroup(int p0, float p1, float p2, int p3);
+    SAPPHIRE_CODEGEN_DLL OpacityEffectAction* runOpacityActionOnGroup(int p0, float p1, float p2, int p3);
 
-    GEODE_CODEGEN_DLL void runPulseEffect(int p0, bool p1, float p2, float p3, float p4, PulseEffectType p5, cocos2d::_ccColor3B p6, cocos2d::_ccHSVValue p7, int p8, bool p9, bool p10, bool p11, int p12);
+    SAPPHIRE_CODEGEN_DLL void runPulseEffect(int p0, bool p1, float p2, float p3, float p4, PulseEffectType p5, cocos2d::_ccColor3B p6, cocos2d::_ccHSVValue p7, int p8, bool p9, bool p10, bool p11, int p12);
 
-    GEODE_CODEGEN_DLL void runTouchTriggerCommand(int p0, bool p1, TouchTriggerType p2, bool p3, int p4);
+    SAPPHIRE_CODEGEN_DLL void runTouchTriggerCommand(int p0, bool p1, TouchTriggerType p2, bool p3, int p4);
 
-    GEODE_CODEGEN_DLL void setColorAction(ColorAction* p0, int p1);
+    SAPPHIRE_CODEGEN_DLL void setColorAction(ColorAction* p0, int p1);
 
-    GEODE_CODEGEN_DLL void setFollowing(int p0, int p1, bool p2);
+    SAPPHIRE_CODEGEN_DLL void setFollowing(int p0, int p1, bool p2);
 
-    GEODE_CODEGEN_DLL void setupFromString(gd::string p0);
+    SAPPHIRE_CODEGEN_DLL void setupFromString(gd::string p0);
 
-    GEODE_CODEGEN_DLL void shouldBlend(int p0);
+    SAPPHIRE_CODEGEN_DLL void shouldBlend(int p0);
 
-    GEODE_CODEGEN_DLL void spawnGroup(int p0, float p1, int p2);
+    SAPPHIRE_CODEGEN_DLL void spawnGroup(int p0, float p1, int p2);
 
-    GEODE_CODEGEN_DLL void stopActionsForTrigger(EffectGameObject* p0);
+    SAPPHIRE_CODEGEN_DLL void stopActionsForTrigger(EffectGameObject* p0);
 
-    GEODE_CODEGEN_DLL void stopMoveActionsForGroup(int p0);
+    SAPPHIRE_CODEGEN_DLL void stopMoveActionsForGroup(int p0);
 
-    GEODE_CODEGEN_DLL void storeTriggeredID(int p0);
+    SAPPHIRE_CODEGEN_DLL void storeTriggeredID(int p0);
 
-    GEODE_CODEGEN_DLL void toggleGroup(int p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void toggleGroup(int p0, bool p1);
 
-    GEODE_CODEGEN_DLL void traverseInheritanceChain(InheritanceNode* p0);
+    SAPPHIRE_CODEGEN_DLL void traverseInheritanceChain(InheritanceNode* p0);
 
-    GEODE_CODEGEN_DLL void updateActiveOpacityEffects();
+    SAPPHIRE_CODEGEN_DLL void updateActiveOpacityEffects();
 
-    GEODE_CODEGEN_DLL void updateColorAction(ColorAction* p0);
+    SAPPHIRE_CODEGEN_DLL void updateColorAction(ColorAction* p0);
 
-    GEODE_CODEGEN_DLL void updateColorEffects(float p0);
+    SAPPHIRE_CODEGEN_DLL void updateColorEffects(float p0);
 
-    GEODE_CODEGEN_DLL void updateColors(cocos2d::_ccColor3B p0, cocos2d::_ccColor3B p1);
+    SAPPHIRE_CODEGEN_DLL void updateColors(cocos2d::_ccColor3B p0, cocos2d::_ccColor3B p1);
 
-    GEODE_CODEGEN_DLL void updateEffects(float p0);
+    SAPPHIRE_CODEGEN_DLL void updateEffects(float p0);
 
-    GEODE_CODEGEN_DLL void updateOpacityAction(OpacityEffectAction* p0);
+    SAPPHIRE_CODEGEN_DLL void updateOpacityAction(OpacityEffectAction* p0);
 
-    GEODE_CODEGEN_DLL void updateOpacityEffects(float p0);
+    SAPPHIRE_CODEGEN_DLL void updateOpacityEffects(float p0);
 
-    GEODE_CODEGEN_DLL void updatePulseEffects(float p0);
+    SAPPHIRE_CODEGEN_DLL void updatePulseEffects(float p0);
 
-    GEODE_CODEGEN_DLL void updateSpawnTriggers(float p0);
+    SAPPHIRE_CODEGEN_DLL void updateSpawnTriggers(float p0);
 
-    GEODE_CODEGEN_DLL void wasFollowing(int p0, int p1);
+    SAPPHIRE_CODEGEN_DLL void wasFollowing(int p0, int p1);
 
-    GEODE_CODEGEN_DLL void wouldCreateLoop(InheritanceNode* p0, int p1);
+    SAPPHIRE_CODEGEN_DLL void wouldCreateLoop(InheritanceNode* p0, int p1);
 
-        GEODE_CODEGEN_DLL ~GJEffectManager();
+        SAPPHIRE_CODEGEN_DLL ~GJEffectManager();
         TriggerEffectDelegate* m_effectDelegate;
         cocos2d::CCDictionary* m_colorActions;
         cocos2d::CCDictionary* m_colorSprites;
@@ -6880,29 +6880,29 @@ public:
         static_assert(T, "Implement LevelSelectLayer::create");
     }
 
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         BoomScrollLayer* m_scrollLayer;
 };
 
 class SetupOpacityPopup : public FLAlertLayer {
 public:
 
-    GEODE_CODEGEN_DLL static SetupOpacityPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
+    SAPPHIRE_CODEGEN_DLL static SetupOpacityPopup* create(EffectGameObject* p0, cocos2d::CCArray* p1);
 
-    GEODE_CODEGEN_DLL void onTargetIDArrow(cocos2d::CCObject* p0);
+    SAPPHIRE_CODEGEN_DLL void onTargetIDArrow(cocos2d::CCObject* p0);
 
-    GEODE_CODEGEN_DLL void textChanged(CCTextInputNode* p0);
+    SAPPHIRE_CODEGEN_DLL void textChanged(CCTextInputNode* p0);
 
-    GEODE_CODEGEN_DLL void updateTargetID();
+    SAPPHIRE_CODEGEN_DLL void updateTargetID();
 
 };
 
 class GJAccountBackupDelegate {
 public:
 
-    GEODE_CODEGEN_DLL virtual bool backupAccountFailed(BackupAccountError p0);
+    SAPPHIRE_CODEGEN_DLL virtual bool backupAccountFailed(BackupAccountError p0);
 
-    GEODE_CODEGEN_DLL virtual bool backupAccountFinished();
+    SAPPHIRE_CODEGEN_DLL virtual bool backupAccountFinished();
 
 };
 
@@ -6970,14 +6970,14 @@ public:
         int m_copyChannelID;
         bool m_copyOpacity;
         ConfigureHSVWidget* m_hsvWidget;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         cocos2d::CCArray* m_unk254;
         cocos2d::CCArray* m_unk258;
         CCTextInputNode* m_textInput2;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         CCMenuItemToggler* m_toggler3;
         CCMenuItemToggler* m_toggler4;
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         cocos2d::CCArray* m_unk274;
         bool m_spawnTrigger;
         bool m_multiTrigger;
@@ -7002,15 +7002,15 @@ public:
         static_assert(T, "Implement DailyLevelPage::updateTimers");
     }
 
-        GEODE_UNIMPLEMENTED_PAD
+        SAPPHIRE_UNIMPLEMENTED_PAD
         bool m_weekly;
 };
 
 class GJComment : public cocos2d::CCNode {
 public:
 
-        GEODE_CODEGEN_DLL ~GJComment();
-    GEODE_CODEGEN_DLL virtual bool init();
+        SAPPHIRE_CODEGEN_DLL ~GJComment();
+    SAPPHIRE_CODEGEN_DLL virtual bool init();
 
     template <bool T=false>
     static GJComment* create(cocos2d::CCDictionary* dict){
@@ -7044,11 +7044,11 @@ public:
 class CCNodeContainer : public cocos2d::CCNode {
 public:
 
-    GEODE_CODEGEN_DLL static CCNodeContainer* create();
+    SAPPHIRE_CODEGEN_DLL static CCNodeContainer* create();
 
-    GEODE_CODEGEN_DLL virtual bool init();
+    SAPPHIRE_CODEGEN_DLL virtual bool init();
 
-    GEODE_CODEGEN_DLL void visit();
+    SAPPHIRE_CODEGEN_DLL void visit();
 
 };
 
@@ -7102,124 +7102,124 @@ public:
 class GameManager : public GManager {
 public:
 
-    GEODE_CODEGEN_DLL int getPlayerFrame();
+    SAPPHIRE_CODEGEN_DLL int getPlayerFrame();
 
-    GEODE_CODEGEN_DLL int getPlayerShip();
+    SAPPHIRE_CODEGEN_DLL int getPlayerShip();
 
-    GEODE_CODEGEN_DLL int getPlayerBall();
+    SAPPHIRE_CODEGEN_DLL int getPlayerBall();
 
-    GEODE_CODEGEN_DLL int getPlayerBird();
+    SAPPHIRE_CODEGEN_DLL int getPlayerBird();
 
-    GEODE_CODEGEN_DLL int getPlayerDart();
+    SAPPHIRE_CODEGEN_DLL int getPlayerDart();
 
-    GEODE_CODEGEN_DLL int getPlayerRobot();
+    SAPPHIRE_CODEGEN_DLL int getPlayerRobot();
 
-    GEODE_CODEGEN_DLL int getPlayerSpider();
+    SAPPHIRE_CODEGEN_DLL int getPlayerSpider();
 
-    GEODE_CODEGEN_DLL int getPlayerStreak();
+    SAPPHIRE_CODEGEN_DLL int getPlayerStreak();
 
-    GEODE_CODEGEN_DLL int getPlayerDeathEffect();
+    SAPPHIRE_CODEGEN_DLL int getPlayerDeathEffect();
 
-    GEODE_CODEGEN_DLL int getPlayerColor();
+    SAPPHIRE_CODEGEN_DLL int getPlayerColor();
 
-    GEODE_CODEGEN_DLL int getPlayerColor2();
+    SAPPHIRE_CODEGEN_DLL int getPlayerColor2();
 
-    GEODE_CODEGEN_DLL bool getPlayerGlow();
+    SAPPHIRE_CODEGEN_DLL bool getPlayerGlow();
 
-    GEODE_CODEGEN_DLL IconType getPlayerIconType();
+    SAPPHIRE_CODEGEN_DLL IconType getPlayerIconType();
 
-    GEODE_CODEGEN_DLL void setPlayerFrame(int id);
+    SAPPHIRE_CODEGEN_DLL void setPlayerFrame(int id);
 
-    GEODE_CODEGEN_DLL void setPlayerShip(int id);
+    SAPPHIRE_CODEGEN_DLL void setPlayerShip(int id);
 
-    GEODE_CODEGEN_DLL void setPlayerBall(int id);
+    SAPPHIRE_CODEGEN_DLL void setPlayerBall(int id);
 
-    GEODE_CODEGEN_DLL void setPlayerBird(int id);
+    SAPPHIRE_CODEGEN_DLL void setPlayerBird(int id);
 
-    GEODE_CODEGEN_DLL void setPlayerDart(int id);
+    SAPPHIRE_CODEGEN_DLL void setPlayerDart(int id);
 
-    GEODE_CODEGEN_DLL void setPlayerRobot(int id);
+    SAPPHIRE_CODEGEN_DLL void setPlayerRobot(int id);
 
-    GEODE_CODEGEN_DLL void setPlayerSpider(int id);
+    SAPPHIRE_CODEGEN_DLL void setPlayerSpider(int id);
 
-    GEODE_CODEGEN_DLL void setPlayerStreak(int id);
+    SAPPHIRE_CODEGEN_DLL void setPlayerStreak(int id);
 
-    GEODE_CODEGEN_DLL void setPlayerDeathEffect(int id);
+    SAPPHIRE_CODEGEN_DLL void setPlayerDeathEffect(int id);
 
-    GEODE_CODEGEN_DLL void setPlayerColor(int id);
+    SAPPHIRE_CODEGEN_DLL void setPlayerColor(int id);
 
-    GEODE_CODEGEN_DLL void setPlayerColor2(int id);
+    SAPPHIRE_CODEGEN_DLL void setPlayerColor2(int id);
 
-    GEODE_CODEGEN_DLL void setPlayerGlow(bool v);
+    SAPPHIRE_CODEGEN_DLL void setPlayerGlow(bool v);
 
-    GEODE_CODEGEN_DLL void setPlayerIconType(IconType v);
+    SAPPHIRE_CODEGEN_DLL void setPlayerIconType(IconType v);
 
-    GEODE_CODEGEN_DLL void setQuality(cocos2d::TextureQuality quality);
+    SAPPHIRE_CODEGEN_DLL void setQuality(cocos2d::TextureQuality quality);
 
-    GEODE_CODEGEN_DLL PlayLayer* getPlayLayer();
+    SAPPHIRE_CODEGEN_DLL PlayLayer* getPlayLayer();
 
-    GEODE_CODEGEN_DLL LevelEditorLayer* getEditorLayer();
+    SAPPHIRE_CODEGEN_DLL LevelEditorLayer* getEditorLayer();
 
-    GEODE_CODEGEN_DLL bool getGameVariableDefault(const char* key, bool defaultValue);
+    SAPPHIRE_CODEGEN_DLL bool getGameVariableDefault(const char* key, bool defaultValue);
 
-    GEODE_CODEGEN_DLL int getIntGameVariableDefault(const char* key, int defaultValue);
+    SAPPHIRE_CODEGEN_DLL int getIntGameVariableDefault(const char* key, int defaultValue);
 
-    GEODE_CODEGEN_DLL static GameManager* get();
+    SAPPHIRE_CODEGEN_DLL static GameManager* get();
 
-    GEODE_CODEGEN_DLL void accountStatusChanged();
+    SAPPHIRE_CODEGEN_DLL void accountStatusChanged();
 
-    GEODE_CODEGEN_DLL cocos2d::_ccColor3B colorForIdx(int p0);
+    SAPPHIRE_CODEGEN_DLL cocos2d::_ccColor3B colorForIdx(int p0);
 
-    GEODE_CODEGEN_DLL void didExitPlayscene();
+    SAPPHIRE_CODEGEN_DLL void didExitPlayscene();
 
-    GEODE_CODEGEN_DLL void doQuickSave();
+    SAPPHIRE_CODEGEN_DLL void doQuickSave();
 
-    GEODE_CODEGEN_DLL void fadeInMusic(const char* p0);
+    SAPPHIRE_CODEGEN_DLL void fadeInMusic(const char* p0);
 
-    GEODE_CODEGEN_DLL void getBGTexture(int p0);
+    SAPPHIRE_CODEGEN_DLL void getBGTexture(int p0);
 
-    GEODE_CODEGEN_DLL void getFontFile(int p0);
+    SAPPHIRE_CODEGEN_DLL void getFontFile(int p0);
 
-    GEODE_CODEGEN_DLL bool getGameVariable(const char* p0);
+    SAPPHIRE_CODEGEN_DLL bool getGameVariable(const char* p0);
 
-    GEODE_CODEGEN_DLL int getIntGameVariable(const char* p0);
+    SAPPHIRE_CODEGEN_DLL int getIntGameVariable(const char* p0);
 
-    GEODE_CODEGEN_DLL bool getUGV(const char* p0);
+    SAPPHIRE_CODEGEN_DLL bool getUGV(const char* p0);
 
-    GEODE_CODEGEN_DLL void loadDeathEffect(int p0);
+    SAPPHIRE_CODEGEN_DLL void loadDeathEffect(int p0);
 
-    GEODE_CODEGEN_DLL void loadFont(int p0);
+    SAPPHIRE_CODEGEN_DLL void loadFont(int p0);
 
-    GEODE_CODEGEN_DLL void reloadAll(bool p0, bool p1, bool p2);
+    SAPPHIRE_CODEGEN_DLL void reloadAll(bool p0, bool p1, bool p2);
 
-    GEODE_CODEGEN_DLL void reloadAllStep2();
+    SAPPHIRE_CODEGEN_DLL void reloadAllStep2();
 
-    GEODE_CODEGEN_DLL void reloadAllStep5();
+    SAPPHIRE_CODEGEN_DLL void reloadAllStep5();
 
-    GEODE_CODEGEN_DLL void reportPercentageForLevel(int p0, int p1, bool p2);
+    SAPPHIRE_CODEGEN_DLL void reportPercentageForLevel(int p0, int p1, bool p2);
 
-    GEODE_CODEGEN_DLL void setGameVariable(const char* p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void setGameVariable(const char* p0, bool p1);
 
-    GEODE_CODEGEN_DLL void setIntGameVariable(const char* p0, int p1);
+    SAPPHIRE_CODEGEN_DLL void setIntGameVariable(const char* p0, int p1);
 
-    GEODE_CODEGEN_DLL void setUGV(char const* p0, bool p1);
+    SAPPHIRE_CODEGEN_DLL void setUGV(char const* p0, bool p1);
 
-    GEODE_CODEGEN_DLL static GameManager* sharedState();
+    SAPPHIRE_CODEGEN_DLL static GameManager* sharedState();
 
-        GEODE_CODEGEN_DLL ~GameManager();
-    GEODE_CODEGEN_DLL void getGTexture(int p0);
+        SAPPHIRE_CODEGEN_DLL ~GameManager();
+    SAPPHIRE_CODEGEN_DLL void getGTexture(int p0);
 
-    GEODE_CODEGEN_DLL virtual bool init();
+    SAPPHIRE_CODEGEN_DLL virtual bool init();
 
-    GEODE_CODEGEN_DLL void reportAchievementWithID(char const* p0, int p1, bool p2);
+    SAPPHIRE_CODEGEN_DLL void reportAchievementWithID(char const* p0, int p1, bool p2);
 
-    GEODE_CODEGEN_DLL cocos2d::CCSize* resolutionForKey(cocos2d::CCSize* p0, int p1);
+    SAPPHIRE_CODEGEN_DLL cocos2d::CCSize* resolutionForKey(cocos2d::CCSize* p0, int p1);
 
-    GEODE_CODEGEN_DLL void update(float p0);
+    SAPPHIRE_CODEGEN_DLL void update(float p0);
 
-    GEODE_CODEGEN_DLL bool isColorUnlocked(int _id, bool _type);
+    SAPPHIRE_CODEGEN_DLL bool isColorUnlocked(int _id, bool _type);
 
-    GEODE_CODEGEN_DLL bool isIconUnlocked(int _id, IconType _type);
+    SAPPHIRE_CODEGEN_DLL bool isIconUnlocked(int _id, IconType _type);
 
     template <bool T=false>
     void toggleGameVariable(const char* key){
@@ -7235,15 +7235,15 @@ public:
         bool m_toFullscreen;
         bool m_reloading;
         bool m_unknown0;
-        GEODE_PAD(0x4);
+        SAPPHIRE_PAD(0x4);
         cocos2d::CCDictionary* m_valueKeeper;
         cocos2d::CCDictionary* m_unlockValueKeeper;
         cocos2d::CCDictionary* m_customObjectDict;
         double m_adTimer;
         double m_adCache;
-        GEODE_PAD(0x8);
+        SAPPHIRE_PAD(0x8);
         double m_unknownDouble;
-        GEODE_PAD(0x4);
+        SAPPHIRE_PAD(0x4);
         bool m_loaded;
         gd::string m_unknownString;
         PlayLayer* m_playLayer;
@@ -7330,7 +7330,7 @@ public:
         bool m_showedRateDiffDialog;
         bool m_showedRateStarDialog;
         bool m_showedLowDetailDialog;
-        GEODE_PAD(0x30);
+        SAPPHIRE_PAD(0x30);
         int m_bootups;
         bool m_hasRatedGame;
         bool m_unk0;
@@ -7352,23 +7352,23 @@ public:
 		return CustomListView::create(entries, width, height, 0, type);
 	}
 
-    GEODE_CODEGEN_DLL static CustomListView* create(cocos2d::CCArray* p0, float p1, float p2, int p3, BoomListType p4);
+    SAPPHIRE_CODEGEN_DLL static CustomListView* create(cocos2d::CCArray* p0, float p1, float p2, int p3, BoomListType p4);
 
-    GEODE_CODEGEN_DLL virtual TableViewCell* getListCell(const char* p0);
+    SAPPHIRE_CODEGEN_DLL virtual TableViewCell* getListCell(const char* p0);
 
-    GEODE_CODEGEN_DLL virtual void loadCell(TableViewCell* p0, unsigned int p1);
+    SAPPHIRE_CODEGEN_DLL virtual void loadCell(TableViewCell* p0, unsigned int p1);
 
-    GEODE_CODEGEN_DLL virtual void setupList();
+    SAPPHIRE_CODEGEN_DLL virtual void setupList();
 
 };
 
 class SongInfoObject : public cocos2d::CCNode {
 public:
 
-        GEODE_CODEGEN_DLL ~SongInfoObject();
-    GEODE_CODEGEN_DLL virtual void encodeWithCoder(DS_Dictionary* p0);
+        SAPPHIRE_CODEGEN_DLL ~SongInfoObject();
+    SAPPHIRE_CODEGEN_DLL virtual void encodeWithCoder(DS_Dictionary* p0);
 
-    GEODE_CODEGEN_DLL virtual bool canEncode();
+    SAPPHIRE_CODEGEN_DLL virtual bool canEncode();
 
         int m_songID;
         gd::string m_songName;
@@ -7386,23 +7386,23 @@ public:
 class AppDelegate : public cocos2d::CCApplication {
 public:
 
-    GEODE_CODEGEN_DLL void bgScale();
+    SAPPHIRE_CODEGEN_DLL void bgScale();
 
-    GEODE_CODEGEN_DLL virtual bool applicationDidFinishLaunching();
+    SAPPHIRE_CODEGEN_DLL virtual bool applicationDidFinishLaunching();
 
-    GEODE_CODEGEN_DLL virtual void applicationDidEnterBackground();
+    SAPPHIRE_CODEGEN_DLL virtual void applicationDidEnterBackground();
 
-    GEODE_CODEGEN_DLL virtual void applicationWillEnterForeground();
+    SAPPHIRE_CODEGEN_DLL virtual void applicationWillEnterForeground();
 
-    GEODE_CODEGEN_DLL virtual void applicationWillBecomeActive();
+    SAPPHIRE_CODEGEN_DLL virtual void applicationWillBecomeActive();
 
-    GEODE_CODEGEN_DLL virtual void applicationWillResignActive();
+    SAPPHIRE_CODEGEN_DLL virtual void applicationWillResignActive();
 
-    GEODE_CODEGEN_DLL virtual void trySaveGame();
+    SAPPHIRE_CODEGEN_DLL virtual void trySaveGame();
 
-    GEODE_CODEGEN_DLL virtual void willSwitchToScene(cocos2d::CCScene* p0);
+    SAPPHIRE_CODEGEN_DLL virtual void willSwitchToScene(cocos2d::CCScene* p0);
 
-    GEODE_CODEGEN_DLL static AppDelegate* get();
+    SAPPHIRE_CODEGEN_DLL static AppDelegate* get();
 
         cocos2d::CCScene* m_runningScene;
 };
@@ -7410,8 +7410,8 @@ public:
 class LabelGameObject : public GameObject {
 public:
 
-    GEODE_CODEGEN_DLL virtual bool init();
+    SAPPHIRE_CODEGEN_DLL virtual bool init();
 
-    GEODE_CODEGEN_DLL void setObjectColor(cocos2d::_ccColor3B const& p0);
+    SAPPHIRE_CODEGEN_DLL void setObjectColor(cocos2d::_ccColor3B const& p0);
 
 };
