@@ -1,2 +1,2 @@
 # suite
-Geode development suite.
+Sapphire development suite.
